@@ -78,7 +78,7 @@ if __name__ == '__main__':
     
 # cd 'Z:\williamyizhu On My Mac\Documents\workspace\PyWind2'
 # .\wind_dr.py -m 'dd' -s 'cfe' -tf 'eod' -d 'mongodb1'
-# -m 'dd': download data from quandl
+# -m 'dd': download data from wind, 'um': update to mongodb
 # -s 'cfe': only apply to sector='cfe', in wind_section.ini
 # -tf 'eod': only download 'eod' data
 # -d 'mongodb1': use mongodb connection section wind_mongodb1 in mongodb_connection.ini
