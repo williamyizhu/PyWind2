@@ -77,13 +77,14 @@ if __name__ == '__main__':
     main()
     
 # cd 'Z:\williamyizhu On My Mac\Documents\workspace\PyWind2'
-# .\wind_dr.py -m 'dd' -s 'cfe' -tf 'eod' -d 'mongodb1'
-# -m 'dd': download data from wind, 'um': update to mongodb
-# -s 'cfe': only apply to sector='cfe', in wind_section.ini
-# -tf 'eod': only download 'eod' data
-# -d 'mongodb1': use mongodb connection section wind_mongodb1 in mongodb_connection.ini
+# .\wind_dr.py -m dd -s cfe -tf eod -d mongodb1
+# -m dd: download data from wind, um: update to mongodb
+# -s cfe: only apply to sector=cfe, in wind_section.ini
+# -tf eod: only download end of day data
+# -d mongodb1: use mongodb connection section wind_mongodb1 in mongodb_connection.ini
 
 # cd 'Z:\williamyizhu On My Mac\Documents\workspace\PyWind2'
-# .\wind_dr.py -m 'dd' 'um' -s 'trading' -tf 'eod' -cc 'y' -d 'mongodb1'
-# daily routine, 'trading' section contains only non-expired contracts
-# -cc 'y': e.g., rename CZCE.ZC705.csv to CZCE.ZC1705
+# .\wind_dr.py -m dd um -s trading -tf eod -cc y -d mongodb1
+# .\wind_dr.py -m dd -s historical -tf eod -cc y
+# daily routine, trading section contains only non-expired contracts
+# -cc y: e.g., rename CZCE.ZC705.csv to CZCE.ZC1705
