@@ -1,7 +1,7 @@
 import os
 import sys
 import pandas as pd
-os.chdir('Z:\williamyizhu On My Mac\Documents\workspace\PyWind2')
+# os.chdir('Z:\williamyizhu On My Mac\Documents\workspace\PyWind2')
 mpath = os.path.join(os.path.abspath('..'), 'PyShare\\PyShare')
 sys.path.append(mpath)
 import Wind
