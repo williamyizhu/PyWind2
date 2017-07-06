@@ -1,0 +1,1404 @@
+Welcome to use Wind Quant API for Python (WindPy)!
+You can use w.menu to help yourself to create commands(WSD,WSS,WST,WSI,WSQ,...)!
+
+COPYRIGHT (C) 2016 WIND HONGHUI INFORMATION & TECHKNOLEWDGE CO., LTD. ALL RIGHTS RESERVED.
+IN NO CIRCUMSTANCE SHALL WIND BE RESPONSIBLE FOR ANY DAMAGES OR LOSSES CAUSED BY USING WIND QUANT API FOR Python.
+cfe a599010101000000
+shf a599010201000000
+dce a599010301000000
+czc a599010401000000
+total number of [trading] contracts: 477
+1 in 477 update CFFEX.IC1709 2017-01-23 00:00:00 time frame eod len 4
+2 in 477 update CFFEX.IF1709 2017-01-23 00:00:00 time frame eod len 4
+3 in 477 update CFFEX.IH1709 2017-01-23 00:00:00 time frame eod len 4
+4 in 477 update CFFEX.T1709 2016-12-12 00:00:00 time frame eod len 4
+5 in 477 update CFFEX.TF1709 2016-12-12 00:00:00 time frame eod len 4
+6 in 477 update SHFE.AG1707 2016-07-18 00:00:00 time frame eod len 4
+7 in 477 update SHFE.AG1708 2016-08-16 00:00:00 time frame eod len 4
+8 in 477 update SHFE.AG1709 2016-09-20 00:00:00 time frame eod len 4
+9 in 477 update SHFE.AG1710 2016-10-18 00:00:00 time frame eod len 4
+10 in 477 update SHFE.AG1711 2016-11-16 00:00:00 time frame eod len 4
+11 in 477 update SHFE.AG1712 2016-12-16 00:00:00 time frame eod len 4
+12 in 477 update SHFE.AG1801 2017-01-17 00:00:00 time frame eod len 4
+13 in 477 update SHFE.AG1802 2017-02-16 00:00:00 time frame eod len 4
+14 in 477 update SHFE.AL1707 2016-07-18 00:00:00 time frame eod len 4
+15 in 477 update SHFE.AL1708 2016-08-16 00:00:00 time frame eod len 4
+16 in 477 update SHFE.AL1709 2016-09-20 00:00:00 time frame eod len 4
+17 in 477 update SHFE.AL1710 2016-10-18 00:00:00 time frame eod len 4
+18 in 477 update SHFE.AL1711 2016-11-16 00:00:00 time frame eod len 4
+19 in 477 update SHFE.AL1712 2016-12-16 00:00:00 time frame eod len 4
+20 in 477 update SHFE.AL1801 2017-01-17 00:00:00 time frame eod len 4
+21 in 477 update SHFE.AL1802 2017-02-16 00:00:00 time frame eod len 4
+22 in 477 update SHFE.AU1708 2016-07-18 00:00:00 time frame eod len 4
+23 in 477 update SHFE.AU1710 2016-09-20 00:00:00 time frame eod len 4
+24 in 477 update SHFE.AU1712 2016-11-16 00:00:00 time frame eod len 4
+25 in 477 update SHFE.AU1802 2017-01-17 00:00:00 time frame eod len 4
+26 in 477 update SHFE.BU1707 2017-01-17 00:00:00 time frame eod len 4
+27 in 477 update SHFE.BU1708 2017-02-16 00:00:00 time frame eod len 5
+28 in 477 update SHFE.BU1709 2015-09-16 00:00:00 time frame eod len 4
+29 in 477 update SHFE.BU1712 2015-12-16 00:00:00 time frame eod len 4
+30 in 477 update SHFE.BU1803 2016-03-16 00:00:00 time frame eod len 4
+31 in 477 update SHFE.BU1806 2016-06-16 00:00:00 time frame eod len 4
+32 in 477 update SHFE.BU1809 2016-09-20 00:00:00 time frame eod len 4
+33 in 477 update SHFE.BU1812 2016-12-16 00:00:00 time frame eod len 4
+34 in 477 update SHFE.CU1707 2016-07-18 00:00:00 time frame eod len 4
+35 in 477 update SHFE.CU1708 2016-08-16 00:00:00 time frame eod len 4
+36 in 477 update SHFE.CU1709 2016-09-20 00:00:00 time frame eod len 4
+37 in 477 update SHFE.CU1710 2016-10-18 00:00:00 time frame eod len 4
+38 in 477 update SHFE.CU1711 2016-11-16 00:00:00 time frame eod len 4
+39 in 477 update SHFE.CU1712 2016-12-16 00:00:00 time frame eod len 4
+40 in 477 update SHFE.CU1801 2017-01-17 00:00:00 time frame eod len 4
+41 in 477 update SHFE.CU1802 2017-02-16 00:00:00 time frame eod len 4
+42 in 477 update SHFE.FU1708 2016-08-01 00:00:00 time frame eod len 4
+43 in 477 update SHFE.FU1709 2016-09-01 00:00:00 time frame eod len 4
+44 in 477 update SHFE.FU1710 2016-10-10 00:00:00 time frame eod len 4
+45 in 477 update SHFE.FU1711 2016-11-01 00:00:00 time frame eod len 4
+46 in 477 update SHFE.FU1712 2016-12-01 00:00:00 time frame eod len 4
+47 in 477 update SHFE.FU1801 2017-01-03 00:00:00 time frame eod len 4
+48 in 477 update SHFE.HC1707 2016-07-18 00:00:00 time frame eod len 4
+49 in 477 update SHFE.HC1708 2016-08-16 00:00:00 time frame eod len 4
+50 in 477 update SHFE.HC1709 2016-09-20 00:00:00 time frame eod len 4
+51 in 477 update SHFE.HC1710 2016-10-18 00:00:00 time frame eod len 4
+52 in 477 update SHFE.HC1711 2016-11-16 00:00:00 time frame eod len 4
+53 in 477 update SHFE.HC1712 2016-12-16 00:00:00 time frame eod len 4
+54 in 477 update SHFE.HC1801 2017-01-17 00:00:00 time frame eod len 4
+55 in 477 update SHFE.HC1802 2017-02-16 00:00:00 time frame eod len 6
+56 in 477 update SHFE.NI1707 2016-07-18 00:00:00 time frame eod len 4
+57 in 477 update SHFE.NI1708 2016-08-16 00:00:00 time frame eod len 4
+58 in 477 update SHFE.NI1709 2016-09-20 00:00:00 time frame eod len 4
+59 in 477 update SHFE.NI1710 2016-10-18 00:00:00 time frame eod len 4
+60 in 477 update SHFE.NI1711 2016-11-16 00:00:00 time frame eod len 5
+61 in 477 update SHFE.NI1712 2016-12-16 00:00:00 time frame eod len 4
+62 in 477 update SHFE.NI1801 2017-01-17 00:00:00 time frame eod len 4
+63 in 477 update SHFE.NI1802 2017-02-16 00:00:00 time frame eod len 4
+64 in 477 update SHFE.PB1707 2016-07-18 00:00:00 time frame eod len 4
+65 in 477 update SHFE.PB1708 2016-08-16 00:00:00 time frame eod len 4
+66 in 477 update SHFE.PB1709 2016-09-20 00:00:00 time frame eod len 4
+67 in 477 update SHFE.PB1710 2016-10-18 00:00:00 time frame eod len 4
+68 in 477 update SHFE.PB1711 2016-11-16 00:00:00 time frame eod len 4
+69 in 477 update SHFE.PB1712 2016-12-16 00:00:00 time frame eod len 4
+70 in 477 update SHFE.PB1801 2017-01-17 00:00:00 time frame eod len 4
+71 in 477 update SHFE.PB1802 2017-02-16 00:00:00 time frame eod len 5
+72 in 477 update SHFE.RB1707 2016-07-18 00:00:00 time frame eod len 4
+73 in 477 update SHFE.RB1708 2016-08-16 00:00:00 time frame eod len 4
+74 in 477 update SHFE.RB1709 2016-09-20 00:00:00 time frame eod len 4
+75 in 477 update SHFE.RB1710 2016-10-18 00:00:00 time frame eod len 4
+76 in 477 update SHFE.RB1711 2016-11-16 00:00:00 time frame eod len 4
+77 in 477 update SHFE.RB1712 2016-12-16 00:00:00 time frame eod len 4
+78 in 477 update SHFE.RB1801 2017-01-17 00:00:00 time frame eod len 4
+79 in 477 update SHFE.RB1802 2017-02-16 00:00:00 time frame eod len 4
+80 in 477 update SHFE.RU1707 2016-07-18 00:00:00 time frame eod len 4
+81 in 477 update SHFE.RU1708 2016-08-16 00:00:00 time frame eod len 4
+82 in 477 update SHFE.RU1709 2016-09-20 00:00:00 time frame eod len 4
+83 in 477 update SHFE.RU1710 2016-10-18 00:00:00 time frame eod len 4
+84 in 477 update SHFE.RU1711 2016-11-16 00:00:00 time frame eod len 4
+85 in 477 update SHFE.RU1801 2017-01-17 00:00:00 time frame eod len 4
+86 in 477 update SHFE.SN1707 2016-07-18 00:00:00 time frame eod len 4
+87 in 477 update SHFE.SN1708 2016-08-16 00:00:00 time frame eod len 6
+88 in 477 update SHFE.SN1709 2016-09-20 00:00:00 time frame eod len 4
+89 in 477 update SHFE.SN1710 2016-10-18 00:00:00 time frame eod len 4
+90 in 477 update SHFE.SN1711 2016-11-16 00:00:00 time frame eod len 4
+91 in 477 update SHFE.SN1712 2016-12-16 00:00:00 time frame eod len 4
+92 in 477 update SHFE.SN1801 2017-01-17 00:00:00 time frame eod len 4
+93 in 477 update SHFE.SN1802 2017-02-16 00:00:00 time frame eod len 4
+94 in 477 update SHFE.WR1707 2016-07-18 00:00:00 time frame eod len 4
+95 in 477 update SHFE.WR1708 2016-08-16 00:00:00 time frame eod len 4
+96 in 477 update SHFE.WR1709 2016-09-20 00:00:00 time frame eod len 4
+97 in 477 update SHFE.WR1710 2016-10-18 00:00:00 time frame eod len 4
+98 in 477 update SHFE.WR1711 2016-11-16 00:00:00 time frame eod len 4
+99 in 477 update SHFE.WR1712 2016-12-16 00:00:00 time frame eod len 4
+100 in 477 update SHFE.WR1801 2017-01-17 00:00:00 time frame eod len 4
+101 in 477 update SHFE.WR1802 2017-02-16 00:00:00 time frame eod len 4
+102 in 477 update SHFE.ZN1707 2016-07-18 00:00:00 time frame eod len 4
+103 in 477 update SHFE.ZN1708 2016-08-16 00:00:00 time frame eod len 4
+104 in 477 update SHFE.ZN1709 2016-09-20 00:00:00 time frame eod len 4
+105 in 477 update SHFE.ZN1710 2016-10-18 00:00:00 time frame eod len 4
+106 in 477 update SHFE.ZN1711 2016-11-16 00:00:00 time frame eod len 4
+107 in 477 update SHFE.ZN1712 2016-12-16 00:00:00 time frame eod len 4
+108 in 477 update SHFE.ZN1801 2017-01-17 00:00:00 time frame eod len 4
+109 in 477 update SHFE.ZN1802 2017-02-16 00:00:00 time frame eod len 4
+110 in 477 update DCE.A1707 2016-01-18 00:00:00 time frame eod len 4
+111 in 477 update DCE.A1709 2016-03-15 00:00:00 time frame eod len 4
+112 in 477 update DCE.A1711 2016-05-17 00:00:00 time frame eod len 4
+113 in 477 update DCE.A1801 2016-07-15 00:00:00 time frame eod len 4
+114 in 477 update DCE.A1803 2016-09-19 00:00:00 time frame eod len 4
+115 in 477 update DCE.A1805 2016-11-15 00:00:00 time frame eod len 4
+116 in 477 update DCE.A1807 2017-01-17 00:00:00 time frame eod len 4
+117 in 477 update DCE.B1707 2016-07-15 00:00:00 time frame eod len 4
+118 in 477 update DCE.B1709 2016-09-19 00:00:00 time frame eod len 4
+119 in 477 update DCE.B1711 2016-11-15 00:00:00 time frame eod len 4
+120 in 477 update DCE.B1801 2017-01-17 00:00:00 time frame eod len 4
+121 in 477 update DCE.BB1707 2016-07-15 00:00:00 time frame eod len 4
+122 in 477 update DCE.BB1708 2016-08-15 00:00:00 time frame eod len 4
+123 in 477 update DCE.BB1709 2016-09-19 00:00:00 time frame eod len 4
+124 in 477 update DCE.BB1710 2016-10-24 00:00:00 time frame eod len 4
+125 in 477 update DCE.BB1711 2016-11-15 00:00:00 time frame eod len 4
+126 in 477 update DCE.BB1712 2016-12-15 00:00:00 time frame eod len 4
+127 in 477 update DCE.BB1801 2017-01-17 00:00:00 time frame eod len 4
+128 in 477 update DCE.BB1802 2017-02-17 00:00:00 time frame eod len 4
+129 in 477 update DCE.C1707 2016-07-15 00:00:00 time frame eod len 4
+130 in 477 update DCE.C1709 2016-09-19 00:00:00 time frame eod len 4
+131 in 477 update DCE.C1711 2016-11-15 00:00:00 time frame eod len 4
+132 in 477 update DCE.C1801 2017-01-17 00:00:00 time frame eod len 4
+133 in 477 update DCE.CS1707 2016-07-15 00:00:00 time frame eod len 5
+134 in 477 update DCE.CS1709 2016-09-19 00:00:00 time frame eod len 4
+135 in 477 update DCE.CS1711 2016-11-15 00:00:00 time frame eod len 4
+136 in 477 update DCE.CS1801 2017-01-17 00:00:00 time frame eod len 4
+137 in 477 update DCE.FB1707 2016-07-15 00:00:00 time frame eod len 4
+138 in 477 update DCE.FB1708 2016-08-15 00:00:00 time frame eod len 4
+139 in 477 update DCE.FB1709 2016-09-19 00:00:00 time frame eod len 4
+140 in 477 update DCE.FB1710 2016-10-24 00:00:00 time frame eod len 4
+141 in 477 update DCE.FB1711 2016-11-15 00:00:00 time frame eod len 4
+142 in 477 update DCE.FB1712 2016-12-15 00:00:00 time frame eod len 4
+143 in 477 update DCE.FB1801 2017-01-17 00:00:00 time frame eod len 5
+144 in 477 update DCE.FB1802 2017-02-17 00:00:00 time frame eod len 4
+145 in 477 update DCE.I1707 2016-07-15 00:00:00 time frame eod len 4
+146 in 477 update DCE.I1708 2016-08-15 00:00:00 time frame eod len 4
+147 in 477 update DCE.I1709 2016-09-19 00:00:00 time frame eod len 4
+148 in 477 update DCE.I1710 2016-10-24 00:00:00 time frame eod len 4
+149 in 477 update DCE.I1711 2016-11-15 00:00:00 time frame eod len 4
+150 in 477 update DCE.I1712 2016-12-15 00:00:00 time frame eod len 4
+151 in 477 update DCE.I1801 2017-01-17 00:00:00 time frame eod len 4
+152 in 477 update DCE.I1802 2017-02-17 00:00:00 time frame eod len 4
+153 in 477 update DCE.J1707 2016-07-15 00:00:00 time frame eod len 4
+154 in 477 update DCE.J1708 2016-08-15 00:00:00 time frame eod len 4
+155 in 477 update DCE.J1709 2016-09-19 00:00:00 time frame eod len 4
+156 in 477 update DCE.J1710 2016-10-24 00:00:00 time frame eod len 4
+157 in 477 update DCE.J1711 2016-11-15 00:00:00 time frame eod len 4
+158 in 477 update DCE.J1712 2016-12-15 00:00:00 time frame eod len 4
+159 in 477 update DCE.J1801 2017-01-17 00:00:00 time frame eod len 4
+160 in 477 update DCE.J1802 2017-02-17 00:00:00 time frame eod len 4
+161 in 477 update DCE.JD1707 2016-07-15 00:00:00 time frame eod len 4
+162 in 477 update DCE.JD1708 2016-08-15 00:00:00 time frame eod len 4
+163 in 477 update DCE.JD1709 2016-09-19 00:00:00 time frame eod len 4
+164 in 477 update DCE.JD1710 2016-10-24 00:00:00 time frame eod len 4
+165 in 477 update DCE.JD1711 2016-11-15 00:00:00 time frame eod len 4
+166 in 477 update DCE.JD1712 2016-12-15 00:00:00 time frame eod len 4
+167 in 477 update DCE.JD1801 2017-01-17 00:00:00 time frame eod len 4
+168 in 477 update DCE.JD1802 2017-02-17 00:00:00 time frame eod len 4
+169 in 477 update DCE.JM1707 2016-07-15 00:00:00 time frame eod len 4
+170 in 477 update DCE.JM1708 2016-08-15 00:00:00 time frame eod len 4
+171 in 477 update DCE.JM1709 2016-09-19 00:00:00 time frame eod len 4
+172 in 477 update DCE.JM1710 2016-10-24 00:00:00 time frame eod len 5
+173 in 477 update DCE.JM1711 2016-11-15 00:00:00 time frame eod len 4
+174 in 477 update DCE.JM1712 2016-12-15 00:00:00 time frame eod len 4
+175 in 477 update DCE.JM1801 2017-01-17 00:00:00 time frame eod len 4
+176 in 477 update DCE.JM1802 2017-02-17 00:00:00 time frame eod len 4
+177 in 477 update DCE.L1707 2016-07-15 00:00:00 time frame eod len 4
+178 in 477 update DCE.L1708 2016-08-15 00:00:00 time frame eod len 4
+179 in 477 update DCE.L1709 2016-09-19 00:00:00 time frame eod len 4
+180 in 477 update DCE.L1710 2016-10-24 00:00:00 time frame eod len 5
+181 in 477 update DCE.L1711 2016-11-15 00:00:00 time frame eod len 5
+182 in 477 update DCE.L1712 2016-12-15 00:00:00 time frame eod len 4
+183 in 477 update DCE.L1801 2017-01-17 00:00:00 time frame eod len 4
+184 in 477 update DCE.L1802 2017-02-17 00:00:00 time frame eod len 4
+185 in 477 update DCE.M1707 2016-07-15 00:00:00 time frame eod len 4
+186 in 477 update DCE.M1708 2016-08-15 00:00:00 time frame eod len 4
+187 in 477 update DCE.M1709 2016-09-19 00:00:00 time frame eod len 4
+188 in 477 update DCE.M1711 2016-11-15 00:00:00 time frame eod len 4
+189 in 477 update DCE.M1712 2016-12-15 00:00:00 time frame eod len 4
+190 in 477 update DCE.M1801 2017-01-17 00:00:00 time frame eod len 4
+191 in 477 update DCE.P1707 2016-07-15 00:00:00 time frame eod len 4
+192 in 477 update DCE.P1708 2016-08-15 00:00:00 time frame eod len 5
+193 in 477 update DCE.P1709 2016-09-19 00:00:00 time frame eod len 4
+194 in 477 update DCE.P1710 2016-10-24 00:00:00 time frame eod len 4
+195 in 477 update DCE.P1711 2016-11-15 00:00:00 time frame eod len 4
+196 in 477 update DCE.P1712 2016-12-15 00:00:00 time frame eod len 4
+197 in 477 update DCE.P1801 2017-01-17 00:00:00 time frame eod len 4
+198 in 477 update DCE.P1802 2017-02-17 00:00:00 time frame eod len 4
+199 in 477 update DCE.PP1707 2016-07-15 00:00:00 time frame eod len 4
+200 in 477 update DCE.PP1708 2016-08-15 00:00:00 time frame eod len 4
+201 in 477 update DCE.PP1709 2016-09-19 00:00:00 time frame eod len 4
+202 in 477 update DCE.PP1710 2016-10-24 00:00:00 time frame eod len 4
+203 in 477 update DCE.PP1711 2016-11-15 00:00:00 time frame eod len 4
+204 in 477 update DCE.PP1712 2016-12-15 00:00:00 time frame eod len 4
+205 in 477 update DCE.PP1801 2017-01-17 00:00:00 time frame eod len 4
+206 in 477 update DCE.PP1802 2017-02-17 00:00:00 time frame eod len 5
+207 in 477 update DCE.V1707 2016-07-15 00:00:00 time frame eod len 4
+208 in 477 update DCE.V1708 2016-08-15 00:00:00 time frame eod len 4
+209 in 477 update DCE.V1709 2016-09-19 00:00:00 time frame eod len 4
+210 in 477 update DCE.V1710 2016-10-24 00:00:00 time frame eod len 5
+211 in 477 update DCE.V1711 2016-11-15 00:00:00 time frame eod len 4
+212 in 477 update DCE.V1712 2016-12-15 00:00:00 time frame eod len 4
+213 in 477 update DCE.V1801 2017-01-17 00:00:00 time frame eod len 4
+214 in 477 update DCE.V1802 2017-02-17 00:00:00 time frame eod len 4
+215 in 477 update DCE.Y1707 2016-07-15 00:00:00 time frame eod len 5
+216 in 477 update DCE.Y1708 2016-08-15 00:00:00 time frame eod len 4
+217 in 477 update DCE.Y1709 2016-09-19 00:00:00 time frame eod len 4
+218 in 477 update DCE.Y1711 2016-11-15 00:00:00 time frame eod len 4
+219 in 477 update DCE.Y1712 2016-12-15 00:00:00 time frame eod len 4
+220 in 477 update DCE.Y1801 2017-01-17 00:00:00 time frame eod len 4
+221 in 477 update CZCE.CF707 2016-07-15 00:00:00 time frame eod len 4
+222 in 477 update CZCE.CF709 2016-09-19 00:00:00 time frame eod len 4
+223 in 477 update CZCE.CF711 2016-11-15 00:00:00 time frame eod len 4
+224 in 477 update CZCE.CF801 2017-01-17 00:00:00 time frame eod len 4
+225 in 477 update CZCE.FG707 2016-07-15 00:00:00 time frame eod len 4
+226 in 477 update CZCE.FG708 2016-08-15 00:00:00 time frame eod len 4
+227 in 477 update CZCE.FG709 2016-09-19 00:00:00 time frame eod len 4
+228 in 477 update CZCE.FG710 2016-10-24 00:00:00 time frame eod len 4
+229 in 477 update CZCE.FG711 2016-11-15 00:00:00 time frame eod len 4
+230 in 477 update CZCE.FG712 2016-12-15 00:00:00 time frame eod len 5
+231 in 477 update CZCE.FG801 2017-01-17 00:00:00 time frame eod len 4
+232 in 477 update CZCE.FG802 2017-02-17 00:00:00 time frame eod len 5
+233 in 477 update CZCE.JR707 2016-07-15 00:00:00 time frame eod len 4
+234 in 477 update CZCE.JR709 2016-09-19 00:00:00 time frame eod len 4
+235 in 477 update CZCE.JR711 2016-11-15 00:00:00 time frame eod len 4
+236 in 477 update CZCE.JR801 2017-01-17 00:00:00 time frame eod len 4
+237 in 477 update CZCE.LR707 2016-07-15 00:00:00 time frame eod len 4
+238 in 477 update CZCE.LR709 2016-09-19 00:00:00 time frame eod len 4
+239 in 477 update CZCE.LR711 2016-11-15 00:00:00 time frame eod len 4
+240 in 477 update CZCE.LR801 2017-01-17 00:00:00 time frame eod len 4
+241 in 477 update CZCE.MA707 2016-07-15 00:00:00 time frame eod len 4
+242 in 477 update CZCE.MA708 2016-08-15 00:00:00 time frame eod len 4
+243 in 477 update CZCE.MA709 2016-09-19 00:00:00 time frame eod len 4
+244 in 477 update CZCE.MA710 2016-10-24 00:00:00 time frame eod len 4
+245 in 477 update CZCE.MA711 2016-11-15 00:00:00 time frame eod len 5
+246 in 477 update CZCE.MA712 2016-12-15 00:00:00 time frame eod len 5
+247 in 477 update CZCE.MA801 2017-01-17 00:00:00 time frame eod len 4
+248 in 477 update CZCE.MA802 2017-02-17 00:00:00 time frame eod len 4
+249 in 477 update CZCE.OI707 2016-07-15 00:00:00 time frame eod len 4
+250 in 477 update CZCE.OI709 2016-09-19 00:00:00 time frame eod len 4
+251 in 477 update CZCE.OI711 2016-11-15 00:00:00 time frame eod len 4
+252 in 477 update CZCE.OI801 2017-01-17 00:00:00 time frame eod len 4
+253 in 477 update CZCE.PM707 2016-07-15 00:00:00 time frame eod len 4
+254 in 477 update CZCE.PM709 2016-09-19 00:00:00 time frame eod len 5
+255 in 477 update CZCE.PM711 2016-11-15 00:00:00 time frame eod len 4
+256 in 477 update CZCE.PM801 2017-01-17 00:00:00 time frame eod len 4
+257 in 477 update CZCE.RI707 2016-07-15 00:00:00 time frame eod len 4
+258 in 477 update CZCE.RI709 2016-09-19 00:00:00 time frame eod len 4
+259 in 477 update CZCE.RI711 2016-11-15 00:00:00 time frame eod len 4
+260 in 477 update CZCE.RI801 2017-01-17 00:00:00 time frame eod len 4
+261 in 477 update CZCE.RM707 2016-07-15 00:00:00 time frame eod len 4
+262 in 477 update CZCE.RM708 2016-08-15 00:00:00 time frame eod len 4
+263 in 477 update CZCE.RM709 2016-09-19 00:00:00 time frame eod len 4
+264 in 477 update CZCE.RM711 2016-11-15 00:00:00 time frame eod len 4
+265 in 477 update CZCE.RM801 2017-01-17 00:00:00 time frame eod len 4
+266 in 477 update CZCE.RS707 2016-07-15 00:00:00 time frame eod len 4
+267 in 477 update CZCE.RS708 2016-08-15 00:00:00 time frame eod len 4
+268 in 477 update CZCE.RS709 2016-09-19 00:00:00 time frame eod len 4
+269 in 477 update CZCE.RS711 2016-11-15 00:00:00 time frame eod len 4
+270 in 477 update CZCE.SF707 2016-07-15 00:00:00 time frame eod len 4
+271 in 477 update CZCE.SF708 2016-08-15 00:00:00 time frame eod len 4
+272 in 477 update CZCE.SF709 2016-09-19 00:00:00 time frame eod len 4
+273 in 477 update CZCE.SF710 2016-10-24 00:00:00 time frame eod len 4
+274 in 477 update CZCE.SF711 2016-11-15 00:00:00 time frame eod len 4
+275 in 477 update CZCE.SF712 2016-12-15 00:00:00 time frame eod len 4
+276 in 477 update CZCE.SF801 2017-01-17 00:00:00 time frame eod len 4
+277 in 477 update CZCE.SF802 2017-02-17 00:00:00 time frame eod len 4
+278 in 477 update CZCE.SM707 2016-07-15 00:00:00 time frame eod len 4
+279 in 477 update CZCE.SM708 2016-08-15 00:00:00 time frame eod len 4
+280 in 477 update CZCE.SM709 2016-09-19 00:00:00 time frame eod len 4
+281 in 477 update CZCE.SM710 2016-10-24 00:00:00 time frame eod len 4
+282 in 477 update CZCE.SM711 2016-11-15 00:00:00 time frame eod len 4
+283 in 477 update CZCE.SM712 2016-12-15 00:00:00 time frame eod len 4
+284 in 477 update CZCE.SM801 2017-01-17 00:00:00 time frame eod len 4
+285 in 477 update CZCE.SM802 2017-02-17 00:00:00 time frame eod len 4
+286 in 477 update CZCE.SR707 2016-01-18 00:00:00 time frame eod len 4
+287 in 477 update CZCE.SR709 2016-03-15 00:00:00 time frame eod len 4
+288 in 477 update CZCE.SR711 2016-05-17 00:00:00 time frame eod len 4
+289 in 477 update CZCE.SR801 2016-07-15 00:00:00 time frame eod len 4
+290 in 477 update CZCE.SR803 2016-09-19 00:00:00 time frame eod len 4
+291 in 477 update CZCE.SR805 2016-11-15 00:00:00 time frame eod len 4
+292 in 477 update CZCE.SR807 2017-01-17 00:00:00 time frame eod len 4
+293 in 477 update CZCE.TA707 2016-07-15 00:00:00 time frame eod len 4
+294 in 477 update CZCE.TA708 2016-08-15 00:00:00 time frame eod len 4
+295 in 477 update CZCE.TA709 2016-09-19 00:00:00 time frame eod len 4
+296 in 477 update CZCE.TA710 2016-10-24 00:00:00 time frame eod len 5
+297 in 477 update CZCE.TA711 2016-11-15 00:00:00 time frame eod len 5
+298 in 477 update CZCE.TA712 2016-12-15 00:00:00 time frame eod len 5
+299 in 477 update CZCE.TA801 2017-01-17 00:00:00 time frame eod len 4
+300 in 477 update CZCE.TA802 2017-02-17 00:00:00 time frame eod len 5
+301 in 477 update CZCE.WH707 2016-07-15 00:00:00 time frame eod len 4
+302 in 477 update CZCE.WH709 2016-09-19 00:00:00 time frame eod len 4
+303 in 477 update CZCE.WH711 2016-11-15 00:00:00 time frame eod len 4
+304 in 477 update CZCE.WH801 2017-01-17 00:00:00 time frame eod len 4
+305 in 477 update CZCE.ZC707 2016-07-08 00:00:00 time frame eod len 4
+306 in 477 update CZCE.ZC708 2016-08-08 00:00:00 time frame eod len 4
+307 in 477 update CZCE.ZC709 2016-09-08 00:00:00 time frame eod len 4
+308 in 477 update CZCE.ZC710 2016-10-17 00:00:00 time frame eod len 5
+309 in 477 update CZCE.ZC711 2016-11-08 00:00:00 time frame eod len 4
+310 in 477 update CZCE.ZC712 2016-12-08 00:00:00 time frame eod len 4
+311 in 477 update CZCE.ZC801 2017-01-10 00:00:00 time frame eod len 4
+312 in 477 update CZCE.ZC802 2017-02-10 00:00:00 time frame eod len 4
+313 in 477 update SHFE.FU1803 2017-03-01 00:00:00 time frame eod len 4
+314 in 477 update CZCE.ZC803 2017-03-08 00:00:00 time frame eod len 4
+315 in 477 update CFFEX.T1712 2017-03-13 00:00:00 time frame eod len 4
+316 in 477 update CFFEX.TF1712 2017-03-13 00:00:00 time frame eod len 4
+317 in 477 update DCE.A1809 2017-03-15 00:00:00 time frame eod len 4
+318 in 477 update DCE.B1803 2017-03-15 00:00:00 time frame eod len 4
+319 in 477 update DCE.BB1803 2017-03-15 00:00:00 time frame eod len 4
+320 in 477 update DCE.C1803 2017-03-15 00:00:00 time frame eod len 4
+321 in 477 update DCE.CS1803 2017-03-15 00:00:00 time frame eod len 4
+322 in 477 update DCE.FB1803 2017-03-15 00:00:00 time frame eod len 4
+323 in 477 update DCE.I1803 2017-03-15 00:00:00 time frame eod len 4
+324 in 477 update DCE.J1803 2017-03-15 00:00:00 time frame eod len 4
+325 in 477 update DCE.JD1803 2017-03-15 00:00:00 time frame eod len 4
+326 in 477 update DCE.JM1803 2017-03-15 00:00:00 time frame eod len 4
+327 in 477 update DCE.L1803 2017-03-15 00:00:00 time frame eod len 4
+328 in 477 update DCE.M1803 2017-03-15 00:00:00 time frame eod len 4
+329 in 477 update DCE.P1803 2017-03-15 00:00:00 time frame eod len 5
+330 in 477 update DCE.PP1803 2017-03-15 00:00:00 time frame eod len 4
+331 in 477 update DCE.V1803 2017-03-15 00:00:00 time frame eod len 4
+332 in 477 update DCE.Y1803 2017-03-15 00:00:00 time frame eod len 4
+333 in 477 update CZCE.CF803 2017-03-15 00:00:00 time frame eod len 5
+334 in 477 update CZCE.FG803 2017-03-15 00:00:00 time frame eod len 4
+335 in 477 update CZCE.JR803 2017-03-15 00:00:00 time frame eod len 4
+336 in 477 update CZCE.LR803 2017-03-15 00:00:00 time frame eod len 4
+337 in 477 update CZCE.MA803 2017-03-15 00:00:00 time frame eod len 4
+338 in 477 update CZCE.OI803 2017-03-15 00:00:00 time frame eod len 4
+339 in 477 update CZCE.PM803 2017-03-15 00:00:00 time frame eod len 4
+340 in 477 update CZCE.RI803 2017-03-15 00:00:00 time frame eod len 4
+341 in 477 update CZCE.RM803 2017-03-15 00:00:00 time frame eod len 4
+342 in 477 update CZCE.SF803 2017-03-15 00:00:00 time frame eod len 4
+343 in 477 update CZCE.SM803 2017-03-15 00:00:00 time frame eod len 4
+344 in 477 update CZCE.SR809 2017-03-15 00:00:00 time frame eod len 4
+345 in 477 update CZCE.TA803 2017-03-15 00:00:00 time frame eod len 4
+346 in 477 update CZCE.WH803 2017-03-15 00:00:00 time frame eod len 4
+347 in 477 update SHFE.AG1803 2017-03-16 00:00:00 time frame eod len 4
+348 in 477 update SHFE.AL1803 2017-03-16 00:00:00 time frame eod len 4
+349 in 477 update SHFE.AU1804 2017-03-16 00:00:00 time frame eod len 4
+350 in 477 update SHFE.BU1903 2017-03-16 00:00:00 time frame eod len 5
+351 in 477 update SHFE.CU1803 2017-03-16 00:00:00 time frame eod len 4
+352 in 477 update SHFE.HC1803 2017-03-16 00:00:00 time frame eod len 4
+353 in 477 update SHFE.NI1803 2017-03-16 00:00:00 time frame eod len 4
+354 in 477 update SHFE.PB1803 2017-03-16 00:00:00 time frame eod len 5
+355 in 477 update SHFE.RB1803 2017-03-16 00:00:00 time frame eod len 4
+356 in 477 update SHFE.RU1803 2017-03-16 00:00:00 time frame eod len 4
+357 in 477 update SHFE.SN1803 2017-03-16 00:00:00 time frame eod len 4
+358 in 477 update SHFE.WR1803 2017-03-16 00:00:00 time frame eod len 4
+359 in 477 update SHFE.ZN1803 2017-03-16 00:00:00 time frame eod len 4
+360 in 477 update SHFE.FU1804 2017-04-05 00:00:00 time frame eod len 4
+361 in 477 update CZCE.ZC804 2017-04-12 00:00:00 time frame eod len 4
+362 in 477 update SHFE.AG1804 2017-04-18 00:00:00 time frame eod len 4
+363 in 477 update SHFE.AL1804 2017-04-18 00:00:00 time frame eod len 4
+364 in 477 update SHFE.AU1707 2017-04-18 00:00:00 time frame eod len 4
+365 in 477 update SHFE.BU1710 2017-04-18 00:00:00 time frame eod len 4
+366 in 477 update SHFE.CU1804 2017-04-18 00:00:00 time frame eod len 4
+367 in 477 update SHFE.HC1804 2017-04-18 00:00:00 time frame eod len 4
+368 in 477 update SHFE.NI1804 2017-04-18 00:00:00 time frame eod len 4
+369 in 477 update SHFE.PB1804 2017-04-18 00:00:00 time frame eod len 5
+370 in 477 update SHFE.RB1804 2017-04-18 00:00:00 time frame eod len 4
+371 in 477 update SHFE.RU1804 2017-04-18 00:00:00 time frame eod len 4
+372 in 477 update SHFE.SN1804 2017-04-18 00:00:00 time frame eod len 4
+373 in 477 update SHFE.WR1804 2017-04-18 00:00:00 time frame eod len 4
+374 in 477 update SHFE.ZN1804 2017-04-18 00:00:00 time frame eod len 4
+375 in 477 update CFFEX.IC1712 2017-04-24 00:00:00 time frame eod len 4
+376 in 477 update CFFEX.IF1712 2017-04-24 00:00:00 time frame eod len 4
+377 in 477 update CFFEX.IH1712 2017-04-24 00:00:00 time frame eod len 4
+378 in 477 update SHFE.AG1805 2017-05-16 00:00:00 time frame eod len 4
+379 in 477 update SHFE.AL1805 2017-05-16 00:00:00 time frame eod len 4
+380 in 477 update SHFE.AU1806 2017-05-16 00:00:00 time frame eod len 4
+381 in 477 update SHFE.BU1711 2017-05-16 00:00:00 time frame eod len 4
+382 in 477 update SHFE.CU1805 2017-05-16 00:00:00 time frame eod len 4
+383 in 477 update SHFE.FU1805 2017-05-02 00:00:00 time frame eod len 4
+384 in 477 update SHFE.HC1805 2017-05-16 00:00:00 time frame eod len 4
+385 in 477 update SHFE.NI1805 2017-05-16 00:00:00 time frame eod len 4
+386 in 477 update SHFE.PB1805 2017-05-16 00:00:00 time frame eod len 4
+387 in 477 update SHFE.RB1805 2017-05-16 00:00:00 time frame eod len 4
+388 in 477 update SHFE.RU1805 2017-05-16 00:00:00 time frame eod len 4
+389 in 477 update SHFE.SN1805 2017-05-16 00:00:00 time frame eod len 4
+390 in 477 update SHFE.WR1805 2017-05-16 00:00:00 time frame eod len 4
+391 in 477 update SHFE.ZN1805 2017-05-16 00:00:00 time frame eod len 4
+392 in 477 update DCE.A1811 2017-05-16 00:00:00 time frame eod len 4
+393 in 477 update DCE.BB1804 2017-04-19 00:00:00 time frame eod len 5
+394 in 477 update DCE.BB1805 2017-05-16 00:00:00 time frame eod len 4
+395 in 477 update DCE.C1805 2017-05-16 00:00:00 time frame eod len 4
+396 in 477 update DCE.CS1805 2017-05-16 00:00:00 time frame eod len 4
+397 in 477 update DCE.FB1804 2017-04-19 00:00:00 time frame eod len 4
+398 in 477 update DCE.FB1805 2017-05-16 00:00:00 time frame eod len 4
+399 in 477 update DCE.I1804 2017-04-19 00:00:00 time frame eod len 4
+400 in 477 update DCE.I1805 2017-05-16 00:00:00 time frame eod len 4
+401 in 477 update DCE.J1804 2017-04-19 00:00:00 time frame eod len 4
+402 in 477 update DCE.J1805 2017-05-16 00:00:00 time frame eod len 4
+403 in 477 update DCE.JD1804 2017-04-26 00:00:00 time frame eod len 4
+404 in 477 update DCE.JM1804 2017-04-19 00:00:00 time frame eod len 4
+405 in 477 update DCE.JM1805 2017-05-16 00:00:00 time frame eod len 4
+406 in 477 update DCE.L1804 2017-04-19 00:00:00 time frame eod len 4
+407 in 477 update DCE.L1805 2017-05-16 00:00:00 time frame eod len 4
+408 in 477 update DCE.M1805 2017-05-16 00:00:00 time frame eod len 4
+409 in 477 update DCE.P1804 2017-04-19 00:00:00 time frame eod len 4
+410 in 477 update DCE.P1805 2017-05-16 00:00:00 time frame eod len 4
+411 in 477 update DCE.PP1804 2017-04-19 00:00:00 time frame eod len 5
+412 in 477 update DCE.PP1805 2017-05-16 00:00:00 time frame eod len 4
+413 in 477 update DCE.V1804 2017-04-19 00:00:00 time frame eod len 4
+414 in 477 update DCE.V1805 2017-05-16 00:00:00 time frame eod len 4
+415 in 477 update DCE.Y1805 2017-05-16 00:00:00 time frame eod len 4
+416 in 477 update CZCE.CF805 2017-05-16 00:00:00 time frame eod len 4
+417 in 477 update CZCE.FG804 2017-04-19 00:00:00 time frame eod len 4
+418 in 477 update CZCE.FG805 2017-05-16 00:00:00 time frame eod len 4
+419 in 477 update CZCE.JR805 2017-05-16 00:00:00 time frame eod len 4
+420 in 477 update CZCE.LR805 2017-05-16 00:00:00 time frame eod len 4
+421 in 477 update CZCE.MA804 2017-04-19 00:00:00 time frame eod len 4
+422 in 477 update CZCE.MA805 2017-05-16 00:00:00 time frame eod len 4
+423 in 477 update CZCE.OI805 2017-05-16 00:00:00 time frame eod len 4
+424 in 477 update CZCE.PM805 2017-05-16 00:00:00 time frame eod len 4
+425 in 477 update CZCE.RI805 2017-05-16 00:00:00 time frame eod len 4
+426 in 477 update CZCE.RM805 2017-05-16 00:00:00 time frame eod len 4
+427 in 477 update CZCE.SF804 2017-04-19 00:00:00 time frame eod len 4
+428 in 477 update CZCE.SF805 2017-05-16 00:00:00 time frame eod len 5
+429 in 477 update CZCE.SM804 2017-04-19 00:00:00 time frame eod len 4
+430 in 477 update CZCE.SM805 2017-05-16 00:00:00 time frame eod len 4
+431 in 477 update CZCE.SR811 2017-05-16 00:00:00 time frame eod len 4
+432 in 477 update CZCE.TA804 2017-04-19 00:00:00 time frame eod len 4
+433 in 477 update CZCE.TA805 2017-05-16 00:00:00 time frame eod len 4
+434 in 477 update CZCE.WH805 2017-05-16 00:00:00 time frame eod len 4
+435 in 477 update CZCE.ZC805 2017-05-09 00:00:00 time frame eod len 4
+436 in 477 update CFFEX.IC1707 2017-05-22 00:00:00 time frame eod len 4
+437 in 477 update CFFEX.IC1708 2017-06-19 00:00:00 time frame eod len 4
+438 in 477 update CFFEX.IF1707 2017-05-22 00:00:00 time frame eod len 4
+439 in 477 update CFFEX.IF1708 2017-06-19 00:00:00 time frame eod len 4
+440 in 477 update CFFEX.IH1707 2017-05-22 00:00:00 time frame eod len 4
+441 in 477 update CFFEX.IH1708 2017-06-19 00:00:00 time frame eod len 4
+442 in 477 update CFFEX.T1803 2017-06-12 00:00:00 time frame eod len 4
+443 in 477 update CFFEX.TF1803 2017-06-12 00:00:00 time frame eod len 4
+444 in 477 update SHFE.AG1806 2017-06-16 00:00:00 time frame eod len 4
+445 in 477 update SHFE.AL1806 2017-06-16 00:00:00 time frame eod len 4
+446 in 477 update SHFE.AU1709 2017-06-16 00:00:00 time frame eod len 4
+447 in 477 update SHFE.BU1906 2017-06-16 00:00:00 time frame eod len 4
+448 in 477 update SHFE.CU1806 2017-06-16 00:00:00 time frame eod len 4
+449 in 477 update SHFE.FU1806 2017-06-01 00:00:00 time frame eod len 4
+450 in 477 update SHFE.FU1807 2017-07-03 00:00:00 time frame eod len 4
+451 in 477 update SHFE.HC1806 2017-06-16 00:00:00 time frame eod len 4
+452 in 477 update SHFE.NI1806 2017-06-16 00:00:00 time frame eod len 4
+453 in 477 update SHFE.PB1806 2017-06-16 00:00:00 time frame eod len 4
+454 in 477 update SHFE.RB1806 2017-06-16 00:00:00 time frame eod len 4
+455 in 477 update SHFE.RU1806 2017-06-16 00:00:00 time frame eod len 4
+456 in 477 update SHFE.SN1806 2017-06-16 00:00:00 time frame eod len 4
+457 in 477 update SHFE.WR1806 2017-06-16 00:00:00 time frame eod len 4
+458 in 477 update SHFE.ZN1806 2017-06-16 00:00:00 time frame eod len 4
+459 in 477 update DCE.B1805 2017-05-31 00:00:00 time frame eod len 4
+460 in 477 update DCE.B1806 2017-06-15 00:00:00 time frame eod len 4
+461 in 477 update DCE.BB1806 2017-06-15 00:00:00 time frame eod len 4
+462 in 477 update DCE.FB1806 2017-06-15 00:00:00 time frame eod len 4
+463 in 477 update DCE.I1806 2017-06-15 00:00:00 time frame eod len 4
+464 in 477 update DCE.J1806 2017-06-15 00:00:00 time frame eod len 4
+465 in 477 update DCE.JD1805 2017-05-25 00:00:00 time frame eod len 4
+466 in 477 update DCE.JD1806 2017-06-28 00:00:00 time frame eod len 4
+467 in 477 update DCE.JM1806 2017-06-15 00:00:00 time frame eod len 4
+468 in 477 update DCE.L1806 2017-06-15 00:00:00 time frame eod len 4
+469 in 477 update DCE.P1806 2017-06-15 00:00:00 time frame eod len 4
+470 in 477 update DCE.PP1806 2017-06-15 00:00:00 time frame eod len 4
+471 in 477 update DCE.V1806 2017-06-15 00:00:00 time frame eod len 4
+472 in 477 update CZCE.FG806 2017-06-15 00:00:00 time frame eod len 5
+473 in 477 update CZCE.MA806 2017-06-15 00:00:00 time frame eod len 4
+474 in 477 update CZCE.SF806 2017-06-15 00:00:00 time frame eod len 4
+475 in 477 update CZCE.SM806 2017-06-15 00:00:00 time frame eod len 4
+476 in 477 update CZCE.TA806 2017-06-15 00:00:00 time frame eod len 4
+477 in 477 update CZCE.ZC806 2017-06-08 00:00:00 time frame eod len 4
+mongodb config file [Z:\williamyizhu On My Mac\Documents\workspace\PyShare\config\mongodb_connection.ini] has [6] sections
+wind_mongodb2 mongodb is conncected on ip1
+1 in 477 CFFEX.IC1709_eod  nInserted 0 nMatched 106 nModified 0 nRemoved 0 nUpserted 0
+2 in 477 CFFEX.IF1709_eod  nInserted 0 nMatched 106 nModified 0 nRemoved 0 nUpserted 0
+3 in 477 CFFEX.IH1709_eod  nInserted 0 nMatched 106 nModified 0 nRemoved 0 nUpserted 0
+4 in 477 CFFEX.T1709_eod  nInserted 0 nMatched 135 nModified 0 nRemoved 0 nUpserted 0
+5 in 477 CFFEX.TF1709_eod  nInserted 0 nMatched 135 nModified 0 nRemoved 0 nUpserted 0
+6 in 477 SHFE.AG1707_eod  nInserted 0 nMatched 232 nModified 0 nRemoved 0 nUpserted 0
+7 in 477 SHFE.AG1708_eod  nInserted 0 nMatched 206 nModified 0 nRemoved 0 nUpserted 0
+8 in 477 SHFE.AG1709_eod  nInserted 0 nMatched 187 nModified 0 nRemoved 0 nUpserted 0
+9 in 477 SHFE.AG1710_eod  nInserted 0 nMatched 167 nModified 0 nRemoved 0 nUpserted 0
+10 in 477 SHFE.AG1711_eod  nInserted 0 nMatched 139 nModified 0 nRemoved 0 nUpserted 0
+11 in 477 SHFE.AG1712_eod  nInserted 0 nMatched 131 nModified 0 nRemoved 0 nUpserted 0
+12 in 477 SHFE.AG1801_eod  nInserted 0 nMatched 106 nModified 0 nRemoved 0 nUpserted 0
+13 in 477 SHFE.AG1802_eod  nInserted 0 nMatched 96 nModified 0 nRemoved 0 nUpserted 0
+14 in 477 SHFE.AL1707_eod  nInserted 0 nMatched 232 nModified 0 nRemoved 0 nUpserted 0
+15 in 477 SHFE.AL1708_eod  nInserted 0 nMatched 212 nModified 0 nRemoved 0 nUpserted 0
+16 in 477 SHFE.AL1709_eod  nInserted 0 nMatched 189 nModified 0 nRemoved 0 nUpserted 0
+17 in 477 SHFE.AL1710_eod  nInserted 0 nMatched 174 nModified 0 nRemoved 0 nUpserted 0
+18 in 477 SHFE.AL1711_eod  nInserted 0 nMatched 153 nModified 0 nRemoved 0 nUpserted 0
+19 in 477 SHFE.AL1712_eod  nInserted 0 nMatched 131 nModified 0 nRemoved 0 nUpserted 0
+20 in 477 SHFE.AL1801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+21 in 477 SHFE.AL1802_eod  nInserted 0 nMatched 97 nModified 0 nRemoved 0 nUpserted 0
+22 in 477 SHFE.AU1708_eod  nInserted 0 nMatched 226 nModified 0 nRemoved 0 nUpserted 0
+23 in 477 SHFE.AU1710_eod  nInserted 0 nMatched 174 nModified 0 nRemoved 0 nUpserted 0
+24 in 477 SHFE.AU1712_eod  nInserted 0 nMatched 153 nModified 0 nRemoved 0 nUpserted 0
+25 in 477 SHFE.AU1802_eod  nInserted 0 nMatched 99 nModified 0 nRemoved 0 nUpserted 0
+26 in 477 SHFE.BU1707_eod  nInserted 0 nMatched 102 nModified 0 nRemoved 0 nUpserted 0
+27 in 477 SHFE.BU1708_eod  nInserted 0 nMatched 66 nModified 0 nRemoved 0 nUpserted 0
+28 in 477 SHFE.BU1709_eod  nInserted 0 nMatched 434 nModified 0 nRemoved 0 nUpserted 0
+29 in 477 SHFE.BU1712_eod  nInserted 0 nMatched 373 nModified 0 nRemoved 0 nUpserted 0
+30 in 477 SHFE.BU1803_eod  nInserted 0 nMatched 315 nModified 0 nRemoved 0 nUpserted 0
+31 in 477 SHFE.BU1806_eod  nInserted 0 nMatched 255 nModified 0 nRemoved 0 nUpserted 0
+32 in 477 SHFE.BU1809_eod  nInserted 0 nMatched 189 nModified 0 nRemoved 0 nUpserted 0
+33 in 477 SHFE.BU1812_eod  nInserted 0 nMatched 131 nModified 0 nRemoved 0 nUpserted 0
+34 in 477 SHFE.CU1707_eod  nInserted 0 nMatched 233 nModified 0 nRemoved 0 nUpserted 0
+35 in 477 SHFE.CU1708_eod  nInserted 0 nMatched 212 nModified 0 nRemoved 0 nUpserted 0
+36 in 477 SHFE.CU1709_eod  nInserted 0 nMatched 189 nModified 0 nRemoved 0 nUpserted 0
+37 in 477 SHFE.CU1710_eod  nInserted 0 nMatched 174 nModified 0 nRemoved 0 nUpserted 0
+38 in 477 SHFE.CU1711_eod  nInserted 0 nMatched 153 nModified 0 nRemoved 0 nUpserted 0
+39 in 477 SHFE.CU1712_eod  nInserted 0 nMatched 131 nModified 0 nRemoved 0 nUpserted 0
+40 in 477 SHFE.CU1801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+41 in 477 SHFE.CU1802_eod  nInserted 0 nMatched 97 nModified 0 nRemoved 0 nUpserted 0
+42 in 477 SHFE.FU1708_eod  nInserted 0 nMatched 41 nModified 0 nRemoved 0 nUpserted 0
+43 in 477 SHFE.FU1709_eod  nInserted 0 nMatched 4 nModified 0 nRemoved 0 nUpserted 0
+44 in 477 SHFE.FU1710_eod  nInserted 0 nMatched 5 nModified 0 nRemoved 0 nUpserted 0
+45 in 477 SHFE.FU1711_eod  nInserted 0 nMatched 63 nModified 0 nRemoved 0 nUpserted 0
+46 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.FU1712.csv
+47 in 477 SHFE.FU1801_eod  nInserted 0 nMatched 15 nModified 0 nRemoved 0 nUpserted 0
+48 in 477 SHFE.HC1707_eod  nInserted 0 nMatched 172 nModified 0 nRemoved 0 nUpserted 0
+49 in 477 SHFE.HC1708_eod  nInserted 0 nMatched 123 nModified 0 nRemoved 0 nUpserted 0
+50 in 477 SHFE.HC1709_eod  nInserted 0 nMatched 188 nModified 0 nRemoved 0 nUpserted 0
+51 in 477 SHFE.HC1710_eod  nInserted 0 nMatched 174 nModified 0 nRemoved 0 nUpserted 0
+52 in 477 SHFE.HC1711_eod  nInserted 0 nMatched 62 nModified 0 nRemoved 0 nUpserted 0
+53 in 477 SHFE.HC1712_eod  nInserted 0 nMatched 75 nModified 0 nRemoved 0 nUpserted 0
+54 in 477 SHFE.HC1801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+55 in 477 SHFE.HC1802_eod  nInserted 0 nMatched 47 nModified 0 nRemoved 0 nUpserted 0
+56 in 477 SHFE.NI1707_eod  nInserted 0 nMatched 189 nModified 0 nRemoved 0 nUpserted 0
+57 in 477 SHFE.NI1708_eod  nInserted 0 nMatched 194 nModified 0 nRemoved 0 nUpserted 0
+58 in 477 SHFE.NI1709_eod  nInserted 0 nMatched 189 nModified 0 nRemoved 0 nUpserted 0
+59 in 477 SHFE.NI1710_eod  nInserted 0 nMatched 157 nModified 0 nRemoved 0 nUpserted 0
+60 in 477 SHFE.NI1711_eod  nInserted 0 nMatched 105 nModified 0 nRemoved 0 nUpserted 0
+61 in 477 SHFE.NI1712_eod  nInserted 0 nMatched 128 nModified 0 nRemoved 0 nUpserted 0
+62 in 477 SHFE.NI1801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+63 in 477 SHFE.NI1802_eod  nInserted 0 nMatched 68 nModified 0 nRemoved 0 nUpserted 0
+64 in 477 SHFE.PB1707_eod  nInserted 0 nMatched 232 nModified 0 nRemoved 0 nUpserted 0
+65 in 477 SHFE.PB1708_eod  nInserted 0 nMatched 204 nModified 0 nRemoved 0 nUpserted 0
+66 in 477 SHFE.PB1709_eod  nInserted 0 nMatched 183 nModified 0 nRemoved 0 nUpserted 0
+67 in 477 SHFE.PB1710_eod  nInserted 0 nMatched 167 nModified 0 nRemoved 0 nUpserted 0
+68 in 477 SHFE.PB1711_eod  nInserted 0 nMatched 140 nModified 0 nRemoved 0 nUpserted 0
+69 in 477 SHFE.PB1712_eod  nInserted 0 nMatched 113 nModified 0 nRemoved 0 nUpserted 0
+70 in 477 SHFE.PB1801_eod  nInserted 0 nMatched 90 nModified 0 nRemoved 0 nUpserted 0
+71 in 477 SHFE.PB1802_eod  nInserted 0 nMatched 88 nModified 0 nRemoved 0 nUpserted 0
+72 in 477 SHFE.RB1707_eod  nInserted 0 nMatched 229 nModified 0 nRemoved 0 nUpserted 0
+73 in 477 SHFE.RB1708_eod  nInserted 0 nMatched 212 nModified 0 nRemoved 0 nUpserted 0
+74 in 477 SHFE.RB1709_eod  nInserted 0 nMatched 189 nModified 0 nRemoved 0 nUpserted 0
+75 in 477 SHFE.RB1710_eod  nInserted 0 nMatched 174 nModified 0 nRemoved 0 nUpserted 0
+76 in 477 SHFE.RB1711_eod  nInserted 0 nMatched 153 nModified 0 nRemoved 0 nUpserted 0
+77 in 477 SHFE.RB1712_eod  nInserted 0 nMatched 131 nModified 0 nRemoved 0 nUpserted 0
+78 in 477 SHFE.RB1801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+79 in 477 SHFE.RB1802_eod  nInserted 0 nMatched 97 nModified 0 nRemoved 0 nUpserted 0
+80 in 477 SHFE.RU1707_eod  nInserted 0 nMatched 233 nModified 0 nRemoved 0 nUpserted 0
+81 in 477 SHFE.RU1708_eod  nInserted 0 nMatched 202 nModified 0 nRemoved 0 nUpserted 0
+82 in 477 SHFE.RU1709_eod  nInserted 0 nMatched 189 nModified 0 nRemoved 0 nUpserted 0
+83 in 477 SHFE.RU1710_eod  nInserted 0 nMatched 173 nModified 0 nRemoved 0 nUpserted 0
+84 in 477 SHFE.RU1711_eod  nInserted 0 nMatched 153 nModified 0 nRemoved 0 nUpserted 0
+85 in 477 SHFE.RU1801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+86 in 477 SHFE.SN1707_eod  nInserted 0 nMatched 28 nModified 0 nRemoved 0 nUpserted 0
+87 in 477 SHFE.SN1708_eod  nInserted 0 nMatched 51 nModified 0 nRemoved 0 nUpserted 0
+88 in 477 SHFE.SN1709_eod  nInserted 0 nMatched 177 nModified 0 nRemoved 0 nUpserted 0
+89 in 477 SHFE.SN1710_eod  nInserted 0 nMatched 54 nModified 0 nRemoved 0 nUpserted 0
+90 in 477 SHFE.SN1711_eod  nInserted 0 nMatched 53 nModified 0 nRemoved 0 nUpserted 0
+91 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.SN1712.csv
+92 in 477 SHFE.SN1801_eod  nInserted 0 nMatched 95 nModified 0 nRemoved 0 nUpserted 0
+93 in 477 SHFE.SN1802_eod  nInserted 0 nMatched 21 nModified 0 nRemoved 0 nUpserted 0
+94 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.WR1707.csv
+95 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.WR1708.csv
+96 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.WR1709.csv
+97 in 477 SHFE.WR1710_eod  nInserted 0 nMatched 14 nModified 0 nRemoved 0 nUpserted 0
+98 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.WR1711.csv
+99 in 477 SHFE.WR1712_eod  nInserted 0 nMatched 43 nModified 0 nRemoved 0 nUpserted 0
+100 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.WR1801.csv
+101 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.WR1802.csv
+102 in 477 SHFE.ZN1707_eod  nInserted 0 nMatched 232 nModified 0 nRemoved 0 nUpserted 0
+103 in 477 SHFE.ZN1708_eod  nInserted 0 nMatched 212 nModified 0 nRemoved 0 nUpserted 0
+104 in 477 SHFE.ZN1709_eod  nInserted 0 nMatched 189 nModified 0 nRemoved 0 nUpserted 0
+105 in 477 SHFE.ZN1710_eod  nInserted 0 nMatched 174 nModified 0 nRemoved 0 nUpserted 0
+106 in 477 SHFE.ZN1711_eod  nInserted 0 nMatched 153 nModified 0 nRemoved 0 nUpserted 0
+107 in 477 SHFE.ZN1712_eod  nInserted 0 nMatched 131 nModified 0 nRemoved 0 nUpserted 0
+108 in 477 SHFE.ZN1801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+109 in 477 SHFE.ZN1802_eod  nInserted 0 nMatched 97 nModified 0 nRemoved 0 nUpserted 0
+110 in 477 DCE.A1707_eod  nInserted 0 nMatched 295 nModified 0 nRemoved 0 nUpserted 0
+111 in 477 DCE.A1709_eod  nInserted 0 nMatched 318 nModified 0 nRemoved 0 nUpserted 0
+112 in 477 DCE.A1711_eod  nInserted 0 nMatched 262 nModified 0 nRemoved 0 nUpserted 0
+113 in 477 DCE.A1801_eod  nInserted 0 nMatched 234 nModified 0 nRemoved 0 nUpserted 0
+114 in 477 DCE.A1803_eod  nInserted 0 nMatched 104 nModified 0 nRemoved 0 nUpserted 0
+115 in 477 DCE.A1805_eod  nInserted 0 nMatched 154 nModified 0 nRemoved 0 nUpserted 0
+116 in 477 DCE.A1807_eod  nInserted 0 nMatched 56 nModified 0 nRemoved 0 nUpserted 0
+117 in 477 DCE.B1707_eod  nInserted 0 nMatched 124 nModified 0 nRemoved 0 nUpserted 0
+118 in 477 DCE.B1709_eod  nInserted 0 nMatched 147 nModified 0 nRemoved 0 nUpserted 0
+119 in 477 DCE.B1711_eod  nInserted 0 nMatched 22 nModified 0 nRemoved 0 nUpserted 0
+120 in 477 DCE.B1801_eod  nInserted 0 nMatched 55 nModified 0 nRemoved 0 nUpserted 0
+121 in 477 DCE.BB1707_eod  nInserted 0 nMatched 7 nModified 0 nRemoved 0 nUpserted 0
+122 in 477 DCE.BB1708_eod  nInserted 0 nMatched 2 nModified 0 nRemoved 0 nUpserted 0
+123 in 477 DCE.BB1709_eod  nInserted 0 nMatched 39 nModified 0 nRemoved 0 nUpserted 0
+124 in 477 DCE.BB1710_eod  nInserted 0 nMatched 14 nModified 0 nRemoved 0 nUpserted 0
+125 in 477 DCE.BB1711_eod  nInserted 0 nMatched 46 nModified 0 nRemoved 0 nUpserted 0
+126 in 477 DCE.BB1712_eod  nInserted 0 nMatched 11 nModified 0 nRemoved 0 nUpserted 0
+127 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.BB1801.csv
+128 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.BB1802.csv
+129 in 477 DCE.C1707_eod  nInserted 0 nMatched 235 nModified 0 nRemoved 0 nUpserted 0
+130 in 477 DCE.C1709_eod  nInserted 0 nMatched 191 nModified 0 nRemoved 0 nUpserted 0
+131 in 477 DCE.C1711_eod  nInserted 0 nMatched 155 nModified 0 nRemoved 0 nUpserted 0
+132 in 477 DCE.C1801_eod  nInserted 0 nMatched 111 nModified 0 nRemoved 0 nUpserted 0
+133 in 477 DCE.CS1707_eod  nInserted 0 nMatched 231 nModified 0 nRemoved 0 nUpserted 0
+134 in 477 DCE.CS1709_eod  nInserted 0 nMatched 191 nModified 0 nRemoved 0 nUpserted 0
+135 in 477 DCE.CS1711_eod  nInserted 0 nMatched 130 nModified 0 nRemoved 0 nUpserted 0
+136 in 477 DCE.CS1801_eod  nInserted 0 nMatched 111 nModified 0 nRemoved 0 nUpserted 0
+137 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.FB1707.csv
+138 in 477 DCE.FB1708_eod  nInserted 0 nMatched 3 nModified 0 nRemoved 0 nUpserted 0
+139 in 477 DCE.FB1709_eod  nInserted 0 nMatched 111 nModified 0 nRemoved 0 nUpserted 0
+140 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.FB1710.csv
+141 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.FB1711.csv
+142 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.FB1712.csv
+143 in 477 DCE.FB1801_eod  nInserted 0 nMatched 7 nModified 0 nRemoved 0 nUpserted 0
+144 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.FB1802.csv
+145 in 477 DCE.I1707_eod  nInserted 0 nMatched 228 nModified 0 nRemoved 0 nUpserted 0
+146 in 477 DCE.I1708_eod  nInserted 0 nMatched 209 nModified 0 nRemoved 0 nUpserted 0
+147 in 477 DCE.I1709_eod  nInserted 0 nMatched 190 nModified 0 nRemoved 0 nUpserted 0
+148 in 477 DCE.I1710_eod  nInserted 0 nMatched 170 nModified 0 nRemoved 0 nUpserted 0
+149 in 477 DCE.I1711_eod  nInserted 0 nMatched 148 nModified 0 nRemoved 0 nUpserted 0
+150 in 477 DCE.I1712_eod  nInserted 0 nMatched 123 nModified 0 nRemoved 0 nUpserted 0
+151 in 477 DCE.I1801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+152 in 477 DCE.I1802_eod  nInserted 0 nMatched 96 nModified 0 nRemoved 0 nUpserted 0
+153 in 477 DCE.J1707_eod  nInserted 0 nMatched 179 nModified 0 nRemoved 0 nUpserted 0
+154 in 477 DCE.J1708_eod  nInserted 0 nMatched 157 nModified 0 nRemoved 0 nUpserted 0
+155 in 477 DCE.J1709_eod  nInserted 0 nMatched 190 nModified 0 nRemoved 0 nUpserted 0
+156 in 477 DCE.J1710_eod  nInserted 0 nMatched 144 nModified 0 nRemoved 0 nUpserted 0
+157 in 477 DCE.J1711_eod  nInserted 0 nMatched 137 nModified 0 nRemoved 0 nUpserted 0
+158 in 477 DCE.J1712_eod  nInserted 0 nMatched 101 nModified 0 nRemoved 0 nUpserted 0
+159 in 477 DCE.J1801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+160 in 477 DCE.J1802_eod  nInserted 0 nMatched 57 nModified 0 nRemoved 0 nUpserted 0
+161 in 477 DCE.JD1707_eod  nInserted 0 nMatched 230 nModified 0 nRemoved 0 nUpserted 0
+162 in 477 DCE.JD1708_eod  nInserted 0 nMatched 212 nModified 0 nRemoved 0 nUpserted 0
+163 in 477 DCE.JD1709_eod  nInserted 0 nMatched 191 nModified 0 nRemoved 0 nUpserted 0
+164 in 477 DCE.JD1710_eod  nInserted 0 nMatched 171 nModified 0 nRemoved 0 nUpserted 0
+165 in 477 DCE.JD1711_eod  nInserted 0 nMatched 149 nModified 0 nRemoved 0 nUpserted 0
+166 in 477 DCE.JD1712_eod  nInserted 0 nMatched 99 nModified 0 nRemoved 0 nUpserted 0
+167 in 477 DCE.JD1801_eod  nInserted 0 nMatched 111 nModified 0 nRemoved 0 nUpserted 0
+168 in 477 DCE.JD1802_eod  nInserted 0 nMatched 96 nModified 0 nRemoved 0 nUpserted 0
+169 in 477 DCE.JM1707_eod  nInserted 0 nMatched 169 nModified 0 nRemoved 0 nUpserted 0
+170 in 477 DCE.JM1708_eod  nInserted 0 nMatched 123 nModified 0 nRemoved 0 nUpserted 0
+171 in 477 DCE.JM1709_eod  nInserted 0 nMatched 189 nModified 0 nRemoved 0 nUpserted 0
+172 in 477 DCE.JM1710_eod  nInserted 0 nMatched 138 nModified 0 nRemoved 0 nUpserted 0
+173 in 477 DCE.JM1711_eod  nInserted 0 nMatched 67 nModified 0 nRemoved 0 nUpserted 0
+174 in 477 DCE.JM1712_eod  nInserted 0 nMatched 54 nModified 0 nRemoved 0 nUpserted 0
+175 in 477 DCE.JM1801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+176 in 477 DCE.JM1802_eod  nInserted 0 nMatched 32 nModified 0 nRemoved 0 nUpserted 0
+177 in 477 DCE.L1707_eod  nInserted 0 nMatched 173 nModified 0 nRemoved 0 nUpserted 0
+178 in 477 DCE.L1708_eod  nInserted 0 nMatched 158 nModified 0 nRemoved 0 nUpserted 0
+179 in 477 DCE.L1709_eod  nInserted 0 nMatched 191 nModified 0 nRemoved 0 nUpserted 0
+180 in 477 DCE.L1710_eod  nInserted 0 nMatched 109 nModified 0 nRemoved 0 nUpserted 0
+181 in 477 DCE.L1711_eod  nInserted 0 nMatched 103 nModified 0 nRemoved 0 nUpserted 0
+182 in 477 DCE.L1712_eod  nInserted 0 nMatched 77 nModified 0 nRemoved 0 nUpserted 0
+183 in 477 DCE.L1801_eod  nInserted 0 nMatched 111 nModified 0 nRemoved 0 nUpserted 0
+184 in 477 DCE.L1802_eod  nInserted 0 nMatched 56 nModified 0 nRemoved 0 nUpserted 0
+185 in 477 DCE.M1707_eod  nInserted 0 nMatched 234 nModified 0 nRemoved 0 nUpserted 0
+186 in 477 DCE.M1708_eod  nInserted 0 nMatched 209 nModified 0 nRemoved 0 nUpserted 0
+187 in 477 DCE.M1709_eod  nInserted 0 nMatched 190 nModified 0 nRemoved 0 nUpserted 0
+188 in 477 DCE.M1711_eod  nInserted 0 nMatched 145 nModified 0 nRemoved 0 nUpserted 0
+189 in 477 DCE.M1712_eod  nInserted 0 nMatched 112 nModified 0 nRemoved 0 nUpserted 0
+190 in 477 DCE.M1801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+191 in 477 DCE.P1707_eod  nInserted 0 nMatched 177 nModified 0 nRemoved 0 nUpserted 0
+192 in 477 DCE.P1708_eod  nInserted 0 nMatched 166 nModified 0 nRemoved 0 nUpserted 0
+193 in 477 DCE.P1709_eod  nInserted 0 nMatched 190 nModified 0 nRemoved 0 nUpserted 0
+194 in 477 DCE.P1710_eod  nInserted 0 nMatched 138 nModified 0 nRemoved 0 nUpserted 0
+195 in 477 DCE.P1711_eod  nInserted 0 nMatched 81 nModified 0 nRemoved 0 nUpserted 0
+196 in 477 DCE.P1712_eod  nInserted 0 nMatched 58 nModified 0 nRemoved 0 nUpserted 0
+197 in 477 DCE.P1801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+198 in 477 DCE.P1802_eod  nInserted 0 nMatched 16 nModified 0 nRemoved 0 nUpserted 0
+199 in 477 DCE.PP1707_eod  nInserted 0 nMatched 195 nModified 0 nRemoved 0 nUpserted 0
+200 in 477 DCE.PP1708_eod  nInserted 0 nMatched 160 nModified 0 nRemoved 0 nUpserted 0
+201 in 477 DCE.PP1709_eod  nInserted 0 nMatched 191 nModified 0 nRemoved 0 nUpserted 0
+202 in 477 DCE.PP1710_eod  nInserted 0 nMatched 139 nModified 0 nRemoved 0 nUpserted 0
+203 in 477 DCE.PP1711_eod  nInserted 0 nMatched 93 nModified 0 nRemoved 0 nUpserted 0
+204 in 477 DCE.PP1712_eod  nInserted 0 nMatched 69 nModified 0 nRemoved 0 nUpserted 0
+205 in 477 DCE.PP1801_eod  nInserted 0 nMatched 111 nModified 0 nRemoved 0 nUpserted 0
+206 in 477 DCE.PP1802_eod  nInserted 0 nMatched 46 nModified 0 nRemoved 0 nUpserted 0
+207 in 477 DCE.V1707_eod  nInserted 0 nMatched 88 nModified 0 nRemoved 0 nUpserted 0
+208 in 477 DCE.V1708_eod  nInserted 0 nMatched 69 nModified 0 nRemoved 0 nUpserted 0
+209 in 477 DCE.V1709_eod  nInserted 0 nMatched 191 nModified 0 nRemoved 0 nUpserted 0
+210 in 477 DCE.V1710_eod  nInserted 0 nMatched 17 nModified 0 nRemoved 0 nUpserted 0
+211 in 477 DCE.V1711_eod  nInserted 0 nMatched 4 nModified 0 nRemoved 0 nUpserted 0
+212 in 477 DCE.V1712_eod  nInserted 0 nMatched 29 nModified 0 nRemoved 0 nUpserted 0
+213 in 477 DCE.V1801_eod  nInserted 0 nMatched 111 nModified 0 nRemoved 0 nUpserted 0
+214 in 477 DCE.V1802_eod  nInserted 0 nMatched 3 nModified 0 nRemoved 0 nUpserted 0
+215 in 477 DCE.Y1707_eod  nInserted 0 nMatched 199 nModified 0 nRemoved 0 nUpserted 0
+216 in 477 DCE.Y1708_eod  nInserted 0 nMatched 181 nModified 0 nRemoved 0 nUpserted 0
+217 in 477 DCE.Y1709_eod  nInserted 0 nMatched 190 nModified 0 nRemoved 0 nUpserted 0
+218 in 477 DCE.Y1711_eod  nInserted 0 nMatched 115 nModified 0 nRemoved 0 nUpserted 0
+219 in 477 DCE.Y1712_eod  nInserted 0 nMatched 76 nModified 0 nRemoved 0 nUpserted 0
+220 in 477 DCE.Y1801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+221 in 477 CZCE.CF707_eod  nInserted 0 nMatched 233 nModified 0 nRemoved 0 nUpserted 0
+222 in 477 CZCE.CF709_eod  nInserted 0 nMatched 190 nModified 0 nRemoved 0 nUpserted 0
+223 in 477 CZCE.CF711_eod  nInserted 0 nMatched 154 nModified 0 nRemoved 0 nUpserted 0
+224 in 477 CZCE.CF801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+225 in 477 CZCE.FG707_eod  nInserted 0 nMatched 196 nModified 0 nRemoved 0 nUpserted 0
+226 in 477 CZCE.FG708_eod  nInserted 0 nMatched 182 nModified 0 nRemoved 0 nUpserted 0
+227 in 477 CZCE.FG709_eod  nInserted 0 nMatched 190 nModified 0 nRemoved 0 nUpserted 0
+228 in 477 CZCE.FG710_eod  nInserted 0 nMatched 147 nModified 0 nRemoved 0 nUpserted 0
+229 in 477 CZCE.FG711_eod  nInserted 0 nMatched 113 nModified 0 nRemoved 0 nUpserted 0
+230 in 477 CZCE.FG712_eod  nInserted 0 nMatched 79 nModified 0 nRemoved 0 nUpserted 0
+231 in 477 CZCE.FG801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+232 in 477 CZCE.FG802_eod  nInserted 0 nMatched 63 nModified 0 nRemoved 0 nUpserted 0
+233 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.JR707.csv
+234 in 477 CZCE.JR709_eod  nInserted 0 nMatched 7 nModified 0 nRemoved 0 nUpserted 0
+235 in 477 CZCE.JR711_eod  nInserted 0 nMatched 81 nModified 0 nRemoved 0 nUpserted 0
+236 in 477 CZCE.JR801_eod  nInserted 0 nMatched 7 nModified 0 nRemoved 0 nUpserted 0
+237 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.LR707.csv
+238 in 477 CZCE.LR709_eod  nInserted 0 nMatched 71 nModified 0 nRemoved 0 nUpserted 0
+239 in 477 CZCE.LR711_eod  nInserted 0 nMatched 41 nModified 0 nRemoved 0 nUpserted 0
+240 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.LR801.csv
+241 in 477 CZCE.MA707_eod  nInserted 0 nMatched 197 nModified 0 nRemoved 0 nUpserted 0
+242 in 477 CZCE.MA708_eod  nInserted 0 nMatched 143 nModified 0 nRemoved 0 nUpserted 0
+243 in 477 CZCE.MA709_eod  nInserted 0 nMatched 190 nModified 0 nRemoved 0 nUpserted 0
+244 in 477 CZCE.MA710_eod  nInserted 0 nMatched 146 nModified 0 nRemoved 0 nUpserted 0
+245 in 477 CZCE.MA711_eod  nInserted 0 nMatched 85 nModified 0 nRemoved 0 nUpserted 0
+246 in 477 CZCE.MA712_eod  nInserted 0 nMatched 74 nModified 0 nRemoved 0 nUpserted 0
+247 in 477 CZCE.MA801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+248 in 477 CZCE.MA802_eod  nInserted 0 nMatched 65 nModified 0 nRemoved 0 nUpserted 0
+249 in 477 CZCE.OI707_eod  nInserted 0 nMatched 202 nModified 0 nRemoved 0 nUpserted 0
+250 in 477 CZCE.OI709_eod  nInserted 0 nMatched 190 nModified 0 nRemoved 0 nUpserted 0
+251 in 477 CZCE.OI711_eod  nInserted 0 nMatched 102 nModified 0 nRemoved 0 nUpserted 0
+252 in 477 CZCE.OI801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+253 in 477 CZCE.PM707_eod  nInserted 0 nMatched 87 nModified 0 nRemoved 0 nUpserted 0
+254 in 477 CZCE.PM709_eod  nInserted 0 nMatched 119 nModified 0 nRemoved 0 nUpserted 0
+255 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.PM711.csv
+256 in 477 CZCE.PM801_eod  nInserted 0 nMatched 10 nModified 0 nRemoved 0 nUpserted 0
+257 in 477 CZCE.RI707_eod  nInserted 0 nMatched 108 nModified 0 nRemoved 0 nUpserted 0
+258 in 477 CZCE.RI709_eod  nInserted 0 nMatched 179 nModified 0 nRemoved 0 nUpserted 0
+259 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.RI711.csv
+260 in 477 CZCE.RI801_eod  nInserted 0 nMatched 29 nModified 0 nRemoved 0 nUpserted 0
+261 in 477 CZCE.RM707_eod  nInserted 0 nMatched 232 nModified 0 nRemoved 0 nUpserted 0
+262 in 477 CZCE.RM708_eod  nInserted 0 nMatched 206 nModified 0 nRemoved 0 nUpserted 0
+263 in 477 CZCE.RM709_eod  nInserted 0 nMatched 190 nModified 0 nRemoved 0 nUpserted 0
+264 in 477 CZCE.RM711_eod  nInserted 0 nMatched 154 nModified 0 nRemoved 0 nUpserted 0
+265 in 477 CZCE.RM801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+266 in 477 CZCE.RS707_eod  nInserted 0 nMatched 148 nModified 0 nRemoved 0 nUpserted 0
+267 in 477 CZCE.RS708_eod  nInserted 0 nMatched 72 nModified 0 nRemoved 0 nUpserted 0
+268 in 477 CZCE.RS709_eod  nInserted 0 nMatched 73 nModified 0 nRemoved 0 nUpserted 0
+269 in 477 CZCE.RS711_eod  nInserted 0 nMatched 42 nModified 0 nRemoved 0 nUpserted 0
+270 in 477 CZCE.SF707_eod  nInserted 0 nMatched 128 nModified 0 nRemoved 0 nUpserted 0
+271 in 477 CZCE.SF708_eod  nInserted 0 nMatched 91 nModified 0 nRemoved 0 nUpserted 0
+272 in 477 CZCE.SF709_eod  nInserted 0 nMatched 186 nModified 0 nRemoved 0 nUpserted 0
+273 in 477 CZCE.SF710_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+274 in 477 CZCE.SF711_eod  nInserted 0 nMatched 44 nModified 0 nRemoved 0 nUpserted 0
+275 in 477 CZCE.SF712_eod  nInserted 0 nMatched 7 nModified 0 nRemoved 0 nUpserted 0
+276 in 477 CZCE.SF801_eod  nInserted 0 nMatched 102 nModified 0 nRemoved 0 nUpserted 0
+277 in 477 CZCE.SF802_eod  nInserted 0 nMatched 55 nModified 0 nRemoved 0 nUpserted 0
+278 in 477 CZCE.SM707_eod  nInserted 0 nMatched 3 nModified 0 nRemoved 0 nUpserted 0
+279 in 477 CZCE.SM708_eod  nInserted 0 nMatched 137 nModified 0 nRemoved 0 nUpserted 0
+280 in 477 CZCE.SM709_eod  nInserted 0 nMatched 189 nModified 0 nRemoved 0 nUpserted 0
+281 in 477 CZCE.SM710_eod  nInserted 0 nMatched 56 nModified 0 nRemoved 0 nUpserted 0
+282 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.SM711.csv
+283 in 477 CZCE.SM712_eod  nInserted 0 nMatched 39 nModified 0 nRemoved 0 nUpserted 0
+284 in 477 CZCE.SM801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+285 in 477 CZCE.SM802_eod  nInserted 0 nMatched 30 nModified 0 nRemoved 0 nUpserted 0
+286 in 477 CZCE.SR707_eod  nInserted 0 nMatched 338 nModified 0 nRemoved 0 nUpserted 0
+287 in 477 CZCE.SR709_eod  nInserted 0 nMatched 318 nModified 0 nRemoved 0 nUpserted 0
+288 in 477 CZCE.SR711_eod  nInserted 0 nMatched 256 nModified 0 nRemoved 0 nUpserted 0
+289 in 477 CZCE.SR801_eod  nInserted 0 nMatched 232 nModified 0 nRemoved 0 nUpserted 0
+290 in 477 CZCE.SR803_eod  nInserted 0 nMatched 137 nModified 0 nRemoved 0 nUpserted 0
+291 in 477 CZCE.SR805_eod  nInserted 0 nMatched 154 nModified 0 nRemoved 0 nUpserted 0
+292 in 477 CZCE.SR807_eod  nInserted 0 nMatched 82 nModified 0 nRemoved 0 nUpserted 0
+293 in 477 CZCE.TA707_eod  nInserted 0 nMatched 204 nModified 0 nRemoved 0 nUpserted 0
+294 in 477 CZCE.TA708_eod  nInserted 0 nMatched 189 nModified 0 nRemoved 0 nUpserted 0
+295 in 477 CZCE.TA709_eod  nInserted 0 nMatched 190 nModified 0 nRemoved 0 nUpserted 0
+296 in 477 CZCE.TA710_eod  nInserted 0 nMatched 136 nModified 0 nRemoved 0 nUpserted 0
+297 in 477 CZCE.TA711_eod  nInserted 0 nMatched 84 nModified 0 nRemoved 0 nUpserted 0
+298 in 477 CZCE.TA712_eod  nInserted 0 nMatched 86 nModified 0 nRemoved 0 nUpserted 0
+299 in 477 CZCE.TA801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+300 in 477 CZCE.TA802_eod  nInserted 0 nMatched 49 nModified 0 nRemoved 0 nUpserted 0
+301 in 477 CZCE.WH707_eod  nInserted 0 nMatched 193 nModified 0 nRemoved 0 nUpserted 0
+302 in 477 CZCE.WH709_eod  nInserted 0 nMatched 191 nModified 0 nRemoved 0 nUpserted 0
+303 in 477 CZCE.WH711_eod  nInserted 0 nMatched 54 nModified 0 nRemoved 0 nUpserted 0
+304 in 477 CZCE.WH801_eod  nInserted 0 nMatched 110 nModified 0 nRemoved 0 nUpserted 0
+305 in 477 CZCE.ZC707_eod  nInserted 0 nMatched 145 nModified 0 nRemoved 0 nUpserted 0
+306 in 477 CZCE.ZC708_eod  nInserted 0 nMatched 122 nModified 0 nRemoved 0 nUpserted 0
+307 in 477 CZCE.ZC709_eod  nInserted 0 nMatched 195 nModified 0 nRemoved 0 nUpserted 0
+308 in 477 CZCE.ZC710_eod  nInserted 0 nMatched 132 nModified 0 nRemoved 0 nUpserted 0
+309 in 477 CZCE.ZC711_eod  nInserted 0 nMatched 21 nModified 0 nRemoved 0 nUpserted 0
+310 in 477 CZCE.ZC712_eod  nInserted 0 nMatched 86 nModified 0 nRemoved 0 nUpserted 0
+311 in 477 CZCE.ZC801_eod  nInserted 0 nMatched 115 nModified 0 nRemoved 0 nUpserted 0
+312 in 477 CZCE.ZC802_eod  nInserted 0 nMatched 43 nModified 0 nRemoved 0 nUpserted 0
+313 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.FU1803.csv
+314 in 477 CZCE.ZC803_eod  nInserted 0 nMatched 2 nModified 0 nRemoved 0 nUpserted 0
+315 in 477 CFFEX.T1712_eod  nInserted 0 nMatched 80 nModified 0 nRemoved 0 nUpserted 0
+316 in 477 CFFEX.TF1712_eod  nInserted 0 nMatched 80 nModified 0 nRemoved 0 nUpserted 0
+317 in 477 DCE.A1809_eod  nInserted 0 nMatched 73 nModified 0 nRemoved 0 nUpserted 0
+318 in 477 DCE.B1803_eod  nInserted 0 nMatched 25 nModified 0 nRemoved 0 nUpserted 0
+319 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.BB1803.csv
+320 in 477 DCE.C1803_eod  nInserted 0 nMatched 78 nModified 0 nRemoved 0 nUpserted 0
+321 in 477 DCE.CS1803_eod  nInserted 0 nMatched 54 nModified 0 nRemoved 0 nUpserted 0
+322 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.FB1803.csv
+323 in 477 DCE.I1803_eod  nInserted 0 nMatched 76 nModified 0 nRemoved 0 nUpserted 0
+324 in 477 DCE.J1803_eod  nInserted 0 nMatched 62 nModified 0 nRemoved 0 nUpserted 0
+325 in 477 DCE.JD1803_eod  nInserted 0 nMatched 73 nModified 0 nRemoved 0 nUpserted 0
+326 in 477 DCE.JM1803_eod  nInserted 0 nMatched 27 nModified 0 nRemoved 0 nUpserted 0
+327 in 477 DCE.L1803_eod  nInserted 0 nMatched 21 nModified 0 nRemoved 0 nUpserted 0
+328 in 477 DCE.M1803_eod  nInserted 0 nMatched 71 nModified 0 nRemoved 0 nUpserted 0
+329 in 477 DCE.P1803_eod  nInserted 0 nMatched 47 nModified 0 nRemoved 0 nUpserted 0
+330 in 477 DCE.PP1803_eod  nInserted 0 nMatched 19 nModified 0 nRemoved 0 nUpserted 0
+331 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.V1803.csv
+332 in 477 DCE.Y1803_eod  nInserted 0 nMatched 54 nModified 0 nRemoved 0 nUpserted 0
+333 in 477 CZCE.CF803_eod  nInserted 0 nMatched 68 nModified 0 nRemoved 0 nUpserted 0
+334 in 477 CZCE.FG803_eod  nInserted 0 nMatched 33 nModified 0 nRemoved 0 nUpserted 0
+335 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.JR803.csv
+336 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.LR803.csv
+337 in 477 CZCE.MA803_eod  nInserted 0 nMatched 65 nModified 0 nRemoved 0 nUpserted 0
+338 in 477 CZCE.OI803_eod  nInserted 0 nMatched 2 nModified 0 nRemoved 0 nUpserted 0
+339 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.PM803.csv
+340 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.RI803.csv
+341 in 477 CZCE.RM803_eod  nInserted 0 nMatched 78 nModified 0 nRemoved 0 nUpserted 0
+342 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.SF803.csv
+343 in 477 CZCE.SM803_eod  nInserted 0 nMatched 11 nModified 0 nRemoved 0 nUpserted 0
+344 in 477 CZCE.SR809_eod  nInserted 0 nMatched 78 nModified 0 nRemoved 0 nUpserted 0
+345 in 477 CZCE.TA803_eod  nInserted 0 nMatched 45 nModified 0 nRemoved 0 nUpserted 0
+346 in 477 CZCE.WH803_eod  nInserted 0 nMatched 46 nModified 0 nRemoved 0 nUpserted 0
+347 in 477 SHFE.AG1803_eod  nInserted 0 nMatched 75 nModified 0 nRemoved 0 nUpserted 0
+348 in 477 SHFE.AL1803_eod  nInserted 0 nMatched 77 nModified 0 nRemoved 0 nUpserted 0
+349 in 477 SHFE.AU1804_eod  nInserted 0 nMatched 71 nModified 0 nRemoved 0 nUpserted 0
+350 in 477 SHFE.BU1903_eod  nInserted 0 nMatched 73 nModified 0 nRemoved 0 nUpserted 0
+351 in 477 SHFE.CU1803_eod  nInserted 0 nMatched 77 nModified 0 nRemoved 0 nUpserted 0
+352 in 477 SHFE.HC1803_eod  nInserted 0 nMatched 60 nModified 0 nRemoved 0 nUpserted 0
+353 in 477 SHFE.NI1803_eod  nInserted 0 nMatched 64 nModified 0 nRemoved 0 nUpserted 0
+354 in 477 SHFE.PB1803_eod  nInserted 0 nMatched 73 nModified 0 nRemoved 0 nUpserted 0
+355 in 477 SHFE.RB1803_eod  nInserted 0 nMatched 77 nModified 0 nRemoved 0 nUpserted 0
+356 in 477 SHFE.RU1803_eod  nInserted 0 nMatched 75 nModified 0 nRemoved 0 nUpserted 0
+357 in 477 SHFE.SN1803_eod  nInserted 0 nMatched 18 nModified 0 nRemoved 0 nUpserted 0
+358 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.WR1803.csv
+359 in 477 SHFE.ZN1803_eod  nInserted 0 nMatched 77 nModified 0 nRemoved 0 nUpserted 0
+360 in 477 SHFE.FU1804_eod  nInserted 0 nMatched 25 nModified 0 nRemoved 0 nUpserted 0
+361 in 477 CZCE.ZC804_eod  nInserted 0 nMatched 15 nModified 0 nRemoved 0 nUpserted 0
+362 in 477 SHFE.AG1804_eod  nInserted 0 nMatched 55 nModified 0 nRemoved 0 nUpserted 0
+363 in 477 SHFE.AL1804_eod  nInserted 0 nMatched 56 nModified 0 nRemoved 0 nUpserted 0
+364 in 477 SHFE.AU1707_eod  nInserted 0 nMatched 48 nModified 0 nRemoved 0 nUpserted 0
+365 in 477 SHFE.BU1710_eod  nInserted 0 nMatched 55 nModified 0 nRemoved 0 nUpserted 0
+366 in 477 SHFE.CU1804_eod  nInserted 0 nMatched 56 nModified 0 nRemoved 0 nUpserted 0
+367 in 477 SHFE.HC1804_eod  nInserted 0 nMatched 30 nModified 0 nRemoved 0 nUpserted 0
+368 in 477 SHFE.NI1804_eod  nInserted 0 nMatched 51 nModified 0 nRemoved 0 nUpserted 0
+369 in 477 SHFE.PB1804_eod  nInserted 0 nMatched 50 nModified 0 nRemoved 0 nUpserted 0
+370 in 477 SHFE.RB1804_eod  nInserted 0 nMatched 56 nModified 0 nRemoved 0 nUpserted 0
+371 in 477 SHFE.RU1804_eod  nInserted 0 nMatched 51 nModified 0 nRemoved 0 nUpserted 0
+372 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.SN1804.csv
+373 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.WR1804.csv
+374 in 477 SHFE.ZN1804_eod  nInserted 0 nMatched 56 nModified 0 nRemoved 0 nUpserted 0
+375 in 477 CFFEX.IC1712_eod  nInserted 0 nMatched 52 nModified 0 nRemoved 0 nUpserted 0
+376 in 477 CFFEX.IF1712_eod  nInserted 0 nMatched 52 nModified 0 nRemoved 0 nUpserted 0
+377 in 477 CFFEX.IH1712_eod  nInserted 0 nMatched 52 nModified 0 nRemoved 0 nUpserted 0
+378 in 477 SHFE.AG1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+379 in 477 SHFE.AL1805_eod  nInserted 0 nMatched 36 nModified 0 nRemoved 0 nUpserted 0
+380 in 477 SHFE.AU1806_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+381 in 477 SHFE.BU1711_eod  nInserted 0 nMatched 32 nModified 0 nRemoved 0 nUpserted 0
+382 in 477 SHFE.CU1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+383 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.FU1805.csv
+384 in 477 SHFE.HC1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+385 in 477 SHFE.NI1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+386 in 477 SHFE.PB1805_eod  nInserted 0 nMatched 30 nModified 0 nRemoved 0 nUpserted 0
+387 in 477 SHFE.RB1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+388 in 477 SHFE.RU1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+389 in 477 SHFE.SN1805_eod  nInserted 0 nMatched 34 nModified 0 nRemoved 0 nUpserted 0
+390 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.WR1805.csv
+391 in 477 SHFE.ZN1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+392 in 477 DCE.A1811_eod  nInserted 0 nMatched 10 nModified 0 nRemoved 0 nUpserted 0
+393 in 477 DCE.BB1804_eod  nInserted 0 nMatched 27 nModified 0 nRemoved 0 nUpserted 0
+394 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.BB1805.csv
+395 in 477 DCE.C1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+396 in 477 DCE.CS1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+397 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.FB1804.csv
+398 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.FB1805.csv
+399 in 477 DCE.I1804_eod  nInserted 0 nMatched 55 nModified 0 nRemoved 0 nUpserted 0
+400 in 477 DCE.I1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+401 in 477 DCE.J1804_eod  nInserted 0 nMatched 45 nModified 0 nRemoved 0 nUpserted 0
+402 in 477 DCE.J1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+403 in 477 DCE.JD1804_eod  nInserted 0 nMatched 50 nModified 0 nRemoved 0 nUpserted 0
+404 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.JM1804.csv
+405 in 477 DCE.JM1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+406 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.L1804.csv
+407 in 477 DCE.L1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+408 in 477 DCE.M1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+409 in 477 DCE.P1804_eod  nInserted 0 nMatched 45 nModified 0 nRemoved 0 nUpserted 0
+410 in 477 DCE.P1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+411 in 477 DCE.PP1804_eod  nInserted 0 nMatched 30 nModified 0 nRemoved 0 nUpserted 0
+412 in 477 DCE.PP1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+413 in 477 DCE.V1804_eod  nInserted 0 nMatched 29 nModified 0 nRemoved 0 nUpserted 0
+414 in 477 DCE.V1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+415 in 477 DCE.Y1805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+416 in 477 CZCE.CF805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+417 in 477 CZCE.FG804_eod  nInserted 0 nMatched 24 nModified 0 nRemoved 0 nUpserted 0
+418 in 477 CZCE.FG805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+419 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.JR805.csv
+420 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.LR805.csv
+421 in 477 CZCE.MA804_eod  nInserted 0 nMatched 48 nModified 0 nRemoved 0 nUpserted 0
+422 in 477 CZCE.MA805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+423 in 477 CZCE.OI805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+424 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.PM805.csv
+425 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.RI805.csv
+426 in 477 CZCE.RM805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+427 in 477 CZCE.SF804_eod  nInserted 0 nMatched 2 nModified 0 nRemoved 0 nUpserted 0
+428 in 477 CZCE.SF805_eod  nInserted 0 nMatched 32 nModified 0 nRemoved 0 nUpserted 0
+429 in 477 CZCE.SM804_eod  nInserted 0 nMatched 2 nModified 0 nRemoved 0 nUpserted 0
+430 in 477 CZCE.SM805_eod  nInserted 0 nMatched 36 nModified 0 nRemoved 0 nUpserted 0
+431 in 477 CZCE.SR811_eod  nInserted 0 nMatched 31 nModified 0 nRemoved 0 nUpserted 0
+432 in 477 CZCE.TA804_eod  nInserted 0 nMatched 34 nModified 0 nRemoved 0 nUpserted 0
+433 in 477 CZCE.TA805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+434 in 477 CZCE.WH805_eod  nInserted 0 nMatched 37 nModified 0 nRemoved 0 nUpserted 0
+435 in 477 CZCE.ZC805_eod  nInserted 0 nMatched 42 nModified 0 nRemoved 0 nUpserted 0
+436 in 477 CFFEX.IC1707_eod  nInserted 0 nMatched 33 nModified 0 nRemoved 0 nUpserted 0
+437 in 477 CFFEX.IC1708_eod  nInserted 0 nMatched 15 nModified 0 nRemoved 0 nUpserted 0
+438 in 477 CFFEX.IF1707_eod  nInserted 0 nMatched 33 nModified 0 nRemoved 0 nUpserted 0
+439 in 477 CFFEX.IF1708_eod  nInserted 0 nMatched 15 nModified 0 nRemoved 0 nUpserted 0
+440 in 477 CFFEX.IH1707_eod  nInserted 0 nMatched 33 nModified 0 nRemoved 0 nUpserted 0
+441 in 477 CFFEX.IH1708_eod  nInserted 0 nMatched 15 nModified 0 nRemoved 0 nUpserted 0
+442 in 477 CFFEX.T1803_eod  nInserted 0 nMatched 20 nModified 0 nRemoved 0 nUpserted 0
+443 in 477 CFFEX.TF1803_eod  nInserted 0 nMatched 15 nModified 0 nRemoved 0 nUpserted 0
+444 in 477 SHFE.AG1806_eod  nInserted 0 nMatched 16 nModified 0 nRemoved 0 nUpserted 0
+445 in 477 SHFE.AL1806_eod  nInserted 0 nMatched 15 nModified 0 nRemoved 0 nUpserted 0
+446 in 477 SHFE.AU1709_eod  nInserted 0 nMatched 15 nModified 0 nRemoved 0 nUpserted 0
+447 in 477 SHFE.BU1906_eod  nInserted 0 nMatched 16 nModified 0 nRemoved 0 nUpserted 0
+448 in 477 SHFE.CU1806_eod  nInserted 0 nMatched 16 nModified 0 nRemoved 0 nUpserted 0
+449 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.FU1806.csv
+450 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.FU1807.csv
+451 in 477 SHFE.HC1806_eod  nInserted 0 nMatched 14 nModified 0 nRemoved 0 nUpserted 0
+452 in 477 SHFE.NI1806_eod  nInserted 0 nMatched 12 nModified 0 nRemoved 0 nUpserted 0
+453 in 477 SHFE.PB1806_eod  nInserted 0 nMatched 16 nModified 0 nRemoved 0 nUpserted 0
+454 in 477 SHFE.RB1806_eod  nInserted 0 nMatched 16 nModified 0 nRemoved 0 nUpserted 0
+455 in 477 SHFE.RU1806_eod  nInserted 0 nMatched 15 nModified 0 nRemoved 0 nUpserted 0
+456 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.SN1806.csv
+457 in 477 no complete data entries C:\wind_data_cn_futures\eod\SHFE.WR1806.csv
+458 in 477 SHFE.ZN1806_eod  nInserted 0 nMatched 14 nModified 0 nRemoved 0 nUpserted 0
+459 in 477 DCE.B1805_eod  nInserted 0 nMatched 28 nModified 0 nRemoved 0 nUpserted 0
+460 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.B1806.csv
+461 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.BB1806.csv
+462 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.FB1806.csv
+463 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.I1806.csv
+464 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.J1806.csv
+465 in 477 DCE.JD1805_eod  nInserted 0 nMatched 30 nModified 0 nRemoved 0 nUpserted 0
+466 in 477 DCE.JD1806_eod  nInserted 0 nMatched 8 nModified 0 nRemoved 0 nUpserted 0
+467 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.JM1806.csv
+468 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.L1806.csv
+469 in 477 DCE.P1806_eod  nInserted 0 nMatched 10 nModified 0 nRemoved 0 nUpserted 0
+470 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.PP1806.csv
+471 in 477 no complete data entries C:\wind_data_cn_futures\eod\DCE.V1806.csv
+472 in 477 CZCE.FG806_eod  nInserted 0 nMatched 17 nModified 0 nRemoved 0 nUpserted 0
+473 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.MA806.csv
+474 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.SF806.csv
+475 in 477 no complete data entries C:\wind_data_cn_futures\eod\CZCE.SM806.csv
+476 in 477 CZCE.TA806_eod  nInserted 0 nMatched 13 nModified 0 nRemoved 0 nUpserted 0
+477 in 477 CZCE.ZC806_eod  nInserted 0 nMatched 2 nModified 0 nRemoved 0 nUpserted 0
+rename CZCE.CF607.csv to CZCE.CF1607.csv
+rename CZCE.CF609.csv to CZCE.CF1609.csv
+rename CZCE.CF611.csv to CZCE.CF1611.csv
+rename CZCE.CF701.csv to CZCE.CF1701.csv
+rename CZCE.CF703.csv to CZCE.CF1703.csv
+rename CZCE.CF705.csv to CZCE.CF1705.csv
+rename CZCE.CF707.csv to CZCE.CF1707.csv
+rename CZCE.CF709.csv to CZCE.CF1709.csv
+rename CZCE.CF711.csv to CZCE.CF1711.csv
+rename CZCE.CF801.csv to CZCE.CF1801.csv
+rename CZCE.CF803.csv to CZCE.CF1803.csv
+rename CZCE.CF805.csv to CZCE.CF1805.csv
+rename CZCE.FG607.csv to CZCE.FG1607.csv
+rename CZCE.FG608.csv to CZCE.FG1608.csv
+rename CZCE.FG609.csv to CZCE.FG1609.csv
+rename CZCE.FG610.csv to CZCE.FG1610.csv
+rename CZCE.FG611.csv to CZCE.FG1611.csv
+rename CZCE.FG612.csv to CZCE.FG1612.csv
+rename CZCE.FG701.csv to CZCE.FG1701.csv
+rename CZCE.FG702.csv to CZCE.FG1702.csv
+rename CZCE.FG703.csv to CZCE.FG1703.csv
+rename CZCE.FG704.csv to CZCE.FG1704.csv
+rename CZCE.FG705.csv to CZCE.FG1705.csv
+rename CZCE.FG706.csv to CZCE.FG1706.csv
+rename CZCE.FG707.csv to CZCE.FG1707.csv
+rename CZCE.FG708.csv to CZCE.FG1708.csv
+rename CZCE.FG709.csv to CZCE.FG1709.csv
+rename CZCE.FG710.csv to CZCE.FG1710.csv
+rename CZCE.FG711.csv to CZCE.FG1711.csv
+rename CZCE.FG712.csv to CZCE.FG1712.csv
+rename CZCE.FG801.csv to CZCE.FG1801.csv
+rename CZCE.FG802.csv to CZCE.FG1802.csv
+rename CZCE.FG803.csv to CZCE.FG1803.csv
+rename CZCE.FG804.csv to CZCE.FG1804.csv
+rename CZCE.FG805.csv to CZCE.FG1805.csv
+rename CZCE.FG806.csv to CZCE.FG1806.csv
+rename CZCE.JR607.csv to CZCE.JR1607.csv
+rename CZCE.JR609.csv to CZCE.JR1609.csv
+rename CZCE.JR611.csv to CZCE.JR1611.csv
+rename CZCE.JR701.csv to CZCE.JR1701.csv
+rename CZCE.JR703.csv to CZCE.JR1703.csv
+rename CZCE.JR705.csv to CZCE.JR1705.csv
+rename CZCE.JR707.csv to CZCE.JR1707.csv
+rename CZCE.JR709.csv to CZCE.JR1709.csv
+rename CZCE.JR711.csv to CZCE.JR1711.csv
+rename CZCE.JR801.csv to CZCE.JR1801.csv
+rename CZCE.JR803.csv to CZCE.JR1803.csv
+rename CZCE.JR805.csv to CZCE.JR1805.csv
+rename CZCE.LR607.csv to CZCE.LR1607.csv
+rename CZCE.LR609.csv to CZCE.LR1609.csv
+rename CZCE.LR611.csv to CZCE.LR1611.csv
+rename CZCE.LR701.csv to CZCE.LR1701.csv
+rename CZCE.LR703.csv to CZCE.LR1703.csv
+rename CZCE.LR705.csv to CZCE.LR1705.csv
+rename CZCE.LR707.csv to CZCE.LR1707.csv
+rename CZCE.LR709.csv to CZCE.LR1709.csv
+rename CZCE.LR711.csv to CZCE.LR1711.csv
+rename CZCE.LR801.csv to CZCE.LR1801.csv
+rename CZCE.LR803.csv to CZCE.LR1803.csv
+rename CZCE.LR805.csv to CZCE.LR1805.csv
+rename CZCE.MA607.csv to CZCE.MA1607.csv
+rename CZCE.MA608.csv to CZCE.MA1608.csv
+rename CZCE.MA609.csv to CZCE.MA1609.csv
+rename CZCE.MA610.csv to CZCE.MA1610.csv
+rename CZCE.MA611.csv to CZCE.MA1611.csv
+rename CZCE.MA612.csv to CZCE.MA1612.csv
+rename CZCE.MA701.csv to CZCE.MA1701.csv
+rename CZCE.MA702.csv to CZCE.MA1702.csv
+rename CZCE.MA703.csv to CZCE.MA1703.csv
+rename CZCE.MA704.csv to CZCE.MA1704.csv
+rename CZCE.MA705.csv to CZCE.MA1705.csv
+rename CZCE.MA706.csv to CZCE.MA1706.csv
+rename CZCE.MA707.csv to CZCE.MA1707.csv
+rename CZCE.MA708.csv to CZCE.MA1708.csv
+rename CZCE.MA709.csv to CZCE.MA1709.csv
+rename CZCE.MA710.csv to CZCE.MA1710.csv
+rename CZCE.MA711.csv to CZCE.MA1711.csv
+rename CZCE.MA712.csv to CZCE.MA1712.csv
+rename CZCE.MA801.csv to CZCE.MA1801.csv
+rename CZCE.MA802.csv to CZCE.MA1802.csv
+rename CZCE.MA803.csv to CZCE.MA1803.csv
+rename CZCE.MA804.csv to CZCE.MA1804.csv
+rename CZCE.MA805.csv to CZCE.MA1805.csv
+rename CZCE.MA806.csv to CZCE.MA1806.csv
+rename CZCE.OI607.csv to CZCE.OI1607.csv
+rename CZCE.OI609.csv to CZCE.OI1609.csv
+rename CZCE.OI611.csv to CZCE.OI1611.csv
+rename CZCE.OI701.csv to CZCE.OI1701.csv
+rename CZCE.OI703.csv to CZCE.OI1703.csv
+rename CZCE.OI705.csv to CZCE.OI1705.csv
+rename CZCE.OI707.csv to CZCE.OI1707.csv
+rename CZCE.OI709.csv to CZCE.OI1709.csv
+rename CZCE.OI711.csv to CZCE.OI1711.csv
+rename CZCE.OI801.csv to CZCE.OI1801.csv
+rename CZCE.OI803.csv to CZCE.OI1803.csv
+rename CZCE.OI805.csv to CZCE.OI1805.csv
+rename CZCE.PM607.csv to CZCE.PM1607.csv
+rename CZCE.PM609.csv to CZCE.PM1609.csv
+rename CZCE.PM611.csv to CZCE.PM1611.csv
+rename CZCE.PM701.csv to CZCE.PM1701.csv
+rename CZCE.PM703.csv to CZCE.PM1703.csv
+rename CZCE.PM705.csv to CZCE.PM1705.csv
+rename CZCE.PM707.csv to CZCE.PM1707.csv
+rename CZCE.PM709.csv to CZCE.PM1709.csv
+rename CZCE.PM711.csv to CZCE.PM1711.csv
+rename CZCE.PM801.csv to CZCE.PM1801.csv
+rename CZCE.PM803.csv to CZCE.PM1803.csv
+rename CZCE.PM805.csv to CZCE.PM1805.csv
+rename CZCE.RI607.csv to CZCE.RI1607.csv
+rename CZCE.RI609.csv to CZCE.RI1609.csv
+rename CZCE.RI611.csv to CZCE.RI1611.csv
+rename CZCE.RI701.csv to CZCE.RI1701.csv
+rename CZCE.RI703.csv to CZCE.RI1703.csv
+rename CZCE.RI705.csv to CZCE.RI1705.csv
+rename CZCE.RI707.csv to CZCE.RI1707.csv
+rename CZCE.RI709.csv to CZCE.RI1709.csv
+rename CZCE.RI711.csv to CZCE.RI1711.csv
+rename CZCE.RI801.csv to CZCE.RI1801.csv
+rename CZCE.RI803.csv to CZCE.RI1803.csv
+rename CZCE.RI805.csv to CZCE.RI1805.csv
+rename CZCE.RM607.csv to CZCE.RM1607.csv
+rename CZCE.RM608.csv to CZCE.RM1608.csv
+rename CZCE.RM609.csv to CZCE.RM1609.csv
+rename CZCE.RM611.csv to CZCE.RM1611.csv
+rename CZCE.RM701.csv to CZCE.RM1701.csv
+rename CZCE.RM703.csv to CZCE.RM1703.csv
+rename CZCE.RM705.csv to CZCE.RM1705.csv
+rename CZCE.RM707.csv to CZCE.RM1707.csv
+rename CZCE.RM708.csv to CZCE.RM1708.csv
+rename CZCE.RM709.csv to CZCE.RM1709.csv
+rename CZCE.RM711.csv to CZCE.RM1711.csv
+rename CZCE.RM801.csv to CZCE.RM1801.csv
+rename CZCE.RM803.csv to CZCE.RM1803.csv
+rename CZCE.RM805.csv to CZCE.RM1805.csv
+rename CZCE.RS607.csv to CZCE.RS1607.csv
+rename CZCE.RS608.csv to CZCE.RS1608.csv
+rename CZCE.RS609.csv to CZCE.RS1609.csv
+rename CZCE.RS611.csv to CZCE.RS1611.csv
+rename CZCE.RS707.csv to CZCE.RS1707.csv
+rename CZCE.RS708.csv to CZCE.RS1708.csv
+rename CZCE.RS709.csv to CZCE.RS1709.csv
+rename CZCE.RS711.csv to CZCE.RS1711.csv
+rename CZCE.SF607.csv to CZCE.SF1607.csv
+rename CZCE.SF608.csv to CZCE.SF1608.csv
+rename CZCE.SF609.csv to CZCE.SF1609.csv
+rename CZCE.SF610.csv to CZCE.SF1610.csv
+rename CZCE.SF611.csv to CZCE.SF1611.csv
+rename CZCE.SF612.csv to CZCE.SF1612.csv
+rename CZCE.SF701.csv to CZCE.SF1701.csv
+rename CZCE.SF702.csv to CZCE.SF1702.csv
+rename CZCE.SF703.csv to CZCE.SF1703.csv
+rename CZCE.SF704.csv to CZCE.SF1704.csv
+rename CZCE.SF705.csv to CZCE.SF1705.csv
+rename CZCE.SF706.csv to CZCE.SF1706.csv
+rename CZCE.SF707.csv to CZCE.SF1707.csv
+rename CZCE.SF708.csv to CZCE.SF1708.csv
+rename CZCE.SF709.csv to CZCE.SF1709.csv
+rename CZCE.SF710.csv to CZCE.SF1710.csv
+rename CZCE.SF711.csv to CZCE.SF1711.csv
+rename CZCE.SF712.csv to CZCE.SF1712.csv
+rename CZCE.SF801.csv to CZCE.SF1801.csv
+rename CZCE.SF802.csv to CZCE.SF1802.csv
+rename CZCE.SF803.csv to CZCE.SF1803.csv
+rename CZCE.SF804.csv to CZCE.SF1804.csv
+rename CZCE.SF805.csv to CZCE.SF1805.csv
+rename CZCE.SF806.csv to CZCE.SF1806.csv
+rename CZCE.SM607.csv to CZCE.SM1607.csv
+rename CZCE.SM608.csv to CZCE.SM1608.csv
+rename CZCE.SM609.csv to CZCE.SM1609.csv
+rename CZCE.SM610.csv to CZCE.SM1610.csv
+rename CZCE.SM611.csv to CZCE.SM1611.csv
+rename CZCE.SM612.csv to CZCE.SM1612.csv
+rename CZCE.SM701.csv to CZCE.SM1701.csv
+rename CZCE.SM702.csv to CZCE.SM1702.csv
+rename CZCE.SM703.csv to CZCE.SM1703.csv
+rename CZCE.SM704.csv to CZCE.SM1704.csv
+rename CZCE.SM705.csv to CZCE.SM1705.csv
+rename CZCE.SM706.csv to CZCE.SM1706.csv
+rename CZCE.SM707.csv to CZCE.SM1707.csv
+rename CZCE.SM708.csv to CZCE.SM1708.csv
+rename CZCE.SM709.csv to CZCE.SM1709.csv
+rename CZCE.SM710.csv to CZCE.SM1710.csv
+rename CZCE.SM711.csv to CZCE.SM1711.csv
+rename CZCE.SM712.csv to CZCE.SM1712.csv
+rename CZCE.SM801.csv to CZCE.SM1801.csv
+rename CZCE.SM802.csv to CZCE.SM1802.csv
+rename CZCE.SM803.csv to CZCE.SM1803.csv
+rename CZCE.SM804.csv to CZCE.SM1804.csv
+rename CZCE.SM805.csv to CZCE.SM1805.csv
+rename CZCE.SM806.csv to CZCE.SM1806.csv
+rename CZCE.SR607.csv to CZCE.SR1607.csv
+rename CZCE.SR609.csv to CZCE.SR1609.csv
+rename CZCE.SR611.csv to CZCE.SR1611.csv
+rename CZCE.SR701.csv to CZCE.SR1701.csv
+rename CZCE.SR703.csv to CZCE.SR1703.csv
+rename CZCE.SR705.csv to CZCE.SR1705.csv
+rename CZCE.SR707.csv to CZCE.SR1707.csv
+rename CZCE.SR709.csv to CZCE.SR1709.csv
+rename CZCE.SR711.csv to CZCE.SR1711.csv
+rename CZCE.SR801.csv to CZCE.SR1801.csv
+rename CZCE.SR803.csv to CZCE.SR1803.csv
+rename CZCE.SR805.csv to CZCE.SR1805.csv
+rename CZCE.SR807.csv to CZCE.SR1807.csv
+rename CZCE.SR809.csv to CZCE.SR1809.csv
+rename CZCE.SR811.csv to CZCE.SR1811.csv
+rename CZCE.TA607.csv to CZCE.TA1607.csv
+rename CZCE.TA608.csv to CZCE.TA1608.csv
+rename CZCE.TA609.csv to CZCE.TA1609.csv
+rename CZCE.TA610.csv to CZCE.TA1610.csv
+rename CZCE.TA611.csv to CZCE.TA1611.csv
+rename CZCE.TA612.csv to CZCE.TA1612.csv
+rename CZCE.TA701.csv to CZCE.TA1701.csv
+rename CZCE.TA702.csv to CZCE.TA1702.csv
+rename CZCE.TA703.csv to CZCE.TA1703.csv
+rename CZCE.TA704.csv to CZCE.TA1704.csv
+rename CZCE.TA705.csv to CZCE.TA1705.csv
+rename CZCE.TA706.csv to CZCE.TA1706.csv
+rename CZCE.TA707.csv to CZCE.TA1707.csv
+rename CZCE.TA708.csv to CZCE.TA1708.csv
+rename CZCE.TA709.csv to CZCE.TA1709.csv
+rename CZCE.TA710.csv to CZCE.TA1710.csv
+rename CZCE.TA711.csv to CZCE.TA1711.csv
+rename CZCE.TA712.csv to CZCE.TA1712.csv
+rename CZCE.TA801.csv to CZCE.TA1801.csv
+rename CZCE.TA802.csv to CZCE.TA1802.csv
+rename CZCE.TA803.csv to CZCE.TA1803.csv
+rename CZCE.TA804.csv to CZCE.TA1804.csv
+rename CZCE.TA805.csv to CZCE.TA1805.csv
+rename CZCE.TA806.csv to CZCE.TA1806.csv
+rename CZCE.WH607.csv to CZCE.WH1607.csv
+rename CZCE.WH609.csv to CZCE.WH1609.csv
+rename CZCE.WH611.csv to CZCE.WH1611.csv
+rename CZCE.WH701.csv to CZCE.WH1701.csv
+rename CZCE.WH703.csv to CZCE.WH1703.csv
+rename CZCE.WH705.csv to CZCE.WH1705.csv
+rename CZCE.WH707.csv to CZCE.WH1707.csv
+rename CZCE.WH709.csv to CZCE.WH1709.csv
+rename CZCE.WH711.csv to CZCE.WH1711.csv
+rename CZCE.WH801.csv to CZCE.WH1801.csv
+rename CZCE.WH803.csv to CZCE.WH1803.csv
+rename CZCE.WH805.csv to CZCE.WH1805.csv
+skip CZCE.WT9901.csv
+skip CZCE.WT9903.csv
+skip CZCE.WT9905.csv
+skip CZCE.WT9907.csv
+skip CZCE.WT9909.csv
+skip CZCE.WT9911.csv
+rename CZCE.ZC607.csv to CZCE.ZC1607.csv
+rename CZCE.ZC608.csv to CZCE.ZC1608.csv
+rename CZCE.ZC609.csv to CZCE.ZC1609.csv
+rename CZCE.ZC610.csv to CZCE.ZC1610.csv
+rename CZCE.ZC611.csv to CZCE.ZC1611.csv
+rename CZCE.ZC612.csv to CZCE.ZC1612.csv
+rename CZCE.ZC701.csv to CZCE.ZC1701.csv
+rename CZCE.ZC702.csv to CZCE.ZC1702.csv
+rename CZCE.ZC703.csv to CZCE.ZC1703.csv
+rename CZCE.ZC704.csv to CZCE.ZC1704.csv
+rename CZCE.ZC705.csv to CZCE.ZC1705.csv
+rename CZCE.ZC706.csv to CZCE.ZC1706.csv
+rename CZCE.ZC707.csv to CZCE.ZC1707.csv
+rename CZCE.ZC708.csv to CZCE.ZC1708.csv
+rename CZCE.ZC709.csv to CZCE.ZC1709.csv
+rename CZCE.ZC710.csv to CZCE.ZC1710.csv
+rename CZCE.ZC711.csv to CZCE.ZC1711.csv
+rename CZCE.ZC712.csv to CZCE.ZC1712.csv
+rename CZCE.ZC801.csv to CZCE.ZC1801.csv
+rename CZCE.ZC802.csv to CZCE.ZC1802.csv
+rename CZCE.ZC803.csv to CZCE.ZC1803.csv
+rename CZCE.ZC804.csv to CZCE.ZC1804.csv
+rename CZCE.ZC805.csv to CZCE.ZC1805.csv
+rename CZCE.ZC806.csv to CZCE.ZC1806.csv
+skip DCE.A9901.csv
+skip DCE.A9903.csv
+skip DCE.A9905.csv
+skip DCE.A9907.csv
+skip DCE.A9909.csv
+skip DCE.A9911.csv
+skip SHFE.AL9505.csv
+skip SHFE.AL9506.csv
+skip SHFE.AL9507.csv
+skip SHFE.AL9508.csv
+skip SHFE.AL9509.csv
+skip SHFE.AL9510.csv
+skip SHFE.AL9511.csv
+skip SHFE.AL9512.csv
+skip SHFE.AL9601.csv
+skip SHFE.AL9602.csv
+skip SHFE.AL9603.csv
+skip SHFE.AL9604.csv
+skip SHFE.AL9605.csv
+skip SHFE.AL9606.csv
+skip SHFE.AL9607.csv
+skip SHFE.AL9608.csv
+skip SHFE.AL9609.csv
+skip SHFE.AL9610.csv
+skip SHFE.AL9611.csv
+skip SHFE.AL9612.csv
+skip SHFE.AL9701.csv
+skip SHFE.AL9702.csv
+skip SHFE.AL9703.csv
+skip SHFE.AL9704.csv
+skip SHFE.AL9705.csv
+skip SHFE.AL9706.csv
+skip SHFE.AL9707.csv
+skip SHFE.AL9708.csv
+skip SHFE.AL9709.csv
+skip SHFE.AL9710.csv
+skip SHFE.AL9711.csv
+skip SHFE.AL9712.csv
+skip SHFE.AL9801.csv
+skip SHFE.AL9802.csv
+skip SHFE.AL9803.csv
+skip SHFE.AL9804.csv
+skip SHFE.AL9805.csv
+skip SHFE.AL9806.csv
+skip SHFE.AL9807.csv
+skip SHFE.AL9808.csv
+skip SHFE.AL9809.csv
+skip SHFE.AL9810.csv
+skip SHFE.AL9811.csv
+skip SHFE.AL9812.csv
+skip SHFE.AL9901.csv
+skip SHFE.AL9902.csv
+skip SHFE.AL9903.csv
+skip SHFE.AL9904.csv
+skip SHFE.AL9905.csv
+skip SHFE.AL9906.csv
+skip SHFE.AL9907.csv
+skip SHFE.AL9908.csv
+skip SHFE.AL9909.csv
+skip SHFE.AL9910.csv
+skip SHFE.AL9911.csv
+skip SHFE.AL9912.csv
+skip SHFE.CU9505.csv
+skip SHFE.CU9506.csv
+skip SHFE.CU9507.csv
+skip SHFE.CU9508.csv
+skip SHFE.CU9509.csv
+skip SHFE.CU9510.csv
+skip SHFE.CU9511.csv
+skip SHFE.CU9512.csv
+skip SHFE.CU9601.csv
+skip SHFE.CU9602.csv
+skip SHFE.CU9603.csv
+skip SHFE.CU9604.csv
+skip SHFE.CU9605.csv
+skip SHFE.CU9606.csv
+skip SHFE.CU9607.csv
+skip SHFE.CU9608.csv
+skip SHFE.CU9609.csv
+skip SHFE.CU9610.csv
+skip SHFE.CU9611.csv
+skip SHFE.CU9612.csv
+skip SHFE.CU9701.csv
+skip SHFE.CU9702.csv
+skip SHFE.CU9703.csv
+skip SHFE.CU9704.csv
+skip SHFE.CU9705.csv
+skip SHFE.CU9706.csv
+skip SHFE.CU9707.csv
+skip SHFE.CU9708.csv
+skip SHFE.CU9709.csv
+skip SHFE.CU9710.csv
+skip SHFE.CU9711.csv
+skip SHFE.CU9712.csv
+skip SHFE.CU9801.csv
+skip SHFE.CU9802.csv
+skip SHFE.CU9803.csv
+skip SHFE.CU9804.csv
+skip SHFE.CU9805.csv
+skip SHFE.CU9806.csv
+skip SHFE.CU9807.csv
+skip SHFE.CU9808.csv
+skip SHFE.CU9809.csv
+skip SHFE.CU9810.csv
+skip SHFE.CU9811.csv
+skip SHFE.CU9812.csv
+skip SHFE.CU9901.csv
+skip SHFE.CU9902.csv
+skip SHFE.CU9903.csv
+skip SHFE.CU9904.csv
+skip SHFE.CU9905.csv
+skip SHFE.CU9906.csv
+skip SHFE.CU9907.csv
+skip SHFE.CU9908.csv
+skip SHFE.CU9909.csv
+skip SHFE.CU9910.csv
+skip SHFE.CU9911.csv
+skip SHFE.CU9912.csv
+skip SHFE.RU9507.csv
+skip SHFE.RU9508.csv
+skip SHFE.RU9509.csv
+skip SHFE.RU9510.csv
+skip SHFE.RU9511.csv
+skip SHFE.RU9512.csv
+skip SHFE.RU9601.csv
+skip SHFE.RU9603.csv
+skip SHFE.RU9604.csv
+skip SHFE.RU9605.csv
+skip SHFE.RU9606.csv
+skip SHFE.RU9607.csv
+skip SHFE.RU9608.csv
+skip SHFE.RU9609.csv
+skip SHFE.RU9610.csv
+skip SHFE.RU9611.csv
+skip SHFE.RU9701.csv
+skip SHFE.RU9703.csv
+skip SHFE.RU9704.csv
+skip SHFE.RU9705.csv
+skip SHFE.RU9706.csv
+skip SHFE.RU9707.csv
+skip SHFE.RU9708.csv
+skip SHFE.RU9709.csv
+skip SHFE.RU9710.csv
+skip SHFE.RU9711.csv
+skip SHFE.RU9712.csv
+skip SHFE.RU9801.csv
+skip SHFE.RU9802.csv
+skip SHFE.RU9803.csv
+skip SHFE.RU9804.csv
+skip SHFE.RU9805.csv
+skip SHFE.RU9806.csv
+skip SHFE.RU9807.csv
+skip SHFE.RU9808.csv
+skip SHFE.RU9809.csv
+skip SHFE.RU9810.csv
+skip SHFE.RU9811.csv
+skip SHFE.RU9812.csv
+skip SHFE.RU9901.csv
+skip SHFE.RU9903.csv
+skip SHFE.RU9904.csv
+skip SHFE.RU9905.csv
+skip SHFE.RU9906.csv
+skip SHFE.RU9907.csv
+skip SHFE.RU9908.csv
+skip SHFE.RU9909.csv
+skip SHFE.RU9910.csv
+skip SHFE.RU9911.csv

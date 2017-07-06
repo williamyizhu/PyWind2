@@ -3,7 +3,7 @@ import sys
 import shutil
 import argparse
 # os.chdir('Z:\williamyizhu On My Mac\Documents\workspace\PyWind2')
-mpath = os.path.join(os.path.abspath('..'), 'PyShare\\Pyshare')
+mpath = os.path.join(os.path.abspath('..'), 'PyShare\\PyShare')
 sys.path.append(mpath)
 import Wind
 import Mongo
@@ -25,17 +25,19 @@ def func(args):
 #     get contract specifications from Wind terminal
     spec_field = ['ipo_date', 'lasttrade_date', 'lastdelivery_date', 'contractmultiplier']
     contract_spec_update, contract_spec_all = wd.get_contract_spec(sector, spec_field)
-
+    
 #     ------------- get data from wind -------------
     if 'dd' in mode:
         success, failed = wd.get_wind_data(contract_spec_update)
         wd.stop()
 
 #     ------------- create mongodb handler, upsert into mongodb -------------
-    if 'um' in mode:        
-        mdb = Mongo.MongoDB('mongodb_connection.ini')
-        mdb.connect(mdb.connection['_'.join(['wind', mongodb])])
-        wd.mongo_upsert(contract_spec_update, mdb)
+    if 'um' in mode:
+        mongo_path = os.path.join(os.path.abspath('..'), 'PyShare', 'config', 'mongodb_connection.ini')
+        mdb = Mongo.MongoDB(mongo_path)
+        mdb_connection_result = mdb.connect(mongodb)
+        if mdb_connection_result:
+            wd.mongo_upsert(contract_spec_update, mdb)
 
 #     ------------- clean copy dir, rename file name and skip old contracts -------------
     if cleancopy:
@@ -77,14 +79,15 @@ if __name__ == '__main__':
     main()
     
 # cd 'Z:\williamyizhu On My Mac\Documents\workspace\PyWind2'
-# .\wind_dr.py -m dd -s cfe -tf eod -d mongodb1
+# .\wind_dr.py -m dd -s cfe-t -tf eod
 # -m dd: download data from wind, um: update to mongodb
 # -s cfe: only apply to sector=cfe, in wind_section.ini
 # -tf eod: only download end of day data
-# -d mongodb1: use mongodb connection section wind_mongodb1 in mongodb_connection.ini
+# -d mongodb1: use mongodb connection section wind_mongodb2 in mongodb_connection.ini
 
 # cd 'Z:\williamyizhu On My Mac\Documents\workspace\PyWind2'
-# .\wind_dr.py -m dd um -s trading -tf eod -cc y -d mongodb1
+# .\wind_dr.py -m dd um -s cfe-t -tf eod -cc y -d wind_mongodb2
+# .\wind_dr.py -m dd um -s trading -tf eod -cc y -d wind_mongodb2
 # .\wind_dr.py -m dd -s historical -tf eod -cc y
 # daily routine, trading section contains only non-expired contracts
 # -cc y: e.g., rename CZCE.ZC705.csv to CZCE.ZC1705

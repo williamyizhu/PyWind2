@@ -21,25 +21,43 @@ wind_sector.set('historical', 'SHF', '1000009644000000')
 wind_sector.set('historical', 'DCE', '1000009645000000')
 wind_sector.set('historical', 'CZC', '1000009646000000')
 
-# 
+# both trading and historical
 wind_sector.add_section('cfe')
 wind_sector.set('cfe', 'trading', 'a599010101000000')
 wind_sector.set('cfe', 'historical', '1000009643000000')
-
-# 
 wind_sector.add_section('shf')
 wind_sector.set('shf', 'trading', 'a599010201000000')
 wind_sector.set('shf', 'historical', '1000009644000000')
-
-# 
 wind_sector.add_section('dce')
 wind_sector.set('dce', 'trading', 'a599010301000000')
 wind_sector.set('dce', 'historical', '1000009645000000')
-
-# 
 wind_sector.add_section('czc')
 wind_sector.set('czc', 'trading', 'a599010401000000')
 wind_sector.set('czc', 'historical', '1000009646000000')                        
+
+# trading only
+wind_sector.add_section('cfe-t')
+wind_sector.set('cfe-t', 'trading', 'a599010101000000')
+wind_sector.add_section('shf-t')
+wind_sector.set('shf-t', 'trading', 'a599010201000000')
+wind_sector.add_section('dce-t')
+wind_sector.set('dce-t', 'trading', 'a599010301000000')
+wind_sector.add_section('czc-t')
+wind_sector.set('czc-t', 'trading', 'a599010401000000')
+
+# historical only
+wind_sector.add_section('cfe-h')
+wind_sector.set('cfe-h', 'historical', '1000009643000000')
+wind_sector.add_section('shf-h')
+wind_sector.set('shf-h', 'historical', '1000009644000000')
+wind_sector.add_section('dce-h')
+wind_sector.set('dce-h', 'historical', '1000009645000000')
+wind_sector.add_section('czc-h')
+wind_sector.set('czc-h', 'historical', '1000009646000000')                        
+
+# active contract only
+wind_sector.add_section('active')
+wind_sector.set('active', 'cn', '1000015510000000')
 
 with open('wind_sector.ini', 'w') as f:
     wind_sector.write(f)
@@ -53,60 +71,3 @@ quandl_sector.set('account', 'api_key', 'zbJDcWPAfgVRVFe_H2uN')
 
 with open('quandl_sector.ini', 'w') as f:
     quandl_sector.write(f)
-    
-# -------------- mysql connection --------------
-mysql_connection = configparser.SafeConfigParser()
-
-mysql_connection.add_section('rds_test')
-mysql_connection.set('rds_test', 'id', 'rds_test')
-mysql_connection.set('rds_test', 'host', 'rm-uf61c095vt8jo2589o.mysql.rds.aliyuncs.com')
-mysql_connection.set('rds_test', 'port', '3306')
-mysql_connection.set('rds_test', 'user', 'zhuyi')
-mysql_connection.set('rds_test', 'password', 'Zhuyi@2701')
-mysql_connection.set('rds_test', 'db', 'futurexdb')
-mysql_connection.set('rds_test', 'charset', 'utf8')
-
-with open('mysql_connection.ini', 'w') as f:
-    mysql_connection.write(f)
-    
-# -------------- mongodb connection --------------
-mongodb_connection = configparser.SafeConfigParser()
-
-mongodb_connection.add_section('wind_mongodb1')
-mongodb_connection.set('wind_mongodb1', 'id', 'wind_mongodb1')
-mongodb_connection.set('wind_mongodb1', 'ip1', 'mongodb://root:Xhmz372701@114.55.54.144:3717')
-mongodb_connection.set('wind_mongodb1', 'ip2', 'mongodb://root:Xhmz372701@114.55.54.144:3718')
-mongodb_connection.set('wind_mongodb1', 'db', 'WindDataCnFutures')
-
-mongodb_connection.add_section('wind_mongodb2')
-mongodb_connection.set('wind_mongodb2', 'id', 'wind_mongodb2')
-mongodb_connection.set('wind_mongodb2', 'ip1', 'mongodb://root:Xhmz372701@114.215.252.135:3717')
-mongodb_connection.set('wind_mongodb2', 'ip2', 'mongodb://root:Xhmz372701@114.215.252.135:3718')
-mongodb_connection.set('wind_mongodb2', 'db', 'WindDataCnFutures')
-
-mongodb_connection.add_section('wind_mongodbi')
-mongodb_connection.set('wind_mongodbi', 'id', 'wind_mongodbi')
-mongodb_connection.set('wind_mongodbi', 'ip1', 'mongodb://root:Xhmz372701@dds-bp1affea778ad1842.mongodb.rds.aliyuncs.com:3717,dds-bp1affea778ad1841.mongodb.rds.aliyuncs.com:3717/admin?replicaSet=mgset-1401299')
-mongodb_connection.set('wind_mongodbi', 'ip2', 'mongodb://root:Xhmz372701@dds-bp1affea778ad1842.mongodb.rds.aliyuncs.com:3717,dds-bp1affea778ad1841.mongodb.rds.aliyuncs.com:3717/admin?replicaSet=mgset-1401299')
-mongodb_connection.set('wind_mongodbi', 'db', 'WindDataCnFutures')
-
-mongodb_connection.add_section('quandl_mongodb1')
-mongodb_connection.set('quandl_mongodb1', 'id', 'quandl_mongodb1')
-mongodb_connection.set('quandl_mongodb1', 'ip1', 'mongodb://root:Xhmz372701@114.55.54.144:3717')
-mongodb_connection.set('quandl_mongodb1', 'ip2', 'mongodb://root:Xhmz372701@114.55.54.144:3718')
-mongodb_connection.set('quandl_mongodb1', 'db', 'QuandlDataCnFutures')
-
-mongodb_connection.add_section('quandl_mongodb2')
-mongodb_connection.set('quandl_mongodb2', 'id', 'quandl_mongodb2')
-mongodb_connection.set('quandl_mongodb2', 'ip1', 'mongodb://root:Xhmz372701@114.215.252.135:3717')
-mongodb_connection.set('quandl_mongodb2', 'ip2', 'mongodb://root:Xhmz372701@114.215.252.135:3718')
-mongodb_connection.set('quandl_mongodb2', 'db', 'QuandlDataCnFutures')
-
-mongodb_connection.add_section('quandl_mongodbi')
-mongodb_connection.set('quandl_mongodbi', 'id', 'quandl_mongodbi')
-mongodb_connection.set('quandl_mongodbi', 'ip1', 'mongodb://root:Xhmz372701@dds-bp1affea778ad1842.mongodb.rds.aliyuncs.com:3717,dds-bp1affea778ad1841.mongodb.rds.aliyuncs.com:3717/admin?replicaSet=mgset-1401299')
-mongodb_connection.set('quandl_mongodbi', 'ip2', 'mongodb://root:Xhmz372701@dds-bp1affea778ad1842.mongodb.rds.aliyuncs.com:3717,dds-bp1affea778ad1841.mongodb.rds.aliyuncs.com:3717/admin?replicaSet=mgset-1401299')
-mongodb_connection.set('quandl_mongodbi', 'db', 'QuandlDataCnFutures')
-
-with open('mongodb_connection.ini', 'w') as f:
-    mongodb_connection.write(f)

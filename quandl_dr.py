@@ -2,7 +2,7 @@ import os
 import sys
 import argparse
 # os.chdir('Z:\williamyizhu On My Mac\Documents\workspace\PyWind2')
-mpath = os.path.join(os.path.abspath('..'), 'PyShare\\Pyshare')
+mpath = os.path.join(os.path.abspath('..'), 'PyShare\\PyShare')
 sys.path.append(mpath)
 import Quandl
 import Mongo
@@ -33,8 +33,9 @@ def func(args):
      
 #     ------------- create mongodb handler, upsert into mongodb -------------
     if 'um' in mode:
-        mdb = Mongo.MongoDB('mongodb_connection.ini')
-        mdb.connect(mdb.connection['_'.join(['quandl', mongodb])])
+        mongo_path = os.path.join(os.path.abspath('..'), 'PyShare', 'config', 'mongodb_connection.ini')
+        mdb = Mongo.MongoDB(mongo_path)
+        mdb.connect(mdb.connection[mongodb])
         qd.mongo_upsert(contract_spec_update, mdb)                 
 
 def main():
