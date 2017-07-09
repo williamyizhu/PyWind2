@@ -64,5 +64,5 @@ if __name__ == '__main__':
 
 
 # cd 'Z:\williamyizhu On My Mac\Documents\workspace\PyWind2'
-# .\mongodb_dr.py -m um -d wind_mongodb1
-# .\mongodb_dr.py -m um -d ctp_mongodb1
+# .\mongodb_dr.py -m um -d wind_mongodb2
+# .\mongodb_dr.py -m um -d ctp_mongodb2

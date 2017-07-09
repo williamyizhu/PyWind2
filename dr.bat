@@ -1,13 +1,17 @@
-echo wind_dr.py, change wind_mongodb2 to wind_mongodb2i
+ECHO OFF
 
-taskkill /f /im WBox.exe
-taskkill /f /im wim.exe
+ECHO "Use dr.ps1 instead"
 
-python .\contract_active.py > log_contract_active.txt
+ECHO wind_dr.py, change wind_mongodb2 to wind_mongodb2i
 
-python .\wind_dr.py -m dd um -s trading -tf eod -cc y -d wind_mongodb2 > log_wind_dr.txt
+REM taskkill /f /im WBox.exe
+REM taskkill /f /im wim.exe
 
-rem python .\mongodb_dr.py > log_mongodb_dr.txt
+REM python .\contract_active.py > log_contract_active.txt
 
-taskkill /f /im WBox.exe
-taskkill /f /im wim.exe
+REM python .\wind_dr.py -m dd um -s trading -tf eod -cc y -d wind_mongodb2 > log_wind_dr.txt
+
+REM python .\mongodb_dr.py > log_mongodb_dr.txt
+
+REM taskkill /f /im WBox.exe
+REM taskkill /f /im wim.exe
