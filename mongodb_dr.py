@@ -45,8 +45,9 @@ def func(args):
                                  ]}
 #             mdb.find(cond_dict)
             mdb.delete_many(cond_dict)
-            print('db=CtpData: create index for TradingDay')
-            mdb.create_index('TradingDay', True)
+#             each index on a collection adds some amount of overhead to the performance of write operation
+#             print('db=CtpData: create index for TradingDay')
+#             mdb.create_index('TradingDay', True)
 
 def main():
     parser = argparse.ArgumentParser(usage='MongoDB Daily Routine')
