@@ -59,6 +59,15 @@ wind_sector.set('czc-h', 'historical', '1000009646000000')
 wind_sector.add_section('active')
 wind_sector.set('active', 'cn', '1000015510000000')
 
+# continuous contract only
+wind_sector.add_section('continuous')
+wind_sector.set('continuous', 'cn', 'a599020600000000')
+
+# continuous contract only, arranged by same months
+wind_sector.add_section('continuous2')
+wind_sector.set('continuous2', 'cn', '1000019227000000')
+
+
 with open('wind_sector.ini', 'w') as f:
     wind_sector.write(f)
 

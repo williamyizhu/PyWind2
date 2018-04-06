@@ -1,7 +1,7 @@
 import os
 import sys
 import pandas as pd
-# os.chdir('Z:\williamyizhu On My Mac\Documents\workspace\PyWind2')
+os.chdir('Z:\Documents\workspace\PyWind2')
 mpath = os.path.join(os.path.abspath('..'), 'PyShare\\PyShare')
 sys.path.append(mpath)
 import Wind
@@ -10,7 +10,7 @@ import Mysql
 # ------------- connect to rds -------------    
 fpath = os.path.join(os.path.abspath('..'), 'PyShare', 'config', 'mysql_connection.ini')
 rds = Mysql.MySqlDB(fpath)
-rtn = rds.connect(rds.connection['rds_test'])   
+rtn = rds.connect(rds.connection['rds_prod'])   
 
 # ------------- get active contract data from wind -------------    
 # create Wind object, set rootdir, wind sector config file, and timeframe
@@ -18,19 +18,28 @@ rootdir = 'C:\\wind_data_cn_futures'
 wd = Wind.Wind(rootdir, 'wind_sector.ini', timeframe=[])
 cnac = wd.get_sector_constituent(sector='active')
 
+# set active contract for equity options
+cnac_equity = pd.DataFrame()
+cnac_equity = cnac_equity.append(pd.Series({'contract':'510050','desc_zh':'50ETF', 'exchange':'SSE','w_symbol':'510050.SSE','symbol':'SSE.510050'}), ignore_index=True)
+cnac_equity = cnac_equity.append(pd.Series({'contract':'510180','desc_zh':'180ETF','exchange':'SSE','w_symbol':'510180.SSE','symbol':'SSE.510180'}), ignore_index=True)
+cnac_equity = cnac_equity.append(pd.Series({'contract':'510300','desc_zh':'300ETF','exchange':'SSE','w_symbol':'510300.SSE','symbol':'SSE.510300'}), ignore_index=True)
+
 # ------------------------ insert active contract data to rds ------------------------
+tmp = pd.concat([cnac, cnac_equity]).reset_index(drop=True).loc[:, ['contract','exchange']]
+tmp['underlying'] = ''
+
 mm, result = rds.execute('TRUNCATE contract_active', [])
-rtn = rds.upsert('contract_active', cnac[['contract','exchange']], False)
-mm, result = rds.execute('UPDATE contract_active a JOIN contractinfo b ON a.contract = b.contract_symbol SET a.contract = b.contract_symbol', [])
+rtn = rds.upsert('contract_active', tmp, False)
+mm, result = rds.execute('UPDATE contract_active a JOIN contractinfo b ON a.contract=b.contract_symbol SET a.contract=b.contract_symbol, a.underlying=b.underlying_symbol', [])
 
 # ------------------------ underlying charting hour, similar to trading hour ------------------------
 # get trading hours of active contracts, each underlying should have at least one active contract
+# trading hour does not include equity options
 ath = wd.get_trading_hours(cnac)
 ath.rename(columns={'symbol':'Symbol'}, inplace=True)
 
 # all contracts from ctp api
-# cctp = pd.read_csv('Z:\williamyizhu On My Mac\Documents\workspace\PyCtp\contract.csv')
-cctp = pd.read_csv(''.join([os.path.dirname(os.getcwd()), '\PyCtp\contract.csv']))
+cctp = pd.read_csv(''.join([os.path.dirname(os.getcwd()), '\PyCtp2\Contract.Future.csv']))
 
 # active contract (Wind) --> underlying (CTP) --> trading hour
 gmc = pd.merge(ath, cctp, on='Symbol', how='left')
@@ -39,7 +48,7 @@ for index, row in gmc.iterrows():
 #     print(row['ProductID2'])
     if row['ProductID2'] in ['ZC','BU','HC','RB','RU']:
         gmc.set_value(index, 'thi', 0)
-    elif row['ProductID2'] in ['CF','OI','FG','MA','RM','SR','TA','A','B','I','J','JM','M','P','Y','M_O','SR_O']: 
+    elif row['ProductID2'] in ['CF','CY','OI','FG','MA','RM','SR','TA','A','B','I','J','JM','M','P','Y','M_O','SR_O']: 
         gmc.set_value(index, 'thi', 1)
     elif row['ProductID2'] in ['AL','CU','NI','PB','SN','ZN']:
         gmc.set_value(index, 'thi', 2)
@@ -66,7 +75,7 @@ th.update({'last_day_start':['21:00:00','09:00:00','10:30:00','13:30:00']})
 th.update({'last_day_end':  ['23:00:00','10:15:00','11:30:00','15:00:00']})
 thdict.update({0:pd.DataFrame(th)})
 
-# ['CF','OI','FG','MA','RM','SR','TA','A','B','I','J','JM','M','P','Y']: 
+# ['CF','CY','OI','FG','MA','RM','SR','TA','A','B','I','J','JM','M','P','Y']: 
 th = {}
 th.update({'session':[1,2,3,4]})
 th.update({'normal_start':  ['21:00:00','09:00:00','10:30:00','13:30:00']})
@@ -119,6 +128,15 @@ th.update({'normal_end':    ['11:30:00','15:00:00']})
 th.update({'last_day_start':['09:30:00','13:00:00']})
 th.update({'last_day_end':  ['11:30:00','15:00:00']})
 thdict.update({6:pd.DataFrame(th)})
+
+# ['510050','510180','510300']:
+th = {}
+th.update({'session':[1,2]})
+th.update({'normal_start':  ['09:30:00','13:00:00']})
+th.update({'normal_end':    ['11:30:00','15:00:00']})
+th.update({'last_day_start':['09:30:00','13:00:00']})
+th.update({'last_day_end':  ['11:30:00','15:00:00']})
+thdict.update({7:pd.DataFrame(th)})
 
 # trading hour by underlying
 trading_hour = pd.DataFrame()
