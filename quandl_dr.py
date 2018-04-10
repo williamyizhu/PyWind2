@@ -65,10 +65,10 @@ if __name__ == '__main__':
 # cd 'Z:\williamyizhu On My Mac\Documents\workspace\PyWind2'
 # cd 'Z:\Documents\workspace\PyWind2'
 
-# .\quandl_dr.py -m dd -tf eod -g y -e CFFEX -exp n
-# .\quandl_dr.py -m dd -tf eod -g y -e SHFE -exp n
-# .\quandl_dr.py -m dd -tf eod -g y -e DCE -exp n
-# .\quandl_dr.py -m dd -tf eod -g y -e ZCE -exp n
+# python .\quandl_dr.py -m dd -tf eod -g y -e CFFEX -exp n
+# python .\quandl_dr.py -m dd -tf eod -g y -e SHFE -exp n
+# python .\quandl_dr.py -m dd -tf eod -g y -e DCE -exp n
+# python .\quandl_dr.py -m dd -tf eod -g y -e ZCE -exp n
 
 # -m dd: download data from quandl
 # -tf eod: download end of day data

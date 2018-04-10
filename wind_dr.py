@@ -86,9 +86,9 @@ if __name__ == '__main__':
 # cd 'Z:\Documents\workspace\PyWind2'
 
 # daily routine, trading section contains only non-expired contracts, historial section contains all expired contracts
-# .\wind_dr.py -m dd -s trading -tf eod -cc y
-# .\wind_dr.py -m dd -s historical -tf eod -cc y
-# .\wind_dr.py -m dd -s shf-t -tf eod -cc y
+# python .\wind_dr.py -m dd -s trading -tf eod -cc y
+# python .\wind_dr.py -m dd -s historical -tf eod -cc y
+# python .\wind_dr.py -m dd -s shf-t -tf eod -cc y
 
 # -dir root directory, by default, 'C:\\wind_data_cn_futures'
 # -m dd: download data from wind, um: update to mongodb
@@ -97,9 +97,9 @@ if __name__ == '__main__':
 # -cc y: e.g., rename CZCE.ZC705.csv to CZCE.ZC1705
 # -d mongodb1: use mongodb connection section wind_mongodb2 in mongodb_connection.ini
 
-# .\wind_dr.py -dir 'c:\wind_data_cn_continuous' -m dd -s continuous -tf eod
-# .\wind_dr.py -dir 'c:\wind_data_cn_continuous2' -m dd -s continuous2 -tf eod
-# .\wind_dr.py -dir 'c:\test' -m dd -s cfe-t -tf eod
-# .\wind_dr.py -m dd -s cfe-t -tf eod
-# .\wind_dr.py -m dd um -s cfe-t -tf eod -cc y -d wind_mongodb2
-# .\wind_dr.py -m dd um -s trading -tf eod -cc y -d wind_mongodb2
+# python .\wind_dr.py -dir 'c:\wind_data_cn_continuous' -m dd -s continuous -tf eod
+# python .\wind_dr.py -dir 'c:\wind_data_cn_continuous2' -m dd -s continuous2 -tf eod
+# python .\wind_dr.py -dir 'c:\test' -m dd -s cfe-t -tf eod
+# python .\wind_dr.py -m dd -s cfe-t -tf eod
+# python .\wind_dr.py -m dd um -s cfe-t -tf eod -cc y -d wind_mongodb2
+# python .\wind_dr.py -m dd um -s trading -tf eod -cc y -d wind_mongodb2

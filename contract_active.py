@@ -34,10 +34,10 @@ mm, result = rds.execute('UPDATE contract_active a JOIN contractinfo b ON a.cont
 
 # ------------------------ underlying charting hour, similar to trading hour ------------------------
 # get trading hours of active contracts, each underlying should have at least one active contract
-# trading hour does not include equity options
-ath = wd.get_trading_hours(cnac)
+# trading hour does not include equity options, or INE contracts
+idx = [ii not in ['INE'] for ii in cnac['exchange']]
+ath = wd.get_trading_hours(cnac.iloc[idx])
 ath.rename(columns={'symbol':'Symbol'}, inplace=True)
-
 # all contracts from ctp api
 cctp = pd.read_csv(''.join([os.path.dirname(os.getcwd()), '\PyCtp2\Contract.Future.csv']))
 
@@ -54,7 +54,7 @@ for index, row in gmc.iterrows():
         gmc.set_value(index, 'thi', 2)
     elif row['ProductID2'] in ['AG','AU']:
         gmc.set_value(index, 'thi', 3)
-    elif row['ProductID2'] in ['FU','WR','WH','JR','LR','PM','RI','RS','SF','SM','BB','C','CS','FB','JD','L','PP','V']:
+    elif row['ProductID2'] in ['AP','FU','WR','WH','JR','LR','PM','RI','RS','SF','SM','BB','C','CS','FB','JD','L','PP','V']:
         gmc.set_value(index, 'thi', 4)
     elif row['ProductID2'] in ['T','TF']:
         gmc.set_value(index, 'thi', 5)
@@ -102,7 +102,7 @@ th.update({'last_day_start':['21:00:00','09:00:00','10:30:00','13:30:00']})
 th.update({'last_day_end':  ['02:30:00','10:15:00','11:30:00','15:00:00']})
 thdict.update({3:pd.DataFrame(th)})
 
-# ['FU','WR','WH','JR','LR','PM','RI','RS','SF','SM','BB','C','CS','FB','JD','L','PP','V']:
+# ['AP','FU','WR','WH','JR','LR','PM','RI','RS','SF','SM','BB','C','CS','FB','JD','L','PP','V']:
 th = {}
 th.update({'session':[1,2,3]})
 th.update({'normal_start':  ['09:00:00','10:30:00','13:30:00']})
