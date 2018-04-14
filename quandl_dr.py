@@ -1,9 +1,7 @@
 import os
 import sys
 import argparse
-# os.chdir('Z:\williamyizhu On My Mac\Documents\workspace\PyWind2')
-mpath = os.path.join(os.path.abspath('..'), 'PyShare\\PyShare')
-sys.path.append(mpath)
+sys.path.append(os.path.join(os.path.abspath('..'), 'PyShare\\PyShare'))
 import Quandl
 import Mongo
 
@@ -27,7 +25,7 @@ def func(args):
     if get_quandl_dataset:
         qd.get_datasets(exchange)
     contract_spec_update, contract_spec_all = qd.get_contract_spec(exchange, underlying, check_expiration)
-    
+
 #     ------------- get data from quandl -------------
     if 'dd' in mode:
         success, failed = qd.get_quandl_data(contract_spec_update)
@@ -56,7 +54,7 @@ def main():
 #     print(args)
     try:
         func(args)
-    except Exception as e: 
+    except Exception as e:
         print(__file__, '\n', e)  
 
 if __name__ == '__main__':
