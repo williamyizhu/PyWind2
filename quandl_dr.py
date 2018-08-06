@@ -38,7 +38,7 @@ def func(args):
         mongo_path = os.path.join(os.path.abspath('..'), 'PyShare', 'config', 'mongodb_connection.ini')
         mdb = Mongo.MongoDB(mongo_path)
         mdb.connect(mdb.connection[mongodb])
-        qd.mongo_upsert(contract_spec_update, mdb)                 
+        qd.mongo_upsert(contract_spec_update, mdb)
 
 def main():
     parser = argparse.ArgumentParser(usage='Get Quandl data')
