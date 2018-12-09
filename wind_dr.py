@@ -69,4 +69,4 @@ if __name__ == '__main__':
 
 # python .\wind_dr.py -m dd -s cfe-t -tf eod
 # python .\wind_dr.py -m dd um -s cfe-t -tf eod -cc y -id default -d wind_mongodb2
-# python .\wind_dr.py -m dd um -s trading -tf eod -cc y -d wind_mongodb2
+# python .\wind_dr.py -m dd um -s trading -tf eod -cc y -id default -d wind_mongodb2
