@@ -1,11 +1,13 @@
-import os
 import configparser
+import os
 
-os.chdir('Z:\williamyizhu On My Mac\Documents\workspace\PyWind2')
-os.getcwd()
+print('config file location', os.path.abspath(os.path.dirname(__file__)))
+
+# os.chdir('Z:\williamyizhu On My Mac\Documents\workspace\PyWind2')
+# os.getcwd()
 
 # -------------- Wind sector id --------------
-wind_sector = configparser.SafeConfigParser()
+wind_sector = configparser.ConfigParser()
 
 # Wind, WSET, future exchange all trading contracts
 wind_sector.add_section('trading')
@@ -33,7 +35,7 @@ wind_sector.set('dce', 'trading', 'a599010301000000')
 wind_sector.set('dce', 'historical', '1000009645000000')
 wind_sector.add_section('czc')
 wind_sector.set('czc', 'trading', 'a599010401000000')
-wind_sector.set('czc', 'historical', '1000009646000000')                        
+wind_sector.set('czc', 'historical', '1000009646000000')
 
 # trading only
 wind_sector.add_section('cfe-t')
@@ -53,7 +55,7 @@ wind_sector.set('shf-h', 'historical', '1000009644000000')
 wind_sector.add_section('dce-h')
 wind_sector.set('dce-h', 'historical', '1000009645000000')
 wind_sector.add_section('czc-h')
-wind_sector.set('czc-h', 'historical', '1000009646000000')                        
+wind_sector.set('czc-h', 'historical', '1000009646000000')
 
 # active contract only
 wind_sector.add_section('active')
@@ -67,12 +69,11 @@ wind_sector.set('continuous', 'cn', 'a599020600000000')
 wind_sector.add_section('continuous2')
 wind_sector.set('continuous2', 'cn', '1000019227000000')
 
-
 with open('wind_sector.ini', 'w') as f:
     wind_sector.write(f)
 
 # -------------- Quandl sector id --------------
-quandl_sector = configparser.SafeConfigParser()
+quandl_sector = configparser.ConfigParser()
 
 quandl_sector.add_section('account')
 quandl_sector.set('account', 'id', 'william.yizhu@live.com')
