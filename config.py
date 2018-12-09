@@ -3,9 +3,6 @@ import os
 
 print('config file location', os.path.abspath(os.path.dirname(__file__)))
 
-# os.chdir('Z:\williamyizhu On My Mac\Documents\workspace\PyWind2')
-# os.getcwd()
-
 # -------------- Wind sector id --------------
 wind_sector = configparser.ConfigParser()
 
