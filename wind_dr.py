@@ -1,13 +1,12 @@
 import argparse
 import platform
-
 from PyShare.PyUtils import Wind
 
 
 def func(args):
     # ------------- parse command line input args -------------
     # default use wind datasource
-    rootdir = 'C:\\wind_data_cn_futures' if 'Windows' in platform.system() else '/home/wind_data_cn_futures'
+    rootdir = 'C:\\wind_data_cn_futures' if 'Windows' in platform.system() else '/usr/local/share/wind_data_cn_futures'
     mode = [] if args.mode is None else [x.lower() for x in args.mode]
     sector = 'trading' if args.sector is None else args.sector[0].lower()
     timeframe = ['eod'] if args.timeframe is None else [x.lower() for x in args.timeframe]

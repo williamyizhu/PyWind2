@@ -1,13 +1,12 @@
 import argparse
 import platform
-
 from PyShare.PyUtils import Quandl
 
 
 def func(args):
     # ------------- parse command line input args -------------
     # arguments for both wind and quandl
-    rootdir = 'C:\\quandl_data_cn_futures' if 'Windows' in platform.system() else '/home/quandl_data_cn_futures'
+    rootdir = 'C:\\quandl_data_cn_futures' if 'Windows' in platform.system() else '/usr/local/share/quandl_data_cn_futures'
     mode = [] if args.mode is None else [x.lower() for x in args.mode]
     timeframe = ['eod'] if args.timeframe is None else [x.lower() for x in args.timeframe]
 

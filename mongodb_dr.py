@@ -1,8 +1,6 @@
 import argparse
 import os
-
 import numpy as np
-
 from PyShare.PyUtils import Mongo
 
 

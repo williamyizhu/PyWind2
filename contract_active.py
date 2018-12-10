@@ -1,9 +1,7 @@
 import datetime as dt
 import os
 import platform
-
 import pandas as pd
-
 from PyShare.PyUtils import Mysql
 from PyShare.PyUtils import Wind
 
@@ -14,7 +12,7 @@ rtn = rds.connect('PyOption')
 
 # ------------- get active contract data from wind -------------    
 # create Wind object, set rootdir, wind sector config file, and timeframe
-rootdir = 'C:\\wind_data_cn_futures' if 'Windows' in platform.system() else '/home/wind_data_cn_futures'
+rootdir = 'C:\\wind_data_cn_futures' if 'Windows' in platform.system() else '/usr/local/share/wind_data_cn_futures'
 
 wd = Wind.Wind(rootdir, 'wind_sector.ini', timeframe=[])
 cnac = wd.get_sector_constituent(sector='active')
