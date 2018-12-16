@@ -60,12 +60,34 @@ def main():
 if __name__ == '__main__':
     main()
 
+# -------------------------------------------------------------------------------------------
+# local machine, download all contracts
+# -------------------------------------------------------------------------------------------
 # cd 'Z:\Documents\workspace\PyWind2'
-
 # python .\quandl_dr.py -m dd -tf eod -g y -e CFFEX -exp n
 # python .\quandl_dr.py -m dd -tf eod -g y -e SHFE -exp n
 # python .\quandl_dr.py -m dd -tf eod -g y -e DCE -exp n
 # python .\quandl_dr.py -m dd -tf eod -g y -e ZCE -exp n
 
+# -------------------------------------------------------------------------------------------
+# local machine, download CFFEX contracts, only non-expired contracts, upload to mongodb
+# -------------------------------------------------------------------------------------------
 # python .\quandl_dr.py -m dd um -tf eod -g y -e CFFEX -exp y -id default -d quandl_mongodb2
-# daily routine, download from quandl and upsert to quandl_mongodb2, non-expired contracts only
+
+# -------------------------------------------------------------------------------------------
+# Dev1, jenkins.optionplus.cn, PyData, download all contracts
+# -------------------------------------------------------------------------------------------
+# cd /usr/local/share/workspace/PyWind2
+# python quandl_dr.py -m dd -tf eod -g y -e CFFEX -exp n -id gxjy -d mongodb_market_data
+# python quandl_dr.py -m dd -tf eod -g y -e DCE -exp n -id gxjy -d mongodb_market_data
+# python quandl_dr.py -m dd -tf eod -g y -e SHFE -exp n -id gxjy -d mongodb_market_data
+# python quandl_dr.py -m dd -tf eod -g y -e ZCE -exp n -id gxjy -d mongodb_market_data
+
+# -------------------------------------------------------------------------------------------
+# Dev1, jenkins.optionplus.cn, PyData, collect quandl data daily, only non-expired contracts
+# -------------------------------------------------------------------------------------------
+# cd /usr/local/share/workspace/PyWind2
+# python quandl_dr.py -m dd um -tf eod -g y -e CFFEX -exp y -id gxjy -d mongodb_market_data
+# python quandl_dr.py -m dd um -tf eod -g y -e DCE -exp y -id gxjy -d mongodb_market_data
+# python quandl_dr.py -m dd um -tf eod -g y -e SHFE -exp y -id gxjy -d mongodb_market_data
+# python quandl_dr.py -m dd um -tf eod -g y -e ZCE -exp y -id gxjy -d mongodb_market_data
