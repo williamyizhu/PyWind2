@@ -59,13 +59,22 @@ def main():
 if __name__ == '__main__':
     main()
 
-# cd 'Z:\Documents\workspace\PyWind2'
-
-# daily routine, trading section contains only non-expired contracts, historial section contains all expired contracts
+# -------------------------------------------------------------------------------------------
+# daily routine, trading section contains only non-expired contracts
+# historial section contains all expired contracts
+# -------------------------------------------------------------------------------------------
 # python .\wind_dr.py -m dd -s trading -tf eod
 # python .\wind_dr.py -m dd -s historical -tf eod
-# python .\wind_dr.py -m dd -s shf-t -tf eod
 
+# python .\wind_dr.py -m dd -s shf-t -tf eod
 # python .\wind_dr.py -m dd -s cfe-t -tf eod
-# python .\wind_dr.py -m dd um -s cfe-t -tf eod -id default -d wind_mongodb2
-# python .\wind_dr.py -m dd um -s trading -tf eod -id default -d wind_mongodb2
+
+# -------------------------------------------------------------------------------------------
+# collect wind data daily, only non-expired contracts
+# -------------------------------------------------------------------------------------------
+# python .\wind_dr.py -m dd um -s trading -tf eod -id gxjy -d mongodb_market_data
+
+# -------------------------------------------------------------------------------------------
+# collect wind historical data
+# -------------------------------------------------------------------------------------------
+# python .\wind_dr.py -m dd um -s historical -tf eod -id gxjy -d mongodb_market_data
