@@ -66,15 +66,23 @@ if __name__ == '__main__':
 # python .\wind_dr.py -m dd -s trading -tf eod
 # python .\wind_dr.py -m dd -s historical -tf eod
 
-# python .\wind_dr.py -m dd -s shf-t -tf eod
+# python .\wind_dr.py -m dd -s dce-t -tf eod
+# python .\wind_dr.py -m dd -s czc-t -tf eod
 # python .\wind_dr.py -m dd -s cfe-t -tf eod
+# python .\wind_dr.py -m dd -s shf-t -tf eod
 
 # -------------------------------------------------------------------------------------------
-# collect wind data daily, only non-expired contracts
+# collect wind data daily and hourly, only non-expired contracts
 # -------------------------------------------------------------------------------------------
 # python .\wind_dr.py -m dd um -s trading -tf eod -id gxjy -d mongodb_market_data
+# python .\wind_dr.py -m dd um -s trading -tf 60 -id gxjy -d mongodb_market_data
 
 # -------------------------------------------------------------------------------------------
-# collect wind historical data
+# collect wind historical data, daily and hourly
 # -------------------------------------------------------------------------------------------
 # python .\wind_dr.py -m dd um -s historical -tf eod -id gxjy -d mongodb_market_data
+#
+# python .\wind_dr.py -m dd um -s dce-h -tf 60 -id gxjy -d mongodb_market_data
+# python .\wind_dr.py -m dd um -s czc-h -tf 60 -id gxjy -d mongodb_market_data
+# python .\wind_dr.py -m dd um -s cfe-h -tf 60 -id gxjy -d mongodb_market_data
+# python .\wind_dr.py -m dd um -s shf-h -tf 60 -id gxjy -d mongodb_market_data
