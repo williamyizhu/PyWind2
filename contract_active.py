@@ -30,13 +30,13 @@ def func(args):
     cnac_equity = cnac_equity.append(pd.Series({'contract': '510180', 'desc_zh': '180ETF', 'exchange': 'SSE', 'w_symbol': '510180.SSE', 'symbol': 'SSE.510180'}), ignore_index=True)
     cnac_equity = cnac_equity.append(pd.Series({'contract': '510300', 'desc_zh': '300ETF', 'exchange': 'SSE', 'w_symbol': '510300.SSE', 'symbol': 'SSE.510300'}), ignore_index=True)
 
-    # ------------------------ insert active contract data to rds ------------------------
+    print(dt.datetime.today(), '---- upsert to contract_active table ----')
     tmp = pd.concat([cnac, cnac_equity], sort=True, ignore_index=True).loc[:, ['contract', 'exchange']]
-    tmp['underlying'] = ''
-
     mm, result = rds.execute('TRUNCATE contract_active', [])
-    rtn = rds.upsert('contract_active', tmp, False)
-    mm, result = rds.execute('UPDATE contract_active a JOIN contractinfo b ON a.contract=b.contract_symbol SET a.contract=b.contract_symbol, a.underlying=b.underlying_symbol', [])
+    sql = '''SELECT exchange_symbol, underlying_symbol, contract_symbol FROM futurexdb.contractinfo WHERE exchange_symbol IN %s AND contract_symbol IN %s'''
+    mm, result = rds.execute(sql, (set(tmp['exchange']), set(tmp['contract'])))
+    df = result.rename(index=str, columns={'exchange_symbol': 'exchange', 'underlying_symbol': 'underlying', 'contract_symbol': 'contract'})
+    rtn = rds.upsert('contract_active', df, is_on_duplicate_key_update=False)
 
     # ------------------------ underlying charting hour, similar to trading hour ------------------------
     # get trading hours of active contracts, each underlying should have at least one active contract
@@ -67,8 +67,8 @@ def func(args):
         elif row['ProductID2'] in ['IC', 'IF', 'IH']:
             gmc.loc[index, 'thi'] = 6
 
-    print(dt.datetime.today(), '---- trading hour by underlying ----')
-    print(gmc[['trading_hour', 'exchange', 'ProductID2', 'thi']].sort_values(by=['trading_hour', 'exchange']))
+    print(dt.datetime.today(), '---- extract trading hour by underlying ----')
+    # print(gmc[['trading_hour', 'exchange', 'ProductID2', 'thi']].sort_values(by=['trading_hour', 'exchange']))
 
     # trading hour dict
     thdict = dict()
@@ -155,7 +155,7 @@ def func(args):
             xg['underlying_symbol'] = row['ProductID2']
             trading_hour = trading_hour.append(xg, True)
 
-    # ------------------------ insert active contract data to rds ------------------------
+    print(dt.datetime.today(), '---- upsert to underlying_charting_hour table ----')
     mm, result = rds.execute('TRUNCATE underlying_charting_hour', [])
     rtn = rds.upsert('underlying_charting_hour', trading_hour[['exchange_symbol', 'underlying_symbol', 'session', 'normal_start', 'normal_end', 'last_day_start', 'last_day_end']], False)
     mm, result = rds.execute('UPDATE underlying_charting_hour a JOIN underlying b ON a.underlying_symbol = b.underlying_symbol SET a.underlying_symbol = b.underlying_symbol', [])
