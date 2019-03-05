@@ -32,6 +32,7 @@ def func(args):
 
     print(dt.datetime.today(), '---- upsert to contract_active table ----')
     tmp = pd.concat([cnac, cnac_equity], sort=True, ignore_index=True).loc[:, ['contract', 'exchange']]
+    # tmp contains symbols from Wind, which are all upper case
     mm, result = rds.execute('TRUNCATE contract_active', [])
     sql = '''SELECT exchange_symbol, underlying_symbol, contract_symbol FROM futurexdb.contractinfo WHERE exchange_symbol IN %s AND contract_symbol IN %s'''
     mm, result = rds.execute(sql, (set(tmp['exchange']), set(tmp['contract'])))
@@ -40,7 +41,7 @@ def func(args):
 
     # ------------------------ underlying charting hour, similar to trading hour ------------------------
     # get trading hours of active contracts, each underlying should have at least one active contract
-    # trading hour does not include equity options, or INE contracts
+    # trading hour does not include options, e.g., m_o or 510050_O
     idx = [ii not in ['INE'] for ii in cnac['exchange']]
     ath = wd.get_trading_hours(cnac.iloc[idx])
     ath.rename(columns={'symbol': 'Symbol'}, inplace=True)
@@ -51,16 +52,16 @@ def func(args):
     gmc = pd.merge(ath, cctp, on='Symbol', how='left')
     gmc['thi'] = -1
     for index, row in gmc.iterrows():
-        #     print(row['ProductID2'])
-        if row['ProductID2'] in ['SP', 'BU', 'HC', 'RB', 'RU', 'FU']:
+        # print(row['ProductID2'])
+        if row['ProductID2'] in ['SP', 'BU', 'HC', 'RB', 'RU', 'FU', 'RU_O']:
             gmc.loc[index, 'thi'] = 0
-        elif row['ProductID2'] in ['CF', 'CY', 'OI', 'FG', 'MA', 'RM', 'SR', 'TA', 'ZC', 'A', 'B', 'I', 'J', 'JM', 'M', 'P', 'Y', 'M_O', 'SR_O']:
+        elif row['ProductID2'] in ['CF', 'CY', 'OI', 'FG', 'MA', 'RM', 'SR', 'TA', 'ZC', 'A', 'B', 'I', 'J', 'JM', 'M', 'P', 'Y', 'M_O', 'SR_O', 'CF_O']:
             gmc.loc[index, 'thi'] = 1
-        elif row['ProductID2'] in ['AL', 'CU', 'NI', 'PB', 'SN', 'ZN']:
+        elif row['ProductID2'] in ['AL', 'CU', 'NI', 'PB', 'SN', 'ZN', 'CU_O']:
             gmc.loc[index, 'thi'] = 2
         elif row['ProductID2'] in ['AG', 'AU']:
             gmc.loc[index, 'thi'] = 3
-        elif row['ProductID2'] in ['AP', 'WR', 'WH', 'JR', 'LR', 'PM', 'RI', 'RS', 'SF', 'SM', 'BB', 'C', 'CS', 'FB', 'JD', 'L', 'PP', 'V', 'EG']:
+        elif row['ProductID2'] in ['AP', 'WR', 'WH', 'JR', 'LR', 'PM', 'RI', 'RS', 'SF', 'SM', 'BB', 'C', 'CS', 'FB', 'JD', 'L', 'PP', 'V', 'EG', 'C_O']:
             gmc.loc[index, 'thi'] = 4
         elif row['ProductID2'] in ['T', 'TF', 'TS']:
             gmc.loc[index, 'thi'] = 5
@@ -72,7 +73,7 @@ def func(args):
 
     # trading hour dict
     thdict = dict()
-    # ['SP', 'BU', 'HC', 'RB', 'RU', 'FU']
+    # ['SP', 'BU', 'HC', 'RB', 'RU', 'FU', 'RU_O']
     th = {}
     th.update({'session': [1, 2, 3, 4]})
     th.update({'normal_start': ['21:00:00', '09:00:00', '10:30:00', '13:30:00']})
@@ -81,7 +82,7 @@ def func(args):
     th.update({'last_day_end': ['23:00:00', '10:15:00', '11:30:00', '15:00:00']})
     thdict.update({0: pd.DataFrame(th)})
 
-    # ['CF', 'CY', 'OI', 'FG', 'MA', 'RM', 'SR', 'TA', 'ZC', 'A', 'B', 'I', 'J', 'JM', 'M', 'P', 'Y', 'M_O', 'SR_O']
+    # ['CF', 'CY', 'OI', 'FG', 'MA', 'RM', 'SR', 'TA', 'ZC', 'A', 'B', 'I', 'J', 'JM', 'M', 'P', 'Y', 'M_O', 'SR_O', 'CF_O']
     th = {}
     th.update({'session': [1, 2, 3, 4]})
     th.update({'normal_start': ['21:00:00', '09:00:00', '10:30:00', '13:30:00']})
@@ -90,7 +91,7 @@ def func(args):
     th.update({'last_day_end': ['23:30:00', '10:15:00', '11:30:00', '15:00:00']})
     thdict.update({1: pd.DataFrame(th)})
 
-    # ['AL', 'CU', 'NI', 'PB', 'SN', 'ZN']
+    # ['AL', 'CU', 'NI', 'PB', 'SN', 'ZN', 'CU_O']
     th = {}
     th.update({'session': [1, 2, 3, 4]})
     th.update({'normal_start': ['21:00:00', '09:00:00', '10:30:00', '13:30:00']})
@@ -108,7 +109,7 @@ def func(args):
     th.update({'last_day_end': ['02:30:00', '10:15:00', '11:30:00', '15:00:00']})
     thdict.update({3: pd.DataFrame(th)})
 
-    # ['AP', 'WR', 'WH', 'JR', 'LR', 'PM', 'RI', 'RS', 'SF', 'SM', 'BB', 'C', 'CS', 'FB', 'JD', 'L', 'PP', 'V', 'EG']
+    # ['AP', 'WR', 'WH', 'JR', 'LR', 'PM', 'RI', 'RS', 'SF', 'SM', 'BB', 'C', 'CS', 'FB', 'JD', 'L', 'PP', 'V', 'EG', 'C_O']
     th = {}
     th.update({'session': [1, 2, 3]})
     th.update({'normal_start': ['09:00:00', '10:30:00', '13:30:00']})
