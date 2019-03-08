@@ -58,6 +58,7 @@ def func(args):
     for k, gp in contract_gp:
         nn = spec2.loc[k]['active_contract_number']
         jj = gp.sort_values(by='expiration', ascending=True)[0:nn]
+        jj['daily_limit_multiplier'] = spec2.loc[k]['daily_limit_multiplier'].split(';')
         tmp = tmp.append(jj)
         print(k, 'active contract number:', nn)
         print(jj)
@@ -67,7 +68,7 @@ def func(args):
     mm, result = rds.execute(sql, ())
 
     print(dt.datetime.today(), '---- upsert to contract_otc_pricing table ----')
-    contract_otc_pricing_df = tmp[['exchange_symbol', 'underlying_symbol', 'contract_symbol']].reset_index(drop=True)
+    contract_otc_pricing_df = tmp[['exchange_symbol', 'underlying_symbol', 'contract_symbol', 'daily_limit_multiplier']].reset_index(drop=True)
     rtn = rds.upsert('contract_otc_pricing', contract_otc_pricing_df, is_on_duplicate_key_update=False)
     print(dt.datetime.today(), '---- number of contracts upsert:', rtn, '----')
 
@@ -90,6 +91,7 @@ def main():
 if __name__ == '__main__':
     main()
 
+# cd Z:\Documents\workspace\PyWind2\
 # python .\contract_otc_pricing.py -id default -r PyOption
 # python .\contract_otc_pricing.py -exp 2019-01-01 -id default -r PyOption
 # python .\contract_otc_pricing.py -dte 10 -id default -r PyOption
