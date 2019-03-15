@@ -64,11 +64,14 @@ def func(args):
         tmp = tmp.append(jj)
         print(k, 'active contract number:', nn)
         print(jj)
+    # upper case and sort contract_symbol, for wind wsq
+    tmp['contract_symbol_upper'] = [i.upper() for i in tmp['contract_symbol']]
+    tmp.sort_values(by=['contract_symbol_upper'], ascending=True, inplace=True)
 
     print(dt.datetime.today(), '---- get pre settlement price from wind ----')
     rootdir = 'C:\\wind_data_cn_futures' if 'Windows' in platform.system() else '/usr/local/share/wind_data_cn_futures'
     wd = Wind.Wind(rootdir, 'wind_sector.ini', timeframe=[])
-    contract_info = wd.get_contract_info([i.upper() for i in tmp['contract_symbol']])
+    contract_info = wd.get_contract_info(tmp['contract_symbol_upper'])
     pre_settle = wd.wsq(contract_info['wind_code'], ['rt_pre_settle'])
 
     print(dt.datetime.today(), '---- truncate contract_otc_pricing table ----')
