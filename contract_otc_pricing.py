@@ -2,7 +2,9 @@ import argparse
 import datetime as dt
 import os
 import pandas as pd
+import platform
 from PyShare.PyUtils import Mysql
+from PyShare.PyUtils import Wind
 
 
 def func(args):
@@ -63,12 +65,20 @@ def func(args):
         print(k, 'active contract number:', nn)
         print(jj)
 
+    print(dt.datetime.today(), '---- get pre settlement price from wind ----')
+    rootdir = 'C:\\wind_data_cn_futures' if 'Windows' in platform.system() else '/usr/local/share/wind_data_cn_futures'
+    wd = Wind.Wind(rootdir, 'wind_sector.ini', timeframe=[])
+    contract_info = wd.get_contract_info([i.upper() for i in tmp['contract_symbol']])
+    pre_settle = wd.wsq(contract_info['wind_code'], ['rt_pre_settle'])
+
     print(dt.datetime.today(), '---- truncate contract_otc_pricing table ----')
     sql = '''TRUNCATE futurexdb.contract_otc_pricing'''
     mm, result = rds.execute(sql, ())
 
     print(dt.datetime.today(), '---- upsert to contract_otc_pricing table ----')
     contract_otc_pricing_df = tmp[['exchange_symbol', 'underlying_symbol', 'contract_symbol', 'daily_limit_multiplier']].reset_index(drop=True)
+    contract_otc_pricing_df['pre_settlement'] = pre_settle['RT_PRE_SETTLE']
+    contract_otc_pricing_df['update_time'] = f'{dt.datetime.now():%Y-%m-%d %H:%M:%S}'
     rtn = rds.upsert('contract_otc_pricing', contract_otc_pricing_df, is_on_duplicate_key_update=False)
     print(dt.datetime.today(), '---- number of contracts upsert:', rtn, '----')
 
