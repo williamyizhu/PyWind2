@@ -72,17 +72,19 @@ def func(args):
     rootdir = 'C:\\wind_data_cn_futures' if 'Windows' in platform.system() else '/usr/local/share/wind_data_cn_futures'
     wd = Wind.Wind(rootdir, 'wind_sector.ini', timeframe=[])
     contract_info = wd.get_contract_info(tmp['contract_symbol_upper'])
-    pre_settle = wd.wsq(contract_info['wind_code'], ['rt_pre_settle'])
+    wind_wsq = wd.wsq(contract_info['wind_code'], ['rt_pre_settle', 'rt_high_limit', 'rt_low_limit'])
 
     print(dt.datetime.today(), '---- truncate contract_otc_pricing table ----')
     sql = '''TRUNCATE futurexdb.contract_otc_pricing'''
     mm, result = rds.execute(sql, ())
 
     print(dt.datetime.today(), '---- upsert to contract_otc_pricing table ----')
-    contract_otc_pricing_df = tmp[['exchange_symbol', 'underlying_symbol', 'contract_symbol', 'daily_limit_multiplier']].reset_index(drop=True)
-    contract_otc_pricing_df['pre_settlement'] = pre_settle['RT_PRE_SETTLE']
+    contract_otc_pricing_df = tmp[['exchange_symbol', 'underlying_symbol', 'contract_symbol', 'daily_limit_multiplier', 'tick_size_multiplier', 'least_days', 'exclude_days']].reset_index(drop=True)
+    contract_otc_pricing_df['pre_settlement'] = wind_wsq['RT_PRE_SETTLE']
+    contract_otc_pricing_df['upper_limit'] = wind_wsq['RT_HIGH_LIMIT']
+    contract_otc_pricing_df['lower_limit'] = wind_wsq['RT_LOW_LIMIT']
     contract_otc_pricing_df['update_time'] = f'{dt.datetime.now():%Y-%m-%d %H:%M:%S}'
-    rtn = rds.upsert('contract_otc_pricing', contract_otc_pricing_df, is_on_duplicate_key_update=False)
+    rtn = rds.upsert('contract_otc_pricing', contract_otc_pricing_df, is_on_duplicate_key_update=True)
     print(dt.datetime.today(), '---- number of contracts upsert:', rtn, '----')
 
 
