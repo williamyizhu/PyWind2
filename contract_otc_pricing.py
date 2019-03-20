@@ -79,7 +79,7 @@ def func(args):
     mm, result = rds.execute(sql, ())
 
     print(dt.datetime.today(), '---- upsert to contract_otc_pricing table ----')
-    contract_otc_pricing_df = tmp[['exchange_symbol', 'underlying_symbol', 'contract_symbol', 'daily_limit_multiplier', 'tick_size_multiplier', 'least_days', 'exclude_days']].reset_index(drop=True)
+    contract_otc_pricing_df = tmp[['exchange_symbol', 'underlying_symbol', 'contract_symbol', 'daily_limit_multiplier', 'tick_size_multiplier', 'least_days', 'exclude_days', 'max_days']].reset_index(drop=True)
     contract_otc_pricing_df['pre_settlement'] = wind_wsq['RT_PRE_SETTLE']
     contract_otc_pricing_df['upper_limit'] = wind_wsq['RT_HIGH_LIMIT']
     contract_otc_pricing_df['lower_limit'] = wind_wsq['RT_LOW_LIMIT']
