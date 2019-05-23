@@ -23,7 +23,11 @@ def func(args):
         print(dt.datetime.today(), '---- MySQL is not connected ----', mysql)
 
     print(dt.datetime.today(), '---- get pricing contract spec ----')
-    spec = pd.read_csv(os.path.join(os.getcwd(), filename), sep=',')
+    # get from csv file
+    # spec = pd.read_csv(os.path.join(os.getcwd(), filename), sep=',')
+    # get from rds contract_otc_pricing_spec table
+    sql = '''SELECT * FROM futurexdb.contract_otc_pricing_spec'''
+    mm, spec = rds.execute(sql, ())
     print(spec)
 
     print(dt.datetime.today(), '---- get underlying from underlying table ----')
