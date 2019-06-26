@@ -46,7 +46,7 @@ def func(args):
     ath = wd.get_trading_hours(cnac.iloc[idx])
     ath.rename(columns={'symbol': 'Symbol'}, inplace=True)
     # all contracts from ctp api
-    cctp = pd.read_csv(os.path.join(os.path.abspath('..'), 'PyCtp2', 'Contract.Future.csv'))
+    cctp = pd.read_csv(os.path.join(os.path.abspath('..'), 'PyCtpSE', 'Contract.Future.csv'))
 
     # active contract (Wind) --> underlying (CTP) --> trading hour
     gmc = pd.merge(ath, cctp, on='Symbol', how='left')
