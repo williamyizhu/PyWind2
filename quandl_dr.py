@@ -1,5 +1,6 @@
 import argparse
 import platform
+import os
 from PyShare.PyUtils import Quandl
 
 
@@ -17,6 +18,7 @@ def func(args):
     check_expiration = True if args.check_expiration is None else args.check_expiration[0].lower() == 'y'
 
     # mongodb connection ini file
+    config_file_papth = os.path.join(os.path.abspath('../../python_packages'), 'PyConfig', 'config')
     config_file_prefix = 'default' if args.config_file_prefix is None else args.config_file_prefix[0]
     mongodb = '' if args.mongodb is None else args.mongodb[0]
 
@@ -35,7 +37,7 @@ def func(args):
 
     # ------------- create mongodb handler, upsert into mongodb -------------
     if 'um' in mode:
-        mdb = qd.mongo_connect(config_file_prefix, mongodb)
+        mdb = qd.mongo_connect(config_file_papth, config_file_prefix, mongodb)
         qd.mongo_upsert(contract_spec_update, mdb)
 
 
@@ -73,6 +75,9 @@ if __name__ == '__main__':
 # local machine, download CFFEX contracts, only non-expired contracts, upload to mongodb
 # -------------------------------------------------------------------------------------------
 # python .\quandl_dr.py -m dd um -tf eod -g y -e CFFEX -exp y -id default -d quandl_mongodb2
+# python .\quandl_dr.py -m dd um -tf eod -g y -e SHFE -exp y -id default -d quandl_mongodb2
+# python .\quandl_dr.py -m dd um -tf eod -g y -e DCE -exp y -id default -d quandl_mongodb2
+# python .\quandl_dr.py -m dd um -tf eod -g y -e ZCE -exp y -id default -d quandl_mongodb2
 
 # -------------------------------------------------------------------------------------------
 # Dev1, jenkins.optionplus.cn, PyData, download all contracts

@@ -1,5 +1,6 @@
 import argparse
 import platform
+import os
 from PyShare.PyUtils import Wind
 
 
@@ -13,6 +14,7 @@ def func(args):
     # cleancopy = False if args.cleancopy is None else args.cleancopy[0].lower() == 'y'
 
     # mongodb connection ini file
+    config_file_papth = os.path.join(os.path.abspath('../../python_packages'), 'PyConfig', 'config')
     config_file_prefix = 'default' if args.config_file_prefix is None else args.config_file_prefix[0]
     mongodb = '' if args.mongodb is None else args.mongodb[0]
 
@@ -32,7 +34,7 @@ def func(args):
 
     # ------------- create mongodb handler, upsert into mongodb -------------
     if 'um' in mode:
-        mdb = wd.mongo_connect(config_file_prefix, mongodb)
+        mdb = wd.mongo_connect(config_file_papth, config_file_prefix, mongodb)
         wd.mongo_upsert(contract_spec_update, mdb)
 
     # # ------------- clean copy dir, rename file name and skip old contracts -------------
@@ -70,6 +72,14 @@ if __name__ == '__main__':
 # python .\wind_dr.py -m dd -s czc-t -tf eod
 # python .\wind_dr.py -m dd -s cfe-t -tf eod
 # python .\wind_dr.py -m dd -s shf-t -tf eod
+
+# -------------------------------------------------------------------------------------------
+# collect wind data daily, only non-expired contracts, and save in mongodb
+# -------------------------------------------------------------------------------------------
+# python .\wind_dr.py -m dd um -s dce-t -tf eod -id default -d ctp_mongodb2
+# python .\wind_dr.py -m dd um -s czc-t -tf eod -id default -d ctp_mongodb2
+# python .\wind_dr.py -m dd um -s cfe-t -tf eod -id default -d ctp_mongodb2
+# python .\wind_dr.py -m dd um -s shf-t -tf eod -id default -d ctp_mongodb2
 
 # -------------------------------------------------------------------------------------------
 # collect wind data daily and hourly, only non-expired contracts
