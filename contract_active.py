@@ -13,7 +13,7 @@ def func(args):
     mysql = '' if args.mysql is None else args.mysql[0]
 
     # ------------- connect to rds -------------
-    fpath = os.path.join(os.path.abspath('..'), 'PyConfig', 'config', '_'.join([config_file_prefix, 'mysql_connection.ini']))
+    fpath = os.path.join(os.path.abspath('../../python_packages'), 'PyConfig', 'config', '_'.join([config_file_prefix, 'mysql_connection.ini']))
     rds = Mysql.MySqlDB(fpath)
     rtn = rds.connect(mysql)
 
@@ -61,7 +61,7 @@ def func(args):
             gmc.loc[index, 'thi'] = 2
         elif row['ProductID2'] in ['AG', 'AU']:
             gmc.loc[index, 'thi'] = 3
-        elif row['ProductID2'] in ['AP', 'WR', 'WH', 'JR', 'LR', 'PM', 'RI', 'RS', 'SF', 'SM', 'BB', 'C', 'CS', 'FB', 'JD', 'L', 'PP', 'V', 'EG', 'C_O']:
+        elif row['ProductID2'] in ['AP', 'CJ', 'WR', 'WH', 'JR', 'LR', 'PM', 'RI', 'RS', 'SF', 'SM', 'BB', 'C', 'CS', 'FB', 'JD', 'L', 'PP', 'V', 'EG', 'C_O']:
             gmc.loc[index, 'thi'] = 4
         elif row['ProductID2'] in ['T', 'TF', 'TS']:
             gmc.loc[index, 'thi'] = 5
@@ -109,7 +109,7 @@ def func(args):
     th.update({'last_day_end': ['02:30:00', '10:15:00', '11:30:00', '15:00:00']})
     thdict.update({3: pd.DataFrame(th)})
 
-    # ['AP', 'WR', 'WH', 'JR', 'LR', 'PM', 'RI', 'RS', 'SF', 'SM', 'BB', 'C', 'CS', 'FB', 'JD', 'L', 'PP', 'V', 'EG', 'C_O']
+    # ['AP', 'CJ', 'WR', 'WH', 'JR', 'LR', 'PM', 'RI', 'RS', 'SF', 'SM', 'BB', 'C', 'CS', 'FB', 'JD', 'L', 'PP', 'V', 'EG', 'C_O']
     th = {}
     th.update({'session': [1, 2, 3]})
     th.update({'normal_start': ['09:00:00', '10:30:00', '13:30:00']})

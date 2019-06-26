@@ -16,7 +16,7 @@ def func(args):
     mysql = '' if args.mysql is None else args.mysql[0]
 
     print(dt.datetime.today(), '---- connect to rds ----')
-    fpath = os.path.join(os.path.abspath('..'), 'PyConfig', 'config', '_'.join([config_file_prefix, 'mysql_connection.ini']))
+    fpath = os.path.join(os.path.abspath('../../python_packages'), 'PyConfig', 'config', '_'.join([config_file_prefix, 'mysql_connection.ini']))
     rds = Mysql.MySqlDB(fpath)
     rtn = rds.connect(mysql)
     if rtn is False:
@@ -42,7 +42,7 @@ def func(args):
 
     print(dt.datetime.today(), '---- get contracts from contractinfo table, expiration after:', expiration, '----')
     sql = '''SELECT * FROM futurexdb.contractinfo WHERE exchange_symbol IN %s AND underlying_symbol IN %s AND expiration > %s AND contract_type IN %s AND product_type IN %s'''
-    mm, result_contractinfo = rds.execute(sql, (set(spec['exchange']), set(spec['underlying']), expiration, set([1]), set([1])))
+    mm, result_contractinfo = rds.execute(sql, (set(spec['exchange']), set(spec['underlying']), expiration, set([1]), set([0])))
     result_contractinfo.drop_duplicates(subset=['exchange_symbol', 'underlying_symbol', 'contract_symbol'], inplace=True)
     # print(result_contractinfo)
 
