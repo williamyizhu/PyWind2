@@ -37,6 +37,8 @@ def func(args):
     sql = '''SELECT exchange_symbol, underlying_symbol, contract_symbol FROM futurexdb.contractinfo WHERE exchange_symbol IN %s AND contract_symbol IN %s'''
     mm, result = rds.execute(sql, (set(tmp['exchange']), set(tmp['contract'])))
     df = result.rename(index=str, columns={'exchange_symbol': 'exchange', 'underlying_symbol': 'underlying', 'contract_symbol': 'contract'})
+    df.drop_duplicates(inplace=True)
+    df.to_csv('contract_active.csv', index=False)
     rtn = rds.upsert('contract_active', df, is_on_duplicate_key_update=False)
 
     # ------------------------ underlying charting hour, similar to trading hour ------------------------

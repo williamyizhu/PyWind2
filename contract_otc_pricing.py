@@ -9,7 +9,7 @@ from PyShare.PyUtils import Wind
 
 def func(args):
     print(dt.datetime.today(), '---- get input parameters ----')
-    filename = 'contract_otc_pricing.csv' if args.filename is None else args.filename[0]
+    filename = 'contract_otc_pricing_spec.csv' if args.filename is None else args.filename[0]
     expiration = dt.datetime.now().date() if args.expiration is None else args.expiration[0]
     days_to_expiration = 30 if args.days_to_expiration is None else int(args.days_to_expiration[0])
     config_file_prefix = 'default' if args.config_file_prefix is None else args.config_file_prefix[0]
@@ -89,6 +89,7 @@ def func(args):
     contract_otc_pricing_df['upper_limit'] = wind_wsq['RT_HIGH_LIMIT']
     contract_otc_pricing_df['lower_limit'] = wind_wsq['RT_LOW_LIMIT']
     contract_otc_pricing_df['update_time'] = f'{dt.datetime.now():%Y-%m-%d %H:%M:%S}'
+    contract_otc_pricing_df.to_csv('contract_otc_pricing.csv', index=False)
     rtn = rds.upsert('contract_otc_pricing', contract_otc_pricing_df, is_on_duplicate_key_update=True)
     print(dt.datetime.today(), '---- number of contracts upsert:', rtn, '----')
 
