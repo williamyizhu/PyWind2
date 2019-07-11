@@ -12,6 +12,11 @@ def func(args):
     config_file_prefix = 'default' if args.config_file_prefix is None else args.config_file_prefix[0]
     mysql = '' if args.mysql is None else args.mysql[0]
 
+    # ------------- check path -------------
+    daily_csv_fpath = os.path.join(os.getcwd(), 'daily_csv', dt.datetime.now().strftime('%Y%m%d'))
+    if not (os.path.isdir(daily_csv_fpath)):
+        os.makedirs(daily_csv_fpath)
+
     # ------------- connect to rds -------------
     fpath = os.path.join(os.path.abspath('../../python_packages'), 'PyConfig', 'config', '_'.join([config_file_prefix, 'mysql_connection.ini']))
     rds = Mysql.MySqlDB(fpath)
@@ -38,8 +43,10 @@ def func(args):
     mm, result = rds.execute(sql, (set(tmp['exchange']), set(tmp['contract'])))
     df = result.rename(index=str, columns={'exchange_symbol': 'exchange', 'underlying_symbol': 'underlying', 'contract_symbol': 'contract'})
     df.drop_duplicates(inplace=True)
-    df.to_csv('contract_active.csv', index=False)
     rtn = rds.upsert('contract_active', df, is_on_duplicate_key_update=False)
+
+    print(dt.datetime.today(), '---- export to csv file ----')
+    df.to_csv(os.path.join(daily_csv_fpath, 'contract_active.csv'), index=False)
 
     # ------------------------ underlying charting hour, similar to trading hour ------------------------
     # get trading hours of active contracts, each underlying should have at least one active contract

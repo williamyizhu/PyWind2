@@ -15,6 +15,11 @@ def func(args):
     config_file_prefix = 'default' if args.config_file_prefix is None else args.config_file_prefix[0]
     mysql = '' if args.mysql is None else args.mysql[0]
 
+    print(dt.datetime.today(), '---- check path ----')
+    daily_csv_fpath = os.path.join(os.getcwd(), 'daily_csv', dt.datetime.now().strftime('%Y%m%d'))
+    if not (os.path.isdir(daily_csv_fpath)):
+        os.makedirs(daily_csv_fpath)
+
     print(dt.datetime.today(), '---- connect to rds ----')
     fpath = os.path.join(os.path.abspath('../../python_packages'), 'PyConfig', 'config', '_'.join([config_file_prefix, 'mysql_connection.ini']))
     rds = Mysql.MySqlDB(fpath)
@@ -89,9 +94,11 @@ def func(args):
     contract_otc_pricing_df['upper_limit'] = wind_wsq['RT_HIGH_LIMIT']
     contract_otc_pricing_df['lower_limit'] = wind_wsq['RT_LOW_LIMIT']
     contract_otc_pricing_df['update_time'] = f'{dt.datetime.now():%Y-%m-%d %H:%M:%S}'
-    contract_otc_pricing_df.to_csv('contract_otc_pricing.csv', index=False)
     rtn = rds.upsert('contract_otc_pricing', contract_otc_pricing_df, is_on_duplicate_key_update=True)
     print(dt.datetime.today(), '---- number of contracts upsert:', rtn, '----')
+
+    print(dt.datetime.today(), '---- export to csv ----')
+    contract_otc_pricing_df.to_csv(os.path.join(daily_csv_fpath, 'contract_otc_pricing.csv'), index=False)
 
 
 def main():
