@@ -62,27 +62,27 @@ def func(args):
     gmc['thi'] = -1
     for index, row in gmc.iterrows():
         # print(row['ProductID2'])
-        if row['ProductID2'] in ['SP', 'BU', 'HC', 'RB', 'RU', 'FU', 'RU_O']:
-            gmc.loc[index, 'thi'] = 0
-        elif row['ProductID2'] in ['CF', 'CY', 'OI', 'FG', 'MA', 'RM', 'SR', 'TA', 'ZC', 'A', 'B', 'I', 'J', 'JM', 'M', 'P', 'Y', 'M_O', 'SR_O', 'CF_O']:
-            gmc.loc[index, 'thi'] = 1
+        if row['ProductID2'] in ['A', 'B', 'RR', 'I', 'J', 'JM', 'M', 'P', 'Y', 'M_O', 'C', 'CS', 'L', 'PP', 'V', 'EG', 'C_O', 'SP', 'BU', 'HC', 'RB', 'RU', 'FU', 'RU_O', 'NR']:
+            gmc.loc[index, 'thi'] = 0  # 21:00~23:00, 9:00~10:15, 10:30~11:30, 13:30~15:00
+        elif row['ProductID2'] in ['CF', 'CY', 'OI', 'FG', 'MA', 'RM', 'SR', 'TA', 'ZC', 'SR_O', 'CF_O']:
+            gmc.loc[index, 'thi'] = 1  # 21:00~23:30, 9:00~10:15, 10:30~11:30, 13:30~15:00
         elif row['ProductID2'] in ['AL', 'CU', 'NI', 'PB', 'SN', 'ZN', 'CU_O']:
-            gmc.loc[index, 'thi'] = 2
-        elif row['ProductID2'] in ['AG', 'AU']:
-            gmc.loc[index, 'thi'] = 3
-        elif row['ProductID2'] in ['AP', 'CJ', 'WR', 'WH', 'JR', 'LR', 'PM', 'RI', 'RS', 'SF', 'SM', 'BB', 'C', 'CS', 'FB', 'JD', 'L', 'PP', 'V', 'EG', 'C_O']:
-            gmc.loc[index, 'thi'] = 4
+            gmc.loc[index, 'thi'] = 2  # 21:00~01:00, 9:00~10:15, 10:30~11:30, 13:30~15:00
+        elif row['ProductID2'] in ['AG', 'AU', 'SC']:
+            gmc.loc[index, 'thi'] = 3  # 21:00~02:30, 9:00~10:15, 10:30~11:30, 13:30~15:00
+        elif row['ProductID2'] in ['AP', 'CJ', 'WH', 'JR', 'LR', 'PM', 'RI', 'RS', 'SF', 'SM', 'UR', 'BB', 'FB', 'JD', 'WR']:
+            gmc.loc[index, 'thi'] = 4  # 9:00~10:15, 10:30~11:30, 13:30~15:00
         elif row['ProductID2'] in ['T', 'TF', 'TS']:
-            gmc.loc[index, 'thi'] = 5
+            gmc.loc[index, 'thi'] = 5  # 9:00~11:30, 13:30~15:15
         elif row['ProductID2'] in ['IC', 'IF', 'IH']:
-            gmc.loc[index, 'thi'] = 6
+            gmc.loc[index, 'thi'] = 6  # 9:00~11:30, 13:30~15:00
 
     print(dt.datetime.today(), '---- extract trading hour by underlying ----')
     # print(gmc[['trading_hour', 'exchange', 'ProductID2', 'thi']].sort_values(by=['trading_hour', 'exchange']))
 
     # trading hour dict
     thdict = dict()
-    # ['SP', 'BU', 'HC', 'RB', 'RU', 'FU', 'RU_O']
+    # 21:00~23:00, 9:00~10:15, 10:30~11:30, 13:30~15:00
     th = {}
     th.update({'session': [1, 2, 3, 4]})
     th.update({'normal_start': ['21:00:00', '09:00:00', '10:30:00', '13:30:00']})
@@ -91,7 +91,7 @@ def func(args):
     th.update({'last_day_end': ['23:00:00', '10:15:00', '11:30:00', '15:00:00']})
     thdict.update({0: pd.DataFrame(th)})
 
-    # ['CF', 'CY', 'OI', 'FG', 'MA', 'RM', 'SR', 'TA', 'ZC', 'A', 'B', 'I', 'J', 'JM', 'M', 'P', 'Y', 'M_O', 'SR_O', 'CF_O']
+    # 21:00~23:30, 9:00~10:15, 10:30~11:30, 13:30~15:00
     th = {}
     th.update({'session': [1, 2, 3, 4]})
     th.update({'normal_start': ['21:00:00', '09:00:00', '10:30:00', '13:30:00']})
@@ -100,7 +100,7 @@ def func(args):
     th.update({'last_day_end': ['23:30:00', '10:15:00', '11:30:00', '15:00:00']})
     thdict.update({1: pd.DataFrame(th)})
 
-    # ['AL', 'CU', 'NI', 'PB', 'SN', 'ZN', 'CU_O']
+    # 21:00~01:00, 9:00~10:15, 10:30~11:30, 13:30~15:00
     th = {}
     th.update({'session': [1, 2, 3, 4]})
     th.update({'normal_start': ['21:00:00', '09:00:00', '10:30:00', '13:30:00']})
@@ -109,7 +109,7 @@ def func(args):
     th.update({'last_day_end': ['01:00:00', '10:15:00', '11:30:00', '15:00:00']})
     thdict.update({2: pd.DataFrame(th)})
 
-    # ['AG', 'AU']
+    # 21:00~02:30, 9:00~10:15, 10:30~11:30, 13:30~15:00
     th = {}
     th.update({'session': [1, 2, 3, 4]})
     th.update({'normal_start': ['21:00:00', '09:00:00', '10:30:00', '13:30:00']})
@@ -118,7 +118,7 @@ def func(args):
     th.update({'last_day_end': ['02:30:00', '10:15:00', '11:30:00', '15:00:00']})
     thdict.update({3: pd.DataFrame(th)})
 
-    # ['AP', 'CJ', 'WR', 'WH', 'JR', 'LR', 'PM', 'RI', 'RS', 'SF', 'SM', 'BB', 'C', 'CS', 'FB', 'JD', 'L', 'PP', 'V', 'EG', 'C_O']
+    # 9:00~10:15, 10:30~11:30, 13:30~15:00
     th = {}
     th.update({'session': [1, 2, 3]})
     th.update({'normal_start': ['09:00:00', '10:30:00', '13:30:00']})
@@ -127,7 +127,7 @@ def func(args):
     th.update({'last_day_end': ['10:15:00', '11:30:00', '15:00:00']})
     thdict.update({4: pd.DataFrame(th)})
 
-    # ['T', 'TF', 'TS']
+    # 9:00~11:30, 13:30~15:15
     th = {}
     th.update({'session': [1, 2]})
     th.update({'normal_start': ['09:15:00', '13:00:00']})
@@ -136,7 +136,7 @@ def func(args):
     th.update({'last_day_end': ['11:30:00', '15:15:00']})
     thdict.update({5: pd.DataFrame(th)})
 
-    # ['IC', 'IF', 'IH']
+    # 9:00~11:30, 13:30~15:00
     th = {}
     th.update({'session': [1, 2]})
     th.update({'normal_start': ['09:30:00', '13:00:00']})
@@ -145,7 +145,7 @@ def func(args):
     th.update({'last_day_end': ['11:30:00', '15:00:00']})
     thdict.update({6: pd.DataFrame(th)})
 
-    # ['510050', '510180', '510300']
+    # 9:30~11:30, 13:00~15:00
     th = {}
     th.update({'session': [1, 2]})
     th.update({'normal_start': ['09:30:00', '13:00:00']})
