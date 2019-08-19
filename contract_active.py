@@ -51,7 +51,7 @@ def func(args):
     # ------------------------ underlying charting hour, similar to trading hour ------------------------
     # get trading hours of active contracts, each underlying should have at least one active contract
     # trading hour does not include options, e.g., m_o or 510050_O
-    idx = [ii not in ['INE'] for ii in cnac['exchange']]
+    idx = [ii not in ['XXX'] for ii in cnac['exchange']]
     ath = wd.get_trading_hours(cnac.iloc[idx])
     ath.rename(columns={'symbol': 'Symbol'}, inplace=True)
     # all contracts from ctp api
